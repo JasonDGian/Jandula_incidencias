@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 
 import ies_jandula.incidencia.persistence.model.Incidencia;
 import ies_jandula.incidencia.persistence.repository.IncidenciaRepository;
-//import ies_jandula.incidencia.utils.EstadoIncidencia;
+import ies_jandula.incidencia.utils.EstadosIncidencia;
 import jakarta.transaction.Transactional;
 
 @Service
@@ -34,7 +34,7 @@ public class ServiceIncidencia
 	// Modificar incidencia
 	public String modificarEstadoResuelta(Long id)
 	{
-		if (actualizaIncidencia(id, "RESUELTA"))
+		if (actualizaIncidencia(id, EstadosIncidencia.RESUELTA))
 		{
 			return "Incidencia resuelta.";
 
@@ -49,7 +49,7 @@ public class ServiceIncidencia
 	// Modificar incidencia
 	public String modificarEstadoCancela(Long id)
 	{
-		if (actualizaIncidencia(id, "CANCELADA"))
+		if (actualizaIncidencia(id, EstadosIncidencia.CANCELADA))
 		{
 			return "Incidencia cancelada.";
 
@@ -79,8 +79,20 @@ public class ServiceIncidencia
 			return false;
 		}
 	}
-
-	// Ver todas incidencias.
-	// ver incidencia filtro.
+	
+	// VER TODAS INCIDENCIAS RESUELTAS.
+	public List<Incidencia> listaResueltas(){
+		 return inRepo.findByEstadoIncidencia(EstadosIncidencia.RESUELTA);		
+	}
+	
+	// VER TODAS INCIDENCIAS RESUELTAS.
+	public List<Incidencia> listaCanceladas(){
+		 return inRepo.findByEstadoIncidencia(EstadosIncidencia.CANCELADA);		
+	}
+	
+	// VER TODAS INCIDENCIAS RESUELTAS.
+	public List<Incidencia> listaEnProgreso(){
+		 return inRepo.findByEstadoIncidencia(EstadosIncidencia.EN_PROGRESO);		
+	}
 
 }
