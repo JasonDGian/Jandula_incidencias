@@ -10,8 +10,6 @@ import ies_jandula.incidencia.persistence.model.Incidencia;
 @Repository
 public interface IncidenciaRepository extends JpaRepository<Incidencia, Long>
 {
-	// Devuelve un listado de incidencias basandose en el estado de la incidencia.
-	// public List<Incidencia> findByEstadoIncidencia( EstadoIncidencia estadoIncidencia);
-	
+	// Devuelve un listado de incidencias basandose en el estado de la incidencia.	
 	public List<Incidencia> findByEstadoIncidencia( String estado );
 }

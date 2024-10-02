@@ -26,8 +26,7 @@ public class Incidencia
 	Date fechaIncidencia;
 
 	String descripcionIncidencia;
-
-	//EstadoIncidencia estadoIncidencia;
+	
 	String estadoIncidencia;
 
 	// Constructor.
@@ -86,16 +85,6 @@ public class Incidencia
 	{
 		this.descripcionIncidencia = descripcionIncidencia;
 	}
-
-//	public EstadoIncidencia getEstadoIncidencia()
-//	{
-//		return estadoIncidencia;
-//	}
-//
-//	public void setEstadoIncidencia(EstadoIncidencia estadoIncidencia)
-//	{
-//		this.estadoIncidencia = estadoIncidencia;
-//	}
 	
 	public String getEstadoIncidencia() {
 		return estadoIncidencia;
