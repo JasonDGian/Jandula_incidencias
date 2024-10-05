@@ -3,11 +3,14 @@ package ies_jandula.incidencia.rest;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
+import java.util.Collections;
 import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestHeader;
@@ -22,6 +25,7 @@ import ies_jandula.incidencia.utils.Constants;
 // import ies_jandula.incidencia.utils.EstadoIncidencia; DESACTIVADO A FAVOR DE TIPO STRING
 
 @RestController
+@RequestMapping(value = "/incidencias")
 public class IncidenciaController
 {
 
@@ -32,19 +36,33 @@ public class IncidenciaController
 	// Gestionar las excepciones y validaciones desde el controlador.
 
 	// LISTAR TODASS INCIDENCIAS.
-	@RequestMapping(value = "/incidencias", method = RequestMethod.GET)
+	@GetMapping // <localhost>/incidencias GET
 	public List<Incidencia> listarIncidencias()
 	{
 		return repo.findAll();
 	}
+	
+	@PostMapping // <localhost>:8888/incidencias POST
+	public Optional<Incidencia> buscaIncidencia( @RequestParam long id ) {
+		// Metodo que devuelve un optional porque no sabemos si el ID buscado
+		// existe ne la bbdd o no.
+		
+		return repo.findById(id);
+	}
 
 	// Generar una nueva incidencia.
-	@PostMapping(value = "/nueva") // <localhost>/incidencias/nueva
+	@PostMapping(value = "/nueva") // <localhost>/incidencias/nueva POST
 	public String creaIncidencia(@RequestHeader(value = "correoDocente", required = true) String correoDocente,
 			@RequestBody Incidencia incidencia)
 	{
 		/*
 		 * HACER BLOQUE DE VALIDACIÓN DE OBJETO JSON INCIDENCIA.
+		 * 
+		 * EN LA CABECERA:
+		 * El unico campo necesario es el correo del docente.
+		 * 
+		 * EN EL CUERPO:
+		 * Los unicos campos necesarios son "numero de aula" y "descripcion". 
 		 */
 
 		// Asignar el correo al objeto.
@@ -63,7 +81,7 @@ public class IncidenciaController
 	}
 
 	// Cambiar a RESUELTA la incidencia con el ID proporcionado.
-	@PostMapping(value = "/resuelta") // <localhost>/incidencias/resuelta
+	@PostMapping(value = "/resuelve") // <localhost>/incidencias/resuelve POST
 	public String resuelveIncidencia(@RequestParam(required = true) long id)
 	{
 
@@ -89,7 +107,7 @@ public class IncidenciaController
 	}
 
 	// Cambiar a CANCELADA la incidencia con el ID proporcionado.
-	@PostMapping(value = "/cancelar") // <localhost>/incidencias/cancelar
+	@PostMapping(value = "/cancelar") // <localhost>/incidencias/cancela POST
 	public String cancelaIncidencia(@RequestParam(required = true) long id)
 	{
 
@@ -115,10 +133,17 @@ public class IncidenciaController
 	}
 
 	// Buscar incidencia por filtro.
-	@PostMapping(value = "/filtro") // <localhost>/incidencias/filter
-	public List<Incidencia> filtrarIncidencia(@RequestBody String estado)
+	@PostMapping(value = "/filtro") // <localhost>/incidencias/filtro POST
+	public List<Incidencia> filtrarIncidencia(@RequestParam String estado)
 	{
-		return repo.findByEstadoIncidencia(estado);
+		
+		// Recupera el listado.
+		List<Incidencia> listado = repo.findByEstadoIncidencia(estado);
+		// Ordena el listado.
+		Collections.sort(listado);
+		// Devuelve listado ordenado
+		return listado;
+		
 	}
 
 }
