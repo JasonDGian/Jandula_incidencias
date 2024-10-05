@@ -1,10 +1,13 @@
 package ies_jandula.incidencia.rest;
 
+import java.time.LocalDateTime;
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestHeader;
@@ -43,15 +46,19 @@ public class IncidenciaController
 		/*
 		 * HACER BLOQUE DE VALIDACIÓN DE OBJETO JSON INCIDENCIA.
 		 */
-		
-		
+
 		// Asignar el correo al objeto.
 		incidencia.setCorreoDocente(correoDocente);
 		// Inicializar el estado de la incidencia by default.
-		incidencia.setEstadoIncidencia(Constants.EN_PROGRESO); 
-	
+		incidencia.setEstadoIncidencia(Constants.EN_PROGRESO);
+
+		// Automatiza la asignación de la fecha.
+		// Hora española.
+		ZonedDateTime currentTimeInSpain = ZonedDateTime.now(java.time.ZoneId.of("Europe/Madrid"));
+		incidencia.setFechaIncidencia(Date.from(currentTimeInSpain.toInstant()));
+
 		repo.saveAndFlush(incidencia);
-		
+
 		return "Incidencia creada " + incidencia.toString();
 	}
 

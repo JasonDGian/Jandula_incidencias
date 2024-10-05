@@ -1,5 +1,7 @@
 package ies_jandula.incidencia.models;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.Date;
 import java.util.Objects;
 
@@ -13,7 +15,7 @@ import jakarta.persistence.Id;
 @Entity
 public class Incidencia
 {
-
+	 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)  // Automaticamente genera el campo ID.
 	@Column(name = "id_incidencia")
