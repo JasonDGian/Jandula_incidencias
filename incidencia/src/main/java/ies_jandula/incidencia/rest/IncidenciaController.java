@@ -52,7 +52,7 @@ public class IncidenciaController
 
 	// Generar una nueva incidencia.
 	@PostMapping(value = "/nueva") // <localhost>/incidencias/nueva POST
-	public String creaIncidencia(@RequestHeader(value = "correoDocente", required = true) String correoDocente,
+	public String creaIncidencia(@RequestHeader(value = "correo-docente", required = true) String correoDocente,
 			@RequestBody Incidencia incidencia)
 	{
 		/*
@@ -98,6 +98,7 @@ public class IncidenciaController
 			{
 				incidencia.setEstadoIncidencia(Constants.RESUELTA);
 				repo.saveAndFlush(incidencia);
+				//llamar a metodo de aviso a profesor (mandar correo de aviso).
 				return "Incidencia resuelta con éxito.";
 			}
 		} else
@@ -124,6 +125,7 @@ public class IncidenciaController
 			{
 				incidencia.setEstadoIncidencia(Constants.CANCELADA);
 				repo.saveAndFlush(incidencia);
+				//llamar a metodo de aviso a profesor (mandar correo de aviso).
 				return "Incidencia cancelada con éxito.";
 			}
 		} else
