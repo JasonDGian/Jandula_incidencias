@@ -21,7 +21,7 @@ public class Incidencia
 
 	String numeroAula;
 
-	String nombreProfesor;
+	String correoDocente;
 
 	Date fechaIncidencia;
 
@@ -56,14 +56,14 @@ public class Incidencia
 		this.numeroAula = numeroAula;
 	}
 
-	public String getNombreProfesor()
+	public String getCorreoDocente()
 	{
-		return nombreProfesor;
+		return correoDocente;
 	}
 
-	public void setNombreProfesor(String nombreProfesor)
+	public void setCorreoDocente(String correoDocente)
 	{
-		this.nombreProfesor = nombreProfesor;
+		this.correoDocente = correoDocente;
 	}
 
 	public Date getFechaIncidencia()
@@ -99,7 +99,7 @@ public class Incidencia
 	@Override
 	public int hashCode()
 	{
-		return Objects.hash(descripcionIncidencia, estadoIncidencia, fechaIncidencia, id, nombreProfesor, numeroAula);
+		return Objects.hash(descripcionIncidencia, estadoIncidencia, fechaIncidencia, id, correoDocente, numeroAula);
 	}
 
 	@Override
@@ -114,7 +114,7 @@ public class Incidencia
 		Incidencia other = (Incidencia) obj;
 		return Objects.equals(descripcionIncidencia, other.descripcionIncidencia)
 				&& estadoIncidencia == other.estadoIncidencia && Objects.equals(fechaIncidencia, other.fechaIncidencia)
-				&& id == other.id && Objects.equals(nombreProfesor, other.nombreProfesor)
+				&& id == other.id && Objects.equals(correoDocente, other.correoDocente)
 				&& Objects.equals(numeroAula, other.numeroAula);
 	}
 
@@ -123,7 +123,7 @@ public class Incidencia
 	@Override
 	public String toString()
 	{
-		return "Incidencia [id=" + id + ", numeroAula=" + numeroAula + ", nombreProfesor=" + nombreProfesor
+		return "Incidencia [id=" + id + ", numeroAula=" + numeroAula + ", correoDocente=" + correoDocente
 				+ ", fechaIncidencia=" + fechaIncidencia + ", descripcionIncidencia=" + descripcionIncidencia
 				+ ", estadoIncidencia=" + estadoIncidencia + "]";
 	}
