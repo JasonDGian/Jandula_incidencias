@@ -1,6 +1,6 @@
 package ies_jandula.incidencia.utils;
 
-public final class EstadosIncidencia
+public final class Constants
 {
 	public static final String EN_PROGRESO = "EN PROGRESO"; 
 	public static final String CANCELADA = "CANCELADA"; 

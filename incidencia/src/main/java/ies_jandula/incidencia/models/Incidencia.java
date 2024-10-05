@@ -1,4 +1,4 @@
-package ies_jandula.incidencia.persistence.model;
+package ies_jandula.incidencia.models;
 
 import java.util.Date;
 import java.util.Objects;

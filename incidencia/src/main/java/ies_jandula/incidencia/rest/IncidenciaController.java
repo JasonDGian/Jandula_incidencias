@@ -1,4 +1,4 @@
-package ies_jandula.incidencia.controller;
+package ies_jandula.incidencia.rest;
 
 import java.util.List;
 
@@ -10,9 +10,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import ies_jandula.incidencia.persistence.model.Incidencia;
-import ies_jandula.incidencia.service.ServiceIncidencia;
-import ies_jandula.incidencia.utils.EstadosIncidencia;
+import ies_jandula.incidencia.models.Incidencia;
+import ies_jandula.incidencia.repository.IIncidenciaRepository;
+import ies_jandula.incidencia.utils.Constants;
 // import ies_jandula.incidencia.utils.EstadoIncidencia; DESACTIVADO A FAVOR DE TIPO STRING
 
 @RestController
@@ -20,7 +20,10 @@ public class IncidenciaController
 {
 
 	@Autowired
-	ServiceIncidencia serviceIncidencia; // Servicio que consume los metodos del repositorio.
+	IIncidenciaRepository repo; 
+	
+	// Adaptar toda la logica del controlador al uso de este repositorio.
+	// Gestionar las excepciones y validaciones desde el controlador.
 
 	// LISTAR INCIDENCIAS.
 	@RequestMapping(value = "/incidencias")
@@ -35,7 +38,7 @@ public class IncidenciaController
 	{
 		// Por defecto pone el estado de la incidencia en EN_PROCESO.
 
-		incidencia.setEstadoIncidencia(EstadosIncidencia.EN_PROGRESO);
+		incidencia.setEstadoIncidencia(Constants.EN_PROGRESO);
 		serviceIncidencia.crearIncidencia(incidencia);
 		return "Incidencia creada " + incidencia.toString();
 	}
