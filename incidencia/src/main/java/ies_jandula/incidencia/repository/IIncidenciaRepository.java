@@ -9,6 +9,7 @@ import org.springframework.stereotype.Repository;
 
 import ies_jandula.incidencia.models.Incidencia;
 
+
 @Repository
 public interface IIncidenciaRepository extends JpaRepository<Incidencia, Long>
 {
@@ -16,7 +17,7 @@ public interface IIncidenciaRepository extends JpaRepository<Incidencia, Long>
     public List<Incidencia> findByEstadoIncidencia(String estado);
     
     // Método de filtrado por estado con query personalizada.
-    @Query("SELECT i FROM Incidencia i WHERE i.estadoIncidencia = :estado ORDER BY i.fechaIncidencia DESC")
+    @Query("SELECT inc FROM Incidencia inc WHERE inc.estadoIncidencia = :estado ORDER BY inc.fechaIncidencia DESC")
     public List<Incidencia> findByEstadoIncidenciaOrderDesc(@Param("estado") String estado);
     
     // Método de filtrado por estado con query personalizada.
