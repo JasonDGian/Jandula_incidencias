@@ -147,5 +147,23 @@ public class IncidenciaController
 		return listado;
 		
 	}
+	
+	@PostMapping(value = "/filtro-2") // <localhost>/incidencias/filtro2 POST
+	public List<Incidencia> filtrarIncidenciaSQL(@RequestParam String estado)
+	{
+
+		// Devuelve listado ordenado
+		return repo.findByEstadoIncidenciaOrderDesc(estado);
+		
+	}
+	
+	@PostMapping(value = "/filtro-3") // <localhost>/incidencias/filtro2 POST
+	public List<Incidencia> filtrarIncidenciaSQLA(@RequestParam String estado)
+	{
+
+		// Devuelve listado ordenado
+		return repo.findByEstadoIncidenciaOrderAsc(estado);
+		
+	}
 
 }
