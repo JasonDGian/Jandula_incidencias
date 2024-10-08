@@ -76,8 +76,9 @@ public class IncidenciaController
 	{
 		try
 		{
-			log.debug( "Parametros recibidos: Correo - {}, Numero - {}, Descripcion - {}", correoDocente, incidencia.getNumeroAula(), incidencia.getDescripcionIncidencia()  );
-			
+			log.debug("Parametros recibidos: Correo - {}, Numero - {}, Descripcion - {}", correoDocente,
+					incidencia.getNumeroAula(), incidencia.getDescripcionIncidencia());
+
 			// Si el numero de aula no está vacio.
 			if (controlaNuloBlanco(incidencia.getNumeroAula()))
 			{
@@ -102,7 +103,7 @@ public class IncidenciaController
 			ZonedDateTime currentTimeInSpain = ZonedDateTime.now(java.time.ZoneId.of("Europe/Madrid"));
 			incidencia.setFechaIncidencia(Date.from(currentTimeInSpain.toInstant()));
 			// Finalmente guarda la incidencia en la BBDD.
-			
+
 			repo.saveAndFlush(incidencia);
 			log.debug("Objeto guardado en base de datos.\n" + incidencia.toString());
 
@@ -125,9 +126,11 @@ public class IncidenciaController
 
 	// Cambiar a RESUELTA la incidencia con el ID proporcionado.
 	@PostMapping(value = "/resuelve") // <localhost>/incidencias/resuelve POST
-	private ResponseEntity<String> resuelveIncidencia(@RequestParam(required = true) long id, String comentarioSolucion)
+	private ResponseEntity<String> resuelveIncidencia(@RequestParam(required = true) long id,
+			@RequestBody(required = true) String comentarioSolucion)
 	{
-
+		// Añadir validación y bloque de control.
+		// aquí la cadena comentarioSolucion es un texto plano, cambiar a Json?
 		return modificaEstadoIncidencia(id, Constants.RESUELTA, comentarioSolucion);
 	}
 
