@@ -8,11 +8,11 @@
 		<version>3.3.4</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>ies_jandula</groupId>
-	<artifactId>incidencia</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<name>incidencia</name>
-	<description>Prototipo de gestión de incidencia</description>
+	<groupId>es.ies.jandula</groupId>
+	<artifactId>ReaktorIssuesServer</artifactId>
+	<version>1.0.0</version>
+	<name>JasonDGian@github</name>
+	<description>Prototipo de servidor gestión de incidencias</description>
 	<url/>
 	<licenses>
 		<license/>

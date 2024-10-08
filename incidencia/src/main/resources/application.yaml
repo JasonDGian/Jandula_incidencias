@@ -13,7 +13,7 @@ server:
 
 logging: #Sección de configuración del sistema de logs en Spring.
   level:
-    com.iesjandula: INFO # Define el nivel de log (recursivo).
+    ies.jandula: DEBUG # Define el nivel de log (recursivo).
   file:
     name: registro.log # ruta y el nombre del archivo donde se guardarán los logs.
     max-size: 1MB # Define el tamaño máximo que puede tener el archivo de log antes de que se cree uno nuevo.

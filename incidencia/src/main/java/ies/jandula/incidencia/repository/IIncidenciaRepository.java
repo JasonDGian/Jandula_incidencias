@@ -1,4 +1,4 @@
-package ies_jandula.incidencia.repository;
+package ies.jandula.incidencia.repository;
 
 import java.util.List;
 
@@ -7,7 +7,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
-import ies_jandula.incidencia.models.Incidencia;
+import ies.jandula.incidencia.models.Incidencia;
 
 
 @Repository

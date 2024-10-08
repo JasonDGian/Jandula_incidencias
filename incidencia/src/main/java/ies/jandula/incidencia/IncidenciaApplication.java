@@ -1,4 +1,4 @@
-package ies_jandula.incidencia;
+package ies.jandula.incidencia;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
