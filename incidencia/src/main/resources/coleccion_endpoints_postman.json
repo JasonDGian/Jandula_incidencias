@@ -720,7 +720,7 @@
 		{
 			"name": "Borra incidencia 3",
 			"request": {
-				"method": "POST",
+				"method": "DELETE",
 				"header": [],
 				"url": {
 					"raw": "localhost:8888/incidencias/borrar?id=3",
@@ -743,12 +743,12 @@
 			},
 			"response": [
 				{
-					"name": "EXITO - Borra incidencia 3",
+					"name": "EXITO - Borra incidencia 2",
 					"originalRequest": {
-						"method": "POST",
+						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "localhost:8888/incidencias/borrar?id=3",
+							"raw": "localhost:8888/incidencias/borrar?id=2",
 							"host": [
 								"localhost"
 							],
@@ -760,7 +760,7 @@
 							"query": [
 								{
 									"key": "id",
-									"value": "3"
+									"value": "2"
 								}
 							]
 						}
@@ -779,7 +779,7 @@
 						},
 						{
 							"key": "Date",
-							"value": "Fri, 11 Oct 2024 17:36:10 GMT"
+							"value": "Fri, 11 Oct 2024 18:35:17 GMT"
 						},
 						{
 							"key": "Keep-Alive",
@@ -791,15 +791,15 @@
 						}
 					],
 					"cookie": [],
-					"body": "Incidencia con id 3 ha sido eliminada con exito. "
+					"body": "Incidencia con id 2 ha sido eliminada con exito. "
 				},
 				{
-					"name": "ERROR - Borra incidencia 3",
+					"name": "ERROR - Borra incidencia 2",
 					"originalRequest": {
-						"method": "POST",
+						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "localhost:8888/incidencias/borrar?id=3",
+							"raw": "localhost:8888/incidencias/borrar?id=2",
 							"host": [
 								"localhost"
 							],
@@ -811,7 +811,7 @@
 							"query": [
 								{
 									"key": "id",
-									"value": "3"
+									"value": "2"
 								}
 							]
 						}
@@ -830,7 +830,7 @@
 						},
 						{
 							"key": "Date",
-							"value": "Fri, 11 Oct 2024 17:36:23 GMT"
+							"value": "Fri, 11 Oct 2024 18:35:34 GMT"
 						},
 						{
 							"key": "Keep-Alive",

@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -275,7 +276,7 @@ public class IncidenciaController
 	 *         (definido en Constants.ERROR_INESPERADO).</li>
 	 *         </ul>
 	 */
-	@PostMapping(value = "/borrar")
+	@DeleteMapping(value = "/borrar")
 	public ResponseEntity<String> borrarIncidencia(@RequestParam(required = true) Long id)
 	{
 		try

@@ -120,3 +120,63 @@ Incidencia(id=2, numeroAula=1.2, correoDocente=luisf53@g.educaand.es, fechaIncid
 2024-10-11T19:44:16.061+02:00  INFO 404876 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2024-10-11T19:44:16.062+02:00  INFO 404876 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2024-10-11T19:44:16.068+02:00  INFO 404876 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-10-11T20:34:38.162+02:00  INFO 550986 --- [main] i.j.incidencia.IncidenciaApplication     : Starting IncidenciaApplication using Java 21.0.4 with PID 550986 (/home/jaydee/Github/Jandula_incidencias/incidencia/target/classes started by jaydee in /home/jaydee/Github/Jandula_incidencias/incidencia)
+2024-10-11T20:34:38.163+02:00 DEBUG 550986 --- [main] i.j.incidencia.IncidenciaApplication     : Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-10-11T20:34:38.163+02:00  INFO 550986 --- [main] i.j.incidencia.IncidenciaApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-10-11T20:34:38.481+02:00  INFO 550986 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-11T20:34:38.508+02:00  INFO 550986 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 23 ms. Found 1 JPA repository interface.
+2024-10-11T20:34:38.788+02:00  INFO 550986 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8888 (http)
+2024-10-11T20:34:38.798+02:00  INFO 550986 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-10-11T20:34:38.798+02:00  INFO 550986 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-10-11T20:34:38.827+02:00  INFO 550986 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-10-11T20:34:38.827+02:00  INFO 550986 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 639 ms
+2024-10-11T20:34:38.911+02:00  INFO 550986 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-11T20:34:38.935+02:00  INFO 550986 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-10-11T20:34:38.952+02:00  INFO 550986 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-10-11T20:34:39.093+02:00  INFO 550986 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-11T20:34:39.107+02:00  INFO 550986 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-10-11T20:34:39.330+02:00  INFO 550986 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1884e671
+2024-10-11T20:34:39.332+02:00  INFO 550986 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-10-11T20:34:39.726+02:00  INFO 550986 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-11T20:34:39.752+02:00  INFO 550986 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-11T20:34:39.876+02:00  INFO 550986 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-10-11T20:34:40.111+02:00  WARN 550986 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-11T20:34:40.280+02:00  INFO 550986 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8888 (http) with context path '/'
+2024-10-11T20:34:40.286+02:00  INFO 550986 --- [main] i.j.incidencia.IncidenciaApplication     : Started IncidenciaApplication in 2.427 seconds (process running for 2.688)
+2024-10-11T20:34:45.793+02:00  INFO 550986 --- [http-nio-8888-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-10-11T20:34:45.793+02:00  INFO 550986 --- [http-nio-8888-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-10-11T20:34:45.794+02:00  INFO 550986 --- [http-nio-8888-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-10-11T20:34:45.849+02:00 DEBUG 550986 --- [http-nio-8888-exec-2] i.j.i.rest.IncidenciaController          : Parametros recibidos: Correo - dgia543@g.educaand.es, Numero - 0.7, Descripcion - La pizarra electronica tiene fallos en la señal video HDMI.
+2024-10-11T20:34:45.895+02:00 DEBUG 550986 --- [http-nio-8888-exec-2] i.j.i.rest.IncidenciaController          : Objeto guardado en base de datos.
+Incidencia(id=13, numeroAula=0.7, correoDocente=dgia543@g.educaand.es, fechaIncidencia=Fri Oct 11 20:34:45 CEST 2024, descripcionIncidencia=La pizarra electronica tiene fallos en la señal video HDMI., estadoIncidencia=PENDIENTE, comentario=)
+2024-10-11T20:34:45.896+02:00 DEBUG 550986 --- [http-nio-8888-exec-2] i.j.i.rest.IncidenciaController          : Parametros recibidos: Correo - luisf53@g.educaand.es, Numero - 1.2, Descripcion - El proyector no enciende después de varios intentos.
+2024-10-11T20:34:45.904+02:00 DEBUG 550986 --- [http-nio-8888-exec-2] i.j.i.rest.IncidenciaController          : Objeto guardado en base de datos.
+Incidencia(id=14, numeroAula=1.2, correoDocente=luisf53@g.educaand.es, fechaIncidencia=Fri Oct 11 20:34:45 CEST 2024, descripcionIncidencia=El proyector no enciende después de varios intentos., estadoIncidencia=PENDIENTE, comentario=)
+2024-10-11T20:34:45.905+02:00 DEBUG 550986 --- [http-nio-8888-exec-2] i.j.i.rest.IncidenciaController          : Parametros recibidos: Correo - mariaf78@g.educaand.es, Numero - 2.4, Descripcion - El ordenador no reconoce el teclado conectado.
+2024-10-11T20:34:45.916+02:00 DEBUG 550986 --- [http-nio-8888-exec-2] i.j.i.rest.IncidenciaController          : Objeto guardado en base de datos.
+Incidencia(id=15, numeroAula=2.4, correoDocente=mariaf78@g.educaand.es, fechaIncidencia=Fri Oct 11 20:34:45 CEST 2024, descripcionIncidencia=El ordenador no reconoce el teclado conectado., estadoIncidencia=PENDIENTE, comentario=)
+2024-10-11T20:34:45.917+02:00 DEBUG 550986 --- [http-nio-8888-exec-2] i.j.i.rest.IncidenciaController          : Parametros recibidos: Correo - josep87@g.educaand.es, Numero - 3.1, Descripcion - No hay acceso a internet en el aula, posible fallo de red.
+2024-10-11T20:34:45.926+02:00 DEBUG 550986 --- [http-nio-8888-exec-2] i.j.i.rest.IncidenciaController          : Objeto guardado en base de datos.
+Incidencia(id=16, numeroAula=3.1, correoDocente=josep87@g.educaand.es, fechaIncidencia=Fri Oct 11 20:34:45 CEST 2024, descripcionIncidencia=No hay acceso a internet en el aula, posible fallo de red., estadoIncidencia=PENDIENTE, comentario=)
+2024-10-11T20:34:45.926+02:00 DEBUG 550986 --- [http-nio-8888-exec-2] i.j.i.rest.IncidenciaController          : Parametros recibidos: Correo - alvarog3@g.educaand.es, Numero - 0.3, Descripcion - El ratón inalámbrico no funciona correctamente.
+2024-10-11T20:34:45.934+02:00 DEBUG 550986 --- [http-nio-8888-exec-2] i.j.i.rest.IncidenciaController          : Objeto guardado en base de datos.
+Incidencia(id=17, numeroAula=0.3, correoDocente=alvarog3@g.educaand.es, fechaIncidencia=Fri Oct 11 20:34:45 CEST 2024, descripcionIncidencia=El ratón inalámbrico no funciona correctamente., estadoIncidencia=PENDIENTE, comentario=)
+2024-10-11T20:34:45.934+02:00 DEBUG 550986 --- [http-nio-8888-exec-2] i.j.i.rest.IncidenciaController          : Parametros recibidos: Correo - soniag19@g.educaand.es, Numero - 4.2, Descripcion - La impresora tiene atascos frecuentes de papel.
+2024-10-11T20:34:45.942+02:00 DEBUG 550986 --- [http-nio-8888-exec-2] i.j.i.rest.IncidenciaController          : Objeto guardado en base de datos.
+Incidencia(id=18, numeroAula=4.2, correoDocente=soniag19@g.educaand.es, fechaIncidencia=Fri Oct 11 20:34:45 CEST 2024, descripcionIncidencia=La impresora tiene atascos frecuentes de papel., estadoIncidencia=PENDIENTE, comentario=)
+2024-10-11T20:34:45.942+02:00 DEBUG 550986 --- [http-nio-8888-exec-2] i.j.i.rest.IncidenciaController          : Parametros recibidos: Correo - carmenp89@g.educaand.es, Numero - 5.1, Descripcion - El sonido del ordenador no funciona al conectar altavoces.
+2024-10-11T20:34:45.950+02:00 DEBUG 550986 --- [http-nio-8888-exec-2] i.j.i.rest.IncidenciaController          : Objeto guardado en base de datos.
+Incidencia(id=19, numeroAula=5.1, correoDocente=carmenp89@g.educaand.es, fechaIncidencia=Fri Oct 11 20:34:45 CEST 2024, descripcionIncidencia=El sonido del ordenador no funciona al conectar altavoces., estadoIncidencia=PENDIENTE, comentario=)
+2024-10-11T20:34:45.950+02:00 DEBUG 550986 --- [http-nio-8888-exec-2] i.j.i.rest.IncidenciaController          : Parametros recibidos: Correo - raulm65@g.educaand.es, Numero - 2.3, Descripcion - Falta el cable HDMI del proyector, no se puede usar.
+2024-10-11T20:34:45.957+02:00 DEBUG 550986 --- [http-nio-8888-exec-2] i.j.i.rest.IncidenciaController          : Objeto guardado en base de datos.
+Incidencia(id=20, numeroAula=2.3, correoDocente=raulm65@g.educaand.es, fechaIncidencia=Fri Oct 11 20:34:45 CEST 2024, descripcionIncidencia=Falta el cable HDMI del proyector, no se puede usar., estadoIncidencia=PENDIENTE, comentario=)
+2024-10-11T20:34:45.957+02:00 DEBUG 550986 --- [http-nio-8888-exec-2] i.j.i.rest.IncidenciaController          : Parametros recibidos: Correo - martaj7@g.educaand.es, Numero - 1.4, Descripcion - El ordenador no se enciende, posible fallo de la fuente de alimentación.
+2024-10-11T20:34:45.964+02:00 DEBUG 550986 --- [http-nio-8888-exec-2] i.j.i.rest.IncidenciaController          : Objeto guardado en base de datos.
+Incidencia(id=21, numeroAula=1.4, correoDocente=martaj7@g.educaand.es, fechaIncidencia=Fri Oct 11 20:34:45 CEST 2024, descripcionIncidencia=El ordenador no se enciende, posible fallo de la fuente de alimentación., estadoIncidencia=PENDIENTE, comentario=)
+2024-10-11T20:34:45.964+02:00 DEBUG 550986 --- [http-nio-8888-exec-2] i.j.i.rest.IncidenciaController          : Parametros recibidos: Correo - antoniog65@g.educaand.es, Numero - 3.3, Descripcion - El cañón del proyector muestra la imagen distorsionada.
+2024-10-11T20:34:45.971+02:00 DEBUG 550986 --- [http-nio-8888-exec-2] i.j.i.rest.IncidenciaController          : Objeto guardado en base de datos.
+Incidencia(id=22, numeroAula=3.3, correoDocente=antoniog65@g.educaand.es, fechaIncidencia=Fri Oct 11 20:34:45 CEST 2024, descripcionIncidencia=El cañón del proyector muestra la imagen distorsionada., estadoIncidencia=PENDIENTE, comentario=)
+2024-10-11T20:34:45.972+02:00 DEBUG 550986 --- [http-nio-8888-exec-2] i.j.i.rest.IncidenciaController          : Parametros recibidos: Correo - elenap32@g.educaand.es, Numero - 0.8, Descripcion - El monitor no enciende, pantalla completamente negra.
+2024-10-11T20:34:45.980+02:00 DEBUG 550986 --- [http-nio-8888-exec-2] i.j.i.rest.IncidenciaController          : Objeto guardado en base de datos.
+Incidencia(id=23, numeroAula=0.8, correoDocente=elenap32@g.educaand.es, fechaIncidencia=Fri Oct 11 20:34:45 CEST 2024, descripcionIncidencia=El monitor no enciende, pantalla completamente negra., estadoIncidencia=PENDIENTE, comentario=)
+2024-10-11T20:35:17.300+02:00  INFO 550986 --- [http-nio-8888-exec-4] i.j.i.rest.IncidenciaController          : Incidencia con id 2 ha sido eliminada en fecha 2024-10-11
