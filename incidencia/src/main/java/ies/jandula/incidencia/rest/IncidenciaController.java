@@ -33,7 +33,7 @@ public class IncidenciaController
 	@Autowired
 	private IIncidenciaRepository repo;
 
-	@GetMapping
+	@GetMapping // Escucha en localhost:8888/incidencias
 	public ResponseEntity<?> listarIncidencias()
 	{
 		try
@@ -116,6 +116,12 @@ public class IncidenciaController
 		}
 
 	}
+	
+	// hacer un endpoint que recibe como queryparam un ID.
+	// ademas recibe un cvuerpo con ESTADO y MENSAJE.
+	// Endpoint se llama Modificar con mensaje.
+	
+	
 
 	// Cambiar a RESUELTA la incidencia con el ID proporcionado.
 	@PostMapping(value = "/reinicia") // <localhost>/incidencias/resuelve POST
@@ -134,24 +140,59 @@ public class IncidenciaController
 		return modificaEstadoIncidencia(id, Constants.RESUELTA, comentarioSolucion);
 	}
 
-	// Cambiar a CANCELADA la incidencia con el ID proporcionado.
+	/**
+	 * Cancela una incidencia estableciendo su estado como "cancelada".
+	 *
+	 * Este método maneja las solicitudes POST en la ruta "/cancelar". 
+	 * Recibe un parámetro de consulta 'id' que corresponde al 
+	 * identificador de la incidencia a cancelar. Llama al método 
+	 * 'modificaEstadoIncidencia' para actualizar el estado de 
+	 * la incidencia a "cancelada".
+	 *
+	 * @param id El identificador de la incidencia a cancelar.
+	 * @return ResponseEntity<String> que indica el resultado de la 
+	 *         operación de cancelación.
+	 */
 	@PostMapping(value = "/cancelar") // <localhost>/incidencias/cancela POST
 	private ResponseEntity<String> cancelaIncidencia(@RequestParam(required = true) long id)
 	{
-
 		return modificaEstadoIncidencia(id, Constants.CANCELADA);
 	}
 
-	// Cambiar a CANCELADA la incidencia con el ID proporcionado.
+	/**
+	 * Activa una incidencia estableciendo su estado como "en progreso".
+	 *
+	 * Este método maneja las solicitudes POST en la ruta "/en-progreso". 
+	 * Recibe un parámetro de consulta 'id' que corresponde al 
+	 * identificador de la incidencia a activar. Llama al método 
+	 * 'modificaEstadoIncidencia' para actualizar el estado de 
+	 * la incidencia a "en progreso".
+	 *
+	 * @param id El identificador de la incidencia a activar.
+	 * @return ResponseEntity<String> que indica el resultado de la 
+	 *         operación de activación.
+	 */
 	@PostMapping(value = "/en-progreso") // <localhost>/incidencias/cancela POST
 	private ResponseEntity<String> activaIncidencia(@RequestParam(required = true) long id)
 	{
-
 		return modificaEstadoIncidencia(id, Constants.EN_PROGRESO);
-
 	}
 
-	@PostMapping(value = "/filtro") // <localhost>/incidencias/filtro2 POST
+	/**
+	 * Filtra las incidencias según el estado proporcionado.
+	 * 
+	 * Este método maneja las solicitudes POST en la ruta "/filtro". 
+	 * Recibe un parámetro de consulta 'estado' y busca todas las 
+	 * incidencias que coinciden con ese estado, devolviéndolas en 
+	 * orden ascendente. En caso de que ocurra una excepción durante 
+	 * el proceso, se registra el error y se devuelve un mensaje 
+	 * de error inesperado.
+	 *
+	 * @param estado El estado de las incidencias que se desea filtrar.
+	 * @return ResponseEntity<?> que contiene la lista de incidencias filtradas 
+	 *         o un mensaje de error en caso de excepción.
+	 */
+	@PostMapping(value = "/filtro") // <localhost>/incidencias/filtro POST
 	private ResponseEntity<?> filtrarIncidenciaSQL(@RequestParam String estado)
 	{
 		try
@@ -164,38 +205,39 @@ public class IncidenciaController
 		}
 
 	}
-
-	private ResponseEntity<String> modificaEstadoIncidencia(long id, String estado)
-	{
-		try
-		{
-			Optional<Incidencia> optIncidencia = repo.findById(id);
-
-			if (optIncidencia.isPresent())
-			{
-				Incidencia incidencia = optIncidencia.get();
-
-				if (incidencia.getEstadoIncidencia().equals(estado))
-				{
-					return ResponseEntity.ok().body("AVISO: La incidencia ya esta configurada como " + estado + ".");
-				} else
-				{
-					incidencia.setEstadoIncidencia(estado);
-					repo.saveAndFlush(incidencia);
-					// llamar a metodo de aviso a profesor (mandar correo de aviso).
-					return ResponseEntity.ok().body("EXITO: Incidencia modificada a " + estado + " con éxito.");
-				}
-			} else
-			{
-				return Constants.ID_NO_ENCONTRADO;
-			}
-		} catch (Exception e)
-		{
-			log.error("Excepción capturada en modificaEstadoIncidencia: {}", e.getMessage(), e);
-			return Constants.ERROR_INESPERADO;
-		}
+	
+	/**
+	 * Modifica el estado de una incidencia, omitiendo el comentario.
+	 * 
+	 * Este método es una sobrecarga que llama a la versión de 
+	 * modificaEstadoIncidencia pasando null como argumento para 
+	 * el comentario de solución. Permite actualizar el estado 
+	 * de la incidencia sin necesidad de proporcionar un comentario.
+	 *
+	 * @param id El identificador de la incidencia a modificar.
+	 * @param estado El nuevo estado que se asignará a la incidencia.
+	 * @return ResponseEntity<String> que indica el resultado de la operación.
+	 */
+	private ResponseEntity<String> modificaEstadoIncidencia(long id, String estado){
+		// invoca la version con comentario puesto a nulo, que obviará ese paso.
+		return modificaEstadoIncidencia(id, estado, null);
 	}
 
+	/**
+	 * Modifica el estado de una incidencia y añade un comentario sobre su solución.
+	 * 
+	 * Este método busca la incidencia por su ID, verifica si ya tiene el estado
+	 * solicitado y, si no, actualiza el estado y el comentario. Devuelve un
+	 * ResponseEntity con un mensaje que indica el resultado de la operación. En
+	 * caso de error o si la incidencia no se encuentra, se maneja la excepción y se
+	 * devuelve un mensaje apropiado.
+	 *
+	 * @param id                 El identificador de la incidencia a modificar.
+	 * @param estado             El nuevo estado que se asignará a la incidencia.
+	 * @param comentarioSolucion El comentario relacionado con la solución de la
+	 *                           incidencia.
+	 * @return ResponseEntity<String> que indica el resultado de la operación.
+	 */
 	private ResponseEntity<String> modificaEstadoIncidencia(long id, String estado, String comentarioSolucion)
 	{
 		try
@@ -212,7 +254,12 @@ public class IncidenciaController
 				} else
 				{
 					incidencia.setEstadoIncidencia(estado);
-					incidencia.setComentarioSolucion(comentarioSolucion);
+
+					// Si el comentario no es nulo ni blanco, actualiza comentario.
+					if (!controlaNuloBlanco(comentarioSolucion))
+					{
+						incidencia.setComentarioSolucion(comentarioSolucion);
+					}
 
 					log.debug("Objeto guardado en base de datos:\n" + incidencia.toString());
 
@@ -233,6 +280,19 @@ public class IncidenciaController
 		}
 	}
 
+	/**
+	 * METODO QOL
+	 * 
+	 * Verifica si una cadena es nula o está vacía.
+	 * 
+	 * Este método comprueba si el parámetro 'cadena' es nulo o si no contiene
+	 * caracteres (es decir, está en blanco). Devuelve true si la cadena es nula o
+	 * está vacía; de lo contrario, devuelve false.
+	 *
+	 * @param cadena La cadena a verificar.
+	 * @return boolean true si la cadena es nula o está en blanco, false en caso
+	 *         contrario.
+	 */
 	private boolean controlaNuloBlanco(String cadena)
 	{
 		return cadena == null || cadena.isBlank();
