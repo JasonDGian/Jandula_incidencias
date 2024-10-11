@@ -1,0 +1,850 @@
+{
+	"info": {
+		"_postman_id": "c0a97d7e-3c99-42e5-a64e-2f8a4dd9d9c6",
+		"name": "Incidencias",
+		"description": "Esta interfaz maneja las solicitudes HTTP relacionadas con la creación, actualización, búsqueda, eliminación y listado de incidencias.\n\n**Proporciona endpoints para realizar operaciones como:**\n\n- Crear una nueva incidencia a partir de los datos enviados en el cuerpo de la solicitud.\n    \n- Listar todas las incidencias almacenadas en la base de datos.\n    \n- Buscar una incidencia específica por su ID.\n    \n- Actualizar el estado de una incidencia y añadir un comentario sobre su solución.\n    \n- Cargar un lote de incidencias para facilitar pruebas de uso.\n    \n- Eliminar una incidencia utilizando su ID (eliminar de la bbdd).",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38627125"
+	},
+	"item": [
+		{
+			"name": "Listar incidencias.",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8888/incidencias",
+					"host": [
+						"localhost"
+					],
+					"port": "8888",
+					"path": [
+						"incidencias"
+					]
+				},
+				"description": "Devuelve todas las incidencias registradas en el sistema."
+			},
+			"response": [
+				{
+					"name": "Listar incidencias.",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8888/incidencias",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"incidencias"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 11 Oct 2024 17:34:47 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 1,\n        \"numeroAula\": \"0.7\",\n        \"correoDocente\": \"dgia543@g.educaand.es\",\n        \"fechaIncidencia\": \"2024-10-11T17:34:35.828+00:00\",\n        \"descripcionIncidencia\": \"La pizarra electronica tiene fallos en la señal video HDMI.\",\n        \"estadoIncidencia\": \"PENDIENTE\",\n        \"comentario\": \"\"\n    },\n    {\n        \"id\": 2,\n        \"numeroAula\": \"1.2\",\n        \"correoDocente\": \"luisf53@g.educaand.es\",\n        \"fechaIncidencia\": \"2024-10-11T17:34:35.858+00:00\",\n        \"descripcionIncidencia\": \"El proyector no enciende después de varios intentos.\",\n        \"estadoIncidencia\": \"PENDIENTE\",\n        \"comentario\": \"\"\n    },\n    {\n        \"id\": 3,\n        \"numeroAula\": \"2.4\",\n        \"correoDocente\": \"mariaf78@g.educaand.es\",\n        \"fechaIncidencia\": \"2024-10-11T17:34:35.866+00:00\",\n        \"descripcionIncidencia\": \"El ordenador no reconoce el teclado conectado.\",\n        \"estadoIncidencia\": \"PENDIENTE\",\n        \"comentario\": \"\"\n    },\n    {\n        \"id\": 4,\n        \"numeroAula\": \"3.1\",\n        \"correoDocente\": \"josep87@g.educaand.es\",\n        \"fechaIncidencia\": \"2024-10-11T17:34:35.874+00:00\",\n        \"descripcionIncidencia\": \"No hay acceso a internet en el aula, posible fallo de red.\",\n        \"estadoIncidencia\": \"PENDIENTE\",\n        \"comentario\": \"\"\n    },\n    {\n        \"id\": 5,\n        \"numeroAula\": \"0.3\",\n        \"correoDocente\": \"alvarog3@g.educaand.es\",\n        \"fechaIncidencia\": \"2024-10-11T17:34:35.882+00:00\",\n        \"descripcionIncidencia\": \"El ratón inalámbrico no funciona correctamente.\",\n        \"estadoIncidencia\": \"PENDIENTE\",\n        \"comentario\": \"\"\n    },\n    {\n        \"id\": 6,\n        \"numeroAula\": \"4.2\",\n        \"correoDocente\": \"soniag19@g.educaand.es\",\n        \"fechaIncidencia\": \"2024-10-11T17:34:35.890+00:00\",\n        \"descripcionIncidencia\": \"La impresora tiene atascos frecuentes de papel.\",\n        \"estadoIncidencia\": \"PENDIENTE\",\n        \"comentario\": \"\"\n    },\n    {\n        \"id\": 7,\n        \"numeroAula\": \"5.1\",\n        \"correoDocente\": \"carmenp89@g.educaand.es\",\n        \"fechaIncidencia\": \"2024-10-11T17:34:35.896+00:00\",\n        \"descripcionIncidencia\": \"El sonido del ordenador no funciona al conectar altavoces.\",\n        \"estadoIncidencia\": \"PENDIENTE\",\n        \"comentario\": \"\"\n    },\n    {\n        \"id\": 8,\n        \"numeroAula\": \"2.3\",\n        \"correoDocente\": \"raulm65@g.educaand.es\",\n        \"fechaIncidencia\": \"2024-10-11T17:34:35.907+00:00\",\n        \"descripcionIncidencia\": \"Falta el cable HDMI del proyector, no se puede usar.\",\n        \"estadoIncidencia\": \"PENDIENTE\",\n        \"comentario\": \"\"\n    },\n    {\n        \"id\": 9,\n        \"numeroAula\": \"1.4\",\n        \"correoDocente\": \"martaj7@g.educaand.es\",\n        \"fechaIncidencia\": \"2024-10-11T17:34:35.915+00:00\",\n        \"descripcionIncidencia\": \"El ordenador no se enciende, posible fallo de la fuente de alimentación.\",\n        \"estadoIncidencia\": \"PENDIENTE\",\n        \"comentario\": \"\"\n    },\n    {\n        \"id\": 10,\n        \"numeroAula\": \"3.3\",\n        \"correoDocente\": \"antoniog65@g.educaand.es\",\n        \"fechaIncidencia\": \"2024-10-11T17:34:35.921+00:00\",\n        \"descripcionIncidencia\": \"El cañón del proyector muestra la imagen distorsionada.\",\n        \"estadoIncidencia\": \"PENDIENTE\",\n        \"comentario\": \"\"\n    },\n    {\n        \"id\": 11,\n        \"numeroAula\": \"0.8\",\n        \"correoDocente\": \"elenap32@g.educaand.es\",\n        \"fechaIncidencia\": \"2024-10-11T17:34:35.928+00:00\",\n        \"descripcionIncidencia\": \"El monitor no enciende, pantalla completamente negra.\",\n        \"estadoIncidencia\": \"PENDIENTE\",\n        \"comentario\": \"\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Cargar lote incidencias",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\n        \"numeroAula\": \"0.7\",\n        \"correoDocente\": \"dgia543@g.educaand.es\",\n        \"descripcionIncidencia\": \"La pizarra electronica tiene fallos en la señal video HDMI.\"\n    },\n    {\n        \"numeroAula\": \"1.2\",\n        \"correoDocente\": \"luisf53@g.educaand.es\",\n        \"descripcionIncidencia\": \"El proyector no enciende después de varios intentos.\"\n    },\n    {\n        \"numeroAula\": \"2.4\",\n        \"correoDocente\": \"mariaf78@g.educaand.es\",\n        \"descripcionIncidencia\": \"El ordenador no reconoce el teclado conectado.\"\n    },\n    {\n        \"numeroAula\": \"3.1\",\n        \"correoDocente\": \"josep87@g.educaand.es\",\n        \"descripcionIncidencia\": \"No hay acceso a internet en el aula, posible fallo de red.\"\n    },\n    {\n        \"numeroAula\": \"0.3\",\n        \"correoDocente\": \"alvarog3@g.educaand.es\",\n        \"descripcionIncidencia\": \"El ratón inalámbrico no funciona correctamente.\"\n    },\n    {\n        \"numeroAula\": \"4.2\",\n        \"correoDocente\": \"soniag19@g.educaand.es\",\n        \"descripcionIncidencia\": \"La impresora tiene atascos frecuentes de papel.\"\n    },\n    {\n        \"numeroAula\": \"5.1\",\n        \"correoDocente\": \"carmenp89@g.educaand.es\",\n        \"descripcionIncidencia\": \"El sonido del ordenador no funciona al conectar altavoces.\"\n    },\n    {\n        \"numeroAula\": \"2.3\",\n        \"correoDocente\": \"raulm65@g.educaand.es\",\n        \"descripcionIncidencia\": \"Falta el cable HDMI del proyector, no se puede usar.\"\n    },\n    {\n        \"numeroAula\": \"1.4\",\n        \"correoDocente\": \"martaj7@g.educaand.es\",\n        \"descripcionIncidencia\": \"El ordenador no se enciende, posible fallo de la fuente de alimentación.\"\n    },\n    {\n        \"numeroAula\": \"3.3\",\n        \"correoDocente\": \"antoniog65@g.educaand.es\",\n        \"descripcionIncidencia\": \"El cañón del proyector muestra la imagen distorsionada.\"\n    },\n    {\n        \"numeroAula\": \"0.8\",\n        \"correoDocente\": \"elenap32@g.educaand.es\",\n        \"descripcionIncidencia\": \"El monitor no enciende, pantalla completamente negra.\"\n    }\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8888/incidencias/carga-lote",
+					"host": [
+						"localhost"
+					],
+					"port": "8888",
+					"path": [
+						"incidencias",
+						"carga-lote"
+					]
+				},
+				"description": "Permite cargar un lote de incidencias.\n\nLa idea de este endpoint es la de permitir cargar lotes de incidencias para realizar pruebas con ellos en lugar de ir añadiendo incidencias una a una.\n\nEspera una lista de objetos Json que especifiquen los siguientes atributos.\n\n{\n\n\"**numeroAula**\" : _String ,_\n\n\"**correoDocente**\" : _String ,_\n\n\"**drescripcionIncidencia**\" : _String_\n\n}"
+			},
+			"response": [
+				{
+					"name": "Cargar lote incidencias",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    {\n        \"numeroAula\": \"0.7\",\n        \"correoDocente\": \"dgia543@g.educaand.es\",\n        \"descripcionIncidencia\": \"La pizarra electronica tiene fallos en la señal video HDMI.\"\n    },\n    {\n        \"numeroAula\": \"1.2\",\n        \"correoDocente\": \"luisf53@g.educaand.es\",\n        \"descripcionIncidencia\": \"El proyector no enciende después de varios intentos.\"\n    },\n    {\n        \"numeroAula\": \"2.4\",\n        \"correoDocente\": \"mariaf78@g.educaand.es\",\n        \"descripcionIncidencia\": \"El ordenador no reconoce el teclado conectado.\"\n    },\n    {\n        \"numeroAula\": \"3.1\",\n        \"correoDocente\": \"josep87@g.educaand.es\",\n        \"descripcionIncidencia\": \"No hay acceso a internet en el aula, posible fallo de red.\"\n    },\n    {\n        \"numeroAula\": \"0.3\",\n        \"correoDocente\": \"alvarog3@g.educaand.es\",\n        \"descripcionIncidencia\": \"El ratón inalámbrico no funciona correctamente.\"\n    },\n    {\n        \"numeroAula\": \"4.2\",\n        \"correoDocente\": \"soniag19@g.educaand.es\",\n        \"descripcionIncidencia\": \"La impresora tiene atascos frecuentes de papel.\"\n    },\n    {\n        \"numeroAula\": \"5.1\",\n        \"correoDocente\": \"carmenp89@g.educaand.es\",\n        \"descripcionIncidencia\": \"El sonido del ordenador no funciona al conectar altavoces.\"\n    },\n    {\n        \"numeroAula\": \"2.3\",\n        \"correoDocente\": \"raulm65@g.educaand.es\",\n        \"descripcionIncidencia\": \"Falta el cable HDMI del proyector, no se puede usar.\"\n    },\n    {\n        \"numeroAula\": \"1.4\",\n        \"correoDocente\": \"martaj7@g.educaand.es\",\n        \"descripcionIncidencia\": \"El ordenador no se enciende, posible fallo de la fuente de alimentación.\"\n    },\n    {\n        \"numeroAula\": \"3.3\",\n        \"correoDocente\": \"antoniog65@g.educaand.es\",\n        \"descripcionIncidencia\": \"El cañón del proyector muestra la imagen distorsionada.\"\n    },\n    {\n        \"numeroAula\": \"0.8\",\n        \"correoDocente\": \"elenap32@g.educaand.es\",\n        \"descripcionIncidencia\": \"El monitor no enciende, pantalla completamente negra.\"\n    }\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8888/incidencias/carga-lote",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"incidencias",
+								"carga-lote"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain;charset=UTF-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "24"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 11 Oct 2024 17:34:35 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "Incidencias cargadas: 11"
+				}
+			]
+		},
+		{
+			"name": "Incidencia nueva - OK.",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "correo-docente",
+						"value": "dgia543@g.educaand.es",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"numeroAula\":\"0.7\",\n    \"descripcionIncidencia\":\"La pizarra electronica tiene fallos en la señal video HDMI.\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8888/incidencias/nueva",
+					"host": [
+						"localhost"
+					],
+					"port": "8888",
+					"path": [
+						"incidencias",
+						"nueva"
+					]
+				},
+				"description": "Endpoint que permite añadir incidencias al sistema.\n\nPrueba para comprobar que una peticion de creacion de incidencia realizada correctamente se comporte como es debido.\n\n**Esta prueba debe dar como resultado una respuesta HTTP con código 201 - \"CREATED\" con informe de exito \"**EXITO: Incidencia creada correctamente**.\"**"
+			},
+			"response": [
+				{
+					"name": "Incidencia nueva - OK.",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "correo-docente",
+								"value": "dgia543@g.educaand.es",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"numeroAula\":\"0.7\",\n    \"descripcionIncidencia\":\"La pizarra electronica tiene fallos en la señal video HDMI.\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8888/incidencias/nueva",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"incidencias",
+								"nueva"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain;charset=UTF-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "38"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 11 Oct 2024 17:34:57 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "EXITO: Incidencia creada correctamente"
+				}
+			]
+		},
+		{
+			"name": "Incidencia nueva - ERROR Numero Aula",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "correo-docente",
+						"value": "dgia543@g.educaand.es",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"numeroAula\":\"\",\n    \"descripcionIncidencia\":\"La pizarra electronica tiene fallos en la señal video HDMI.\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8888/incidencias/nueva",
+					"host": [
+						"localhost"
+					],
+					"port": "8888",
+					"path": [
+						"incidencias",
+						"nueva"
+					]
+				},
+				"description": "Endpoint que permite añadir incidencias al sistema.\n\nPrueba para comprobar que una peticion de creacion de incidencia realizada de manera incorrecta o incompleta se comporte como es debido.\n\n**Esta prueba debe dar como resultado una respuesta HTTP con código 400 - \"BAD REQUEST\" y un informe de error \"**ERROR: Numero de aula nulo o vacio.\""
+			},
+			"response": [
+				{
+					"name": "Incidencia nueva - ERROR Numero Aula",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "correo-docente",
+								"value": "dgia543@g.educaand.es",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"numeroAula\":\"\",\n    \"descripcionIncidencia\":\"La pizarra electronica tiene fallos en la señal video HDMI.\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8888/incidencias/nueva",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"incidencias",
+								"nueva"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain;charset=UTF-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "35"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 11 Oct 2024 17:35:02 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "ERROR: Numero de aula nulo o vacio."
+				}
+			]
+		},
+		{
+			"name": "Incidencia nueva - ERROR Descripcion",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "correo-docente",
+						"value": "dgia543@g.educaand.es",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"numeroAula\":\"0.7\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8888/incidencias/nueva",
+					"host": [
+						"localhost"
+					],
+					"port": "8888",
+					"path": [
+						"incidencias",
+						"nueva"
+					]
+				},
+				"description": "Endpoint que permite añadir incidencias al sistema.\n\nPrueba para comprobar que una peticion de creacion de incidencia realizada de manera incorrecta o incompleta se comporte como es debido.\n\n**Esta prueba debe dar como resultado una respuesta HTTP con código 400 - \"BAD REQUEST\" y un informe de error \"**ERROR: Descripcion de incidencia nulo o vacio.\""
+			},
+			"response": [
+				{
+					"name": "Incidencia nueva - ERROR Descripcion",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "correo-docente",
+								"value": "dgia543@g.educaand.es",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"numeroAula\":\"0.7\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8888/incidencias/nueva",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"incidencias",
+								"nueva"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain;charset=UTF-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "46"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 11 Oct 2024 17:35:06 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "ERROR: Descripcion de incidencia nulo o vacio."
+				}
+			]
+		},
+		{
+			"name": "Busca incidencia con ID",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8888/incidencias?id=3",
+					"host": [
+						"localhost"
+					],
+					"port": "8888",
+					"path": [
+						"incidencias"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "3"
+						}
+					]
+				},
+				"description": "Endpoint que permite recuperar una incidencia especifica almacenada en el sistema mediante su ID.\n\nEn este ejemplo se buscará la incidencia con ID = 3.\n\n**Este endpoint puede devolver varios distintos resultados.**\n\n- **Si el objeto existe:** Devolverá el objeto incidencia buscado. - Código http 200.\n    \n- **Si el objeto no existe: \"**_ERROR: No existen incidencias con ese ID_\" .- Código http 400.\n    \n- **Si el parametro indicado no es valido:** \"Bad request\" - Código http 400.\n    \n- **Si se produce un error inesperado:** \"_Se ha producido un error inesperado_\". - Código http 500."
+			},
+			"response": [
+				{
+					"name": "EXITO - Busca incidencia con ID",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:8888/incidencias?id=3",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"incidencias"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 11 Oct 2024 17:35:24 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 3,\n    \"numeroAula\": \"2.4\",\n    \"correoDocente\": \"mariaf78@g.educaand.es\",\n    \"fechaIncidencia\": \"2024-10-11T17:34:35.866+00:00\",\n    \"descripcionIncidencia\": \"El ordenador no reconoce el teclado conectado.\",\n    \"estadoIncidencia\": \"PENDIENTE\",\n    \"comentario\": \"\"\n}"
+				},
+				{
+					"name": "ERROR - Busca incidencia con ID",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:8888/incidencias?id=-1",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"incidencias"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "-1"
+								}
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain;charset=UTF-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "41"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 11 Oct 2024 17:35:49 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "ERROR: No existen incidencias con ese ID."
+				}
+			]
+		},
+		{
+			"name": "Resuelve incidencia con comentario.",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"estado\":\"RESUELTA\",\n    \"comentario\":\"La incidencia ha sido resuelta sin dificultades.\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8888/incidencias/actualiza?id=2",
+					"host": [
+						"localhost"
+					],
+					"port": "8888",
+					"path": [
+						"incidencias",
+						"actualiza"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "2"
+						}
+					]
+				},
+				"description": "Endpoint que actualiza una incidencia con ID especifico basandose en el cuerpo JSON que recibe.\n\n- **id**: En la URL se especifica el ID de la incidencia a actualizar.\n    \n- **estado**: En el cuerpo se especifica el estado.\n    \n- **comentario**: En el cuerpo se proporcioan un comentario acerca de como se ha resuelto la incidencia."
+			},
+			"response": [
+				{
+					"name": "EXITO - Resuelve incidencia con comentario.",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"estado\":\"RESUELTA\",\n    \"comentario\":\"La incidencia ha sido resuelta sin dificultades.\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8888/incidencias/actualiza?id=2",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"incidencias",
+								"actualiza"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain;charset=UTF-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "160"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 11 Oct 2024 17:36:02 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "EXITO: Incidencia modificada a {\n    \"estado\":\"RESUELTA\",\n    \"comentario\":\"La incidencia ha sido resuelta sin dificultades.\"\n} con éxito.\nComentario agregado."
+				},
+				{
+					"name": "ERROR - Resuelve incidencia con comentario.",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"estado\":\"RESUELTA\",\n    \"comentario\":\"La incidencia ha sido resuelta sin dificultades.\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8888/incidencias/actualiza?id=3",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"incidencias",
+								"actualiza"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain;charset=UTF-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "41"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 11 Oct 2024 17:36:47 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "ERROR: No existen incidencias con ese ID."
+				}
+			]
+		},
+		{
+			"name": "Borra incidencia 3",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8888/incidencias/borrar?id=3",
+					"host": [
+						"localhost"
+					],
+					"port": "8888",
+					"path": [
+						"incidencias",
+						"borrar"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "3"
+						}
+					]
+				},
+				"description": "Endpoint que permite borrar de la base de datos una incidencia especifica a partir de su ID.\n\nUNA INCIDENCIA BORRADA A TRAVES DE ESTE ENDPOINT NO SERÁ RECUPERABLE.\n\n**Este endpoint puede devolver varios resultados.**\n\n- **Si el objeto existe:** \"Incidencia eliminada con exito.\"\n    \n- **Si el objeto no existe: \"**_ERROR: No existen incidencias con ese ID_\" .- Código http 400.\n    \n- **Si el parametro indicado no es valido:** \"Bad request\" - Código http 400.\n    \n- **Si se produce un error inesperado:** \"_Se ha producido un error inesperado_\". - Código http 500."
+			},
+			"response": [
+				{
+					"name": "EXITO - Borra incidencia 3",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:8888/incidencias/borrar?id=3",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"incidencias",
+								"borrar"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain;charset=UTF-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "49"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 11 Oct 2024 17:36:10 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "Incidencia con id 3 ha sido eliminada con exito. "
+				},
+				{
+					"name": "ERROR - Borra incidencia 3",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:8888/incidencias/borrar?id=3",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"incidencias",
+								"borrar"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain;charset=UTF-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "41"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 11 Oct 2024 17:36:23 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "ERROR: No existen incidencias con ese ID."
+				}
+			]
+		}
+	]
+}

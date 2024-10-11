@@ -1,5 +1,6 @@
 package ies.jandula.incidencia.rest;
 
+import java.time.LocalDate;
 import java.time.ZonedDateTime;
 import java.util.Date;
 import java.util.List;
@@ -23,9 +24,29 @@ import ies.jandula.incidencia.utils.Constants;
 import lombok.extern.slf4j.Slf4j;
 
 /**
- * Clase Controller que atiende a las peticiones relacionadas al manejo de
- * incidencias.
+ * Controlador REST para la gestión de incidencias en el sistema.
+ * 
+ * Esta clase maneja las solicitudes HTTP relacionadas con la creación,
+ * actualización, búsqueda, eliminación y listado de incidencias. Proporciona
+ * endpoints para realizar operaciones como: - Crear una nueva incidencia a
+ * partir de los datos enviados en el cuerpo de la solicitud. - Listar todas las
+ * incidencias almacenadas en la base de datos. - Buscar una incidencia
+ * específica por su ID. - Actualizar el estado de una incidencia y añadir un
+ * comentario sobre su solución. - Cargar un lote de incidencias para facilitar
+ * pruebas de uso. - Eliminar una incidencia utilizando su ID (eliminar de la
+ * bbdd).
+ * 
+ * Se utiliza inyección de dependencias para acceder al repositorio de
+ * incidencias y se implementa un manejo de excepciones para capturar errores y
+ * retornar mensajes apropiados. La clase también incluye métodos para filtrar
+ * incidencias por estado y modificar su estado a "PENDIENTE", "RESUELTA",
+ * "CANCELADA", "EN PROGRESO", entre otros.
+ * 
+ * Las operaciones se realizan en un contexto transaccional, y se registran las
+ * acciones y excepciones en los logs para facilitar la depuración y el
+ * mantenimiento del sistema.
  */
+
 @Slf4j // añade el logger.
 @RestController
 @RequestMapping(value = "/incidencias")
@@ -36,7 +57,7 @@ public class IncidenciaController
 	// Auto-inyeccion de repositorio.
 	private IIncidenciaRepository repo;
 
-	// ------------ EDNPOINTS --------------------------------
+	// =========================== ENDPOINTS ===========================//
 
 	/**
 	 * CREAR NUEVA INCIDENCIA.
@@ -83,7 +104,7 @@ public class IncidenciaController
 			incidencia.setCorreoDocente(correoDocente);
 			// Inicializar el estado de la incidencia by default.
 			incidencia.setEstadoIncidencia(Constants.PENDIENTE);
-			incidencia.setComentarioSolucion("");
+			incidencia.setComentario("");
 
 			// Automatiza la asignación de la fecha.
 			// Hora española.
@@ -229,9 +250,64 @@ public class IncidenciaController
 		}
 	}
 
-	// TODO: Borrar incidencia por ID.
+	/**
+	 * BORRAR INCIDENCIA POR ID.
+	 * 
+	 * Elimina una incidencia del sistema basada en su ID.
+	 * <p>
+	 * Este método recibe una solicitud HTTP POST en la ruta "/borrar" con un
+	 * parámetro obligatorio que representa el ID de la incidencia a eliminar.
+	 * Primero, se busca la incidencia en el repositorio. Si la incidencia existe,
+	 * se elimina y se registra un mensaje en los logs con la información del
+	 * borrado. Si la incidencia no es encontrada, devuelve una respuesta
+	 * predefinida indicando que el ID no fue localizado. En caso de cualquier
+	 * excepción, se captura y se devuelve una respuesta de error inesperado.
+	 * </p>
+	 * 
+	 * @param id El ID de la incidencia que se desea eliminar. Es un parámetro
+	 *           requerido.
+	 * @return ResponseEntity con el estado HTTP correspondiente:
+	 *         <ul>
+	 *         <li>200 OK: Si la incidencia fue eliminada exitosamente.</li>
+	 *         <li>404 NOT FOUND: Si la incidencia no fue encontrada (definido en
+	 *         Constants.ID_NO_ENCONTRADO).</li>
+	 *         <li>500 INTERNAL SERVER ERROR: Si ocurre algún error inesperado
+	 *         (definido en Constants.ERROR_INESPERADO).</li>
+	 *         </ul>
+	 */
+	@PostMapping(value = "/borrar")
+	public ResponseEntity<String> borrarIncidencia(@RequestParam(required = true) Long id)
+	{
+		try
+		{
+			// Busca incidencia.
+			Optional<Incidencia> incidenciaOpt = repo.findById(id);
 
-	// --------------- OTRA LOGICA --------------------------------
+			// Si la incidencia existe.
+			if (incidenciaOpt.isPresent())
+			{
+				// Loguea su borrado.
+				log.info("Incidencia con id {} ha sido eliminada en fecha {}", id, LocalDate.now());
+				// Borrala.
+				repo.deleteById(id);
+				// Responde exito.
+				return ResponseEntity.status(HttpStatus.OK)
+						.body("Incidencia con id " + id + " ha sido eliminada con exito. ");
+			} else
+			{
+				return Constants.ID_NO_ENCONTRADO;
+			}
+
+		} catch (Exception e)
+		{
+			log.error("Excepción capturada cargando ficheros demostrativos: {}", e.getMessage(), e);
+			return Constants.ERROR_INESPERADO;
+		}
+	}
+	
+	
+
+	// =========================== OTRA LOGICA ===========================//
 
 	/**
 	 * MMODIFICA ESTADO INCIDENCIA SIN COMENTARIO.
@@ -252,6 +328,8 @@ public class IncidenciaController
 		// invoca la version con comentario puesto a nulo, que obviará ese paso.
 		return modificaEstadoIncidencia(id, estado, null);
 	}
+	
+	
 
 	/**
 	 * MODIFICA ESTADO INCIDENCIA CON COMENTARIO.
@@ -290,7 +368,7 @@ public class IncidenciaController
 					// Si el comentario no es nulo ni blanco, actualiza comentario.
 					if (!controlaNuloBlanco(comentarioSolucion))
 					{
-						incidencia.setComentarioSolucion(comentarioSolucion);
+						incidencia.setComentario(comentarioSolucion);
 					}
 
 					log.debug("Objeto guardado en base de datos:\n" + incidencia.toString());
@@ -311,6 +389,8 @@ public class IncidenciaController
 			return Constants.ERROR_INESPERADO;
 		}
 	}
+	
+	
 
 	/**
 	 * METODO QOL - Control de cadenas.
@@ -329,8 +409,10 @@ public class IncidenciaController
 	{
 		return cadena == null || cadena.isBlank();
 	}
+	
+	
 
-	// --------------- LOGICA DESCARTABLE ? ----------------------------
+	// =========================== DESCARTABLES? ===========================//
 
 	/**
 	 * Filtra las incidencias según el estado proporcionado.
@@ -358,6 +440,8 @@ public class IncidenciaController
 		}
 
 	}
+	
+	
 
 	// Cambiar a 'PENDIENTE' la incidencia con el ID proporcionado.
 	@PostMapping(value = "/reinicia") // <localhost>/incidencias/resuelve POST
