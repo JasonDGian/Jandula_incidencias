@@ -61,6 +61,6 @@ public class Incidencia
 	/**
 	 * Atribtuo - Comentario relacionado a la solucion de la incidencia.
 	 */
-	private String comentarioSolucion;
+	private String comentario;
 
 }

@@ -1,148 +1,72 @@
-2024-10-08T18:47:59.766+02:00  INFO 16044 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-10-08T18:47:59.767+02:00  INFO 16044 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-10-08T18:47:59.773+02:00  INFO 16044 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2024-10-08T18:48:59.734+02:00  INFO 19344 --- [main] i.j.incidencia.IncidenciaApplication     : Starting IncidenciaApplication using Java 21.0.4 with PID 19344 (/home/jaydee/Github/Jandula_incidencias/incidencia/target/classes started by jaydee in /home/jaydee/Github/Jandula_incidencias/incidencia)
-2024-10-08T18:48:59.735+02:00  INFO 19344 --- [main] i.j.incidencia.IncidenciaApplication     : No active profile set, falling back to 1 default profile: "default"
-2024-10-08T18:49:00.032+02:00  INFO 19344 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-10-08T18:49:00.062+02:00  INFO 19344 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 26 ms. Found 1 JPA repository interface.
-2024-10-08T18:49:00.319+02:00  INFO 19344 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8888 (http)
-2024-10-08T18:49:00.328+02:00  INFO 19344 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-10-08T18:49:00.328+02:00  INFO 19344 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
-2024-10-08T18:49:00.353+02:00  INFO 19344 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-10-08T18:49:00.353+02:00  INFO 19344 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 597 ms
-2024-10-08T18:49:00.427+02:00  INFO 19344 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-10-08T18:49:00.451+02:00  INFO 19344 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
-2024-10-08T18:49:00.466+02:00  INFO 19344 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-10-08T18:49:00.600+02:00  INFO 19344 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-10-08T18:49:00.613+02:00  INFO 19344 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-10-08T18:49:00.813+02:00  INFO 19344 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1218e12
-2024-10-08T18:49:00.814+02:00  INFO 19344 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-10-08T18:49:01.209+02:00  INFO 19344 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-10-08T18:49:01.270+02:00  INFO 19344 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-10-08T18:49:01.381+02:00  INFO 19344 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
-2024-10-08T18:49:01.595+02:00  WARN 19344 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-10-08T18:49:01.757+02:00  INFO 19344 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8888 (http) with context path '/'
-2024-10-08T18:49:01.762+02:00  INFO 19344 --- [main] i.j.incidencia.IncidenciaApplication     : Started IncidenciaApplication in 2.297 seconds (process running for 2.517)
-2024-10-08T18:49:04.050+02:00  INFO 19344 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-10-08T18:49:04.051+02:00  INFO 19344 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-10-08T18:49:04.056+02:00  INFO 19344 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2024-10-08T18:56:16.864+02:00  INFO 34837 --- [main] i.j.incidencia.IncidenciaApplication     : Starting IncidenciaApplication using Java 21.0.4 with PID 34837 (/home/jaydee/Github/Jandula_incidencias/incidencia/target/classes started by jaydee in /home/jaydee/Github/Jandula_incidencias/incidencia)
-2024-10-08T18:56:16.865+02:00 DEBUG 34837 --- [main] i.j.incidencia.IncidenciaApplication     : Running with Spring Boot v3.3.4, Spring v6.1.13
-2024-10-08T18:56:16.866+02:00  INFO 34837 --- [main] i.j.incidencia.IncidenciaApplication     : No active profile set, falling back to 1 default profile: "default"
-2024-10-08T18:56:17.162+02:00  INFO 34837 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-10-08T18:56:17.188+02:00  INFO 34837 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 22 ms. Found 1 JPA repository interface.
-2024-10-08T18:56:17.454+02:00  INFO 34837 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8888 (http)
-2024-10-08T18:56:17.463+02:00  INFO 34837 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-10-08T18:56:17.463+02:00  INFO 34837 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
-2024-10-08T18:56:17.488+02:00  INFO 34837 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-10-08T18:56:17.489+02:00  INFO 34837 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 599 ms
-2024-10-08T18:56:17.581+02:00  INFO 34837 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-10-08T18:56:17.606+02:00  INFO 34837 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
-2024-10-08T18:56:17.620+02:00  INFO 34837 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-10-08T18:56:17.748+02:00  INFO 34837 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-10-08T18:56:17.761+02:00  INFO 34837 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-10-08T18:56:17.964+02:00  INFO 34837 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4fee14b
-2024-10-08T18:56:17.966+02:00  INFO 34837 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-10-08T18:56:18.336+02:00  INFO 34837 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-10-08T18:56:18.389+02:00  INFO 34837 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-10-08T18:56:18.494+02:00  INFO 34837 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
-2024-10-08T18:56:18.720+02:00  WARN 34837 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-10-08T18:56:18.876+02:00  INFO 34837 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8888 (http) with context path '/'
-2024-10-08T18:56:18.881+02:00  INFO 34837 --- [main] i.j.incidencia.IncidenciaApplication     : Started IncidenciaApplication in 2.282 seconds (process running for 2.493)
-2024-10-08T18:56:22.663+02:00  INFO 34837 --- [http-nio-8888-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-10-08T18:56:22.663+02:00  INFO 34837 --- [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-10-08T18:56:22.663+02:00  INFO 34837 --- [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
-2024-10-08T18:56:22.715+02:00 DEBUG 34837 --- [http-nio-8888-exec-1] i.j.i.rest.IncidenciaController          : Parametros recibidos: Correo - dgia543@g.educaand.es, Numero - 0.7, Descripcion - La pizarra electronica tiene fallos en la señal video HDMI.
-2024-10-08T18:56:22.768+02:00 DEBUG 34837 --- [http-nio-8888-exec-1] i.j.i.rest.IncidenciaController          : Objeto guardado en base de datos.
-Incidencia(id=1, numeroAula=0.7, correoDocente=dgia543@g.educaand.es, fechaIncidencia=Tue Oct 08 18:56:22 CEST 2024, descripcionIncidencia=La pizarra electronica tiene fallos en la señal video HDMI., estadoIncidencia=PENDIENTE, comentarioSolucion=)
-2024-10-08T18:56:58.243+02:00 DEBUG 34837 --- [http-nio-8888-exec-3] i.j.i.rest.IncidenciaController          : Parametros recibidos: Correo - dgia543@g.educaand.es, Numero - , Descripcion - La pizarra electronica tiene fallos en la señal video HDMI.
-2024-10-08T18:56:58.243+02:00 DEBUG 34837 --- [http-nio-8888-exec-3] i.j.i.rest.IncidenciaController          : Intento de creación de incidencia con numero de aula no definido
-2024-10-08T18:57:09.220+02:00 DEBUG 34837 --- [http-nio-8888-exec-5] i.j.i.rest.IncidenciaController          : Parametros recibidos: Correo - dgia543@g.educaand.es, Numero - 0.7, Descripcion - null
-2024-10-08T18:57:09.220+02:00 DEBUG 34837 --- [http-nio-8888-exec-5] i.j.i.rest.IncidenciaController          : Intento de creación de incidencia con descripcion no definida
-2024-10-08T18:57:22.605+02:00  INFO 34837 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-10-08T18:57:22.607+02:00  INFO 34837 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-10-08T18:57:22.613+02:00  INFO 34837 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2024-10-08T19:02:22.443+02:00  INFO 48017 --- [main] i.j.incidencia.IncidenciaApplication     : Starting IncidenciaApplication using Java 21.0.4 with PID 48017 (/home/jaydee/Github/Jandula_incidencias/incidencia/target/classes started by jaydee in /home/jaydee/Github/Jandula_incidencias/incidencia)
-2024-10-08T19:02:22.444+02:00 DEBUG 48017 --- [main] i.j.incidencia.IncidenciaApplication     : Running with Spring Boot v3.3.4, Spring v6.1.13
-2024-10-08T19:02:22.445+02:00  INFO 48017 --- [main] i.j.incidencia.IncidenciaApplication     : No active profile set, falling back to 1 default profile: "default"
-2024-10-08T19:02:22.761+02:00  INFO 48017 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-10-08T19:02:22.787+02:00  INFO 48017 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 22 ms. Found 1 JPA repository interface.
-2024-10-08T19:02:23.053+02:00  INFO 48017 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8888 (http)
-2024-10-08T19:02:23.061+02:00  INFO 48017 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-10-08T19:02:23.062+02:00  INFO 48017 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
-2024-10-08T19:02:23.088+02:00  INFO 48017 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-10-08T19:02:23.088+02:00  INFO 48017 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 622 ms
-2024-10-08T19:02:23.166+02:00  INFO 48017 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-10-08T19:02:23.188+02:00  INFO 48017 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
-2024-10-08T19:02:23.205+02:00  INFO 48017 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-10-08T19:02:23.339+02:00  INFO 48017 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-10-08T19:02:23.352+02:00  INFO 48017 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-10-08T19:02:23.552+02:00  INFO 48017 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@717a8a76
-2024-10-08T19:02:23.554+02:00  INFO 48017 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-10-08T19:02:23.944+02:00  INFO 48017 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-10-08T19:02:23.999+02:00  INFO 48017 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-10-08T19:02:24.112+02:00  INFO 48017 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
-2024-10-08T19:02:24.364+02:00  WARN 48017 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-10-08T19:02:24.534+02:00  INFO 48017 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8888 (http) with context path '/'
-2024-10-08T19:02:24.539+02:00  INFO 48017 --- [main] i.j.incidencia.IncidenciaApplication     : Started IncidenciaApplication in 2.363 seconds (process running for 2.581)
-2024-10-08T19:02:28.135+02:00  INFO 48017 --- [http-nio-8888-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-10-08T19:02:28.135+02:00  INFO 48017 --- [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-10-08T19:02:28.136+02:00  INFO 48017 --- [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2024-10-08T19:02:30.714+02:00 DEBUG 48017 --- [http-nio-8888-exec-3] i.j.i.rest.IncidenciaController          : Parametros recibidos: Correo - dgia543@g.educaand.es, Numero - 0.7, Descripcion - La pizarra electronica tiene fallos en la señal video HDMI.
-2024-10-08T19:02:30.744+02:00 DEBUG 48017 --- [http-nio-8888-exec-3] i.j.i.rest.IncidenciaController          : Objeto guardado en base de datos.
-Incidencia(id=1, numeroAula=0.7, correoDocente=dgia543@g.educaand.es, fechaIncidencia=Tue Oct 08 19:02:30 CEST 2024, descripcionIncidencia=La pizarra electronica tiene fallos en la señal video HDMI., estadoIncidencia=PENDIENTE, comentarioSolucion=)
-2024-10-08T19:02:41.817+02:00 DEBUG 48017 --- [http-nio-8888-exec-4] i.j.i.rest.IncidenciaController          : Parametros recibidos: Correo - dgia543@g.educaand.es, Numero - 0.5, Descripcion - Ratones rotos.
-2024-10-08T19:02:41.826+02:00 DEBUG 48017 --- [http-nio-8888-exec-4] i.j.i.rest.IncidenciaController          : Objeto guardado en base de datos.
-Incidencia(id=2, numeroAula=0.5, correoDocente=dgia543@g.educaand.es, fechaIncidencia=Tue Oct 08 19:02:41 CEST 2024, descripcionIncidencia=Ratones rotos., estadoIncidencia=PENDIENTE, comentarioSolucion=)
-2024-10-08T19:02:55.943+02:00 DEBUG 48017 --- [http-nio-8888-exec-5] i.j.i.rest.IncidenciaController          : Parametros recibidos: Correo - dgia543@g.educaand.es, Numero - 0.8, Descripcion - Pantallas que no encienten y teclados rotos.
-2024-10-08T19:02:55.952+02:00 DEBUG 48017 --- [http-nio-8888-exec-5] i.j.i.rest.IncidenciaController          : Objeto guardado en base de datos.
-Incidencia(id=3, numeroAula=0.8, correoDocente=dgia543@g.educaand.es, fechaIncidencia=Tue Oct 08 19:02:55 CEST 2024, descripcionIncidencia=Pantallas que no encienten y teclados rotos., estadoIncidencia=PENDIENTE, comentarioSolucion=)
-2024-10-08T19:03:04.152+02:00 DEBUG 48017 --- [http-nio-8888-exec-9] i.j.i.rest.IncidenciaController          : Parametros recibidos: Correo - dgia543@g.educaand.es, Numero - , Descripcion - La pizarra electronica tiene fallos en la señal video HDMI.
-2024-10-08T19:03:04.152+02:00 DEBUG 48017 --- [http-nio-8888-exec-9] i.j.i.rest.IncidenciaController          : Intento de creación de incidencia con numero de aula no definido
-2024-10-08T19:03:08.725+02:00 DEBUG 48017 --- [http-nio-8888-exec-6] i.j.i.rest.IncidenciaController          : Parametros recibidos: Correo - dgia543@g.educaand.es, Numero - 0.7, Descripcion - null
-2024-10-08T19:03:08.725+02:00 DEBUG 48017 --- [http-nio-8888-exec-6] i.j.i.rest.IncidenciaController          : Intento de creación de incidencia con descripcion no definida
-2024-10-08T19:07:07.125+02:00  INFO 48017 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-10-08T19:07:07.126+02:00  INFO 48017 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-10-08T19:07:07.131+02:00  INFO 48017 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2024-10-08T19:07:11.126+02:00  INFO 58253 --- [main] i.j.incidencia.IncidenciaApplication     : Starting IncidenciaApplication using Java 21.0.4 with PID 58253 (/home/jaydee/Github/Jandula_incidencias/incidencia/target/classes started by jaydee in /home/jaydee/Github/Jandula_incidencias/incidencia)
-2024-10-08T19:07:11.127+02:00 DEBUG 58253 --- [main] i.j.incidencia.IncidenciaApplication     : Running with Spring Boot v3.3.4, Spring v6.1.13
-2024-10-08T19:07:11.128+02:00  INFO 58253 --- [main] i.j.incidencia.IncidenciaApplication     : No active profile set, falling back to 1 default profile: "default"
-2024-10-08T19:07:11.416+02:00  INFO 58253 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-10-08T19:07:11.446+02:00  INFO 58253 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 23 ms. Found 1 JPA repository interface.
-2024-10-08T19:07:11.709+02:00  INFO 58253 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8888 (http)
-2024-10-08T19:07:11.717+02:00  INFO 58253 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-10-08T19:07:11.718+02:00  INFO 58253 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
-2024-10-08T19:07:11.745+02:00  INFO 58253 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-10-08T19:07:11.745+02:00  INFO 58253 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 596 ms
-2024-10-08T19:07:11.821+02:00  INFO 58253 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-10-08T19:07:11.845+02:00  INFO 58253 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
-2024-10-08T19:07:11.859+02:00  INFO 58253 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-10-08T19:07:11.989+02:00  INFO 58253 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-10-08T19:07:12.001+02:00  INFO 58253 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-10-08T19:07:12.204+02:00  INFO 58253 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7cdc4070
-2024-10-08T19:07:12.205+02:00  INFO 58253 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-10-08T19:07:12.569+02:00  INFO 58253 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-10-08T19:07:12.622+02:00  INFO 58253 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-10-08T19:07:12.729+02:00  INFO 58253 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
-2024-10-08T19:07:12.949+02:00  WARN 58253 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-10-08T19:07:13.110+02:00  INFO 58253 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8888 (http) with context path '/'
-2024-10-08T19:07:13.115+02:00  INFO 58253 --- [main] i.j.incidencia.IncidenciaApplication     : Started IncidenciaApplication in 2.253 seconds (process running for 2.465)
-2024-10-08T19:07:20.814+02:00  INFO 58253 --- [http-nio-8888-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-10-08T19:07:20.814+02:00  INFO 58253 --- [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-10-08T19:07:20.815+02:00  INFO 58253 --- [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2024-10-08T19:07:20.867+02:00 DEBUG 58253 --- [http-nio-8888-exec-1] i.j.i.rest.IncidenciaController          : Parametros recibidos: Correo - dgia543@g.educaand.es, Numero - 0.7, Descripcion - La pizarra electronica tiene fallos en la señal video HDMI.
-2024-10-08T19:07:20.910+02:00 DEBUG 58253 --- [http-nio-8888-exec-1] i.j.i.rest.IncidenciaController          : Objeto guardado en base de datos.
-Incidencia(id=1, numeroAula=0.7, correoDocente=dgia543@g.educaand.es, fechaIncidencia=Tue Oct 08 19:07:20 CEST 2024, descripcionIncidencia=La pizarra electronica tiene fallos en la señal video HDMI., estadoIncidencia=PENDIENTE, comentarioSolucion=)
-2024-10-08T19:08:20.991+02:00 DEBUG 58253 --- [http-nio-8888-exec-5] i.j.i.rest.IncidenciaController          : Objeto guardado en base de datos:
-Incidencia(id=1, numeroAula=0.7, correoDocente=dgia543@g.educaand.es, fechaIncidencia=2024-10-08 19:07:20.867, descripcionIncidencia=La pizarra electronica tiene fallos en la señal video HDMI., estadoIncidencia=RESUELTA, comentarioSolucion={
-    "comentarioSolucion":"Pues cambie de pieza"
-})
-2024-10-08T19:12:44.494+02:00 DEBUG 58253 --- [http-nio-8888-exec-7] i.j.i.rest.IncidenciaController          : Parametros recibidos: Correo - dgia543@g.educaand.es, Numero - 0.7, Descripcion - La pizarra electronica tiene fallos en la señal video HDMI.
-2024-10-08T19:12:44.503+02:00 DEBUG 58253 --- [http-nio-8888-exec-7] i.j.i.rest.IncidenciaController          : Objeto guardado en base de datos.
-Incidencia(id=2, numeroAula=0.7, correoDocente=dgia543@g.educaand.es, fechaIncidencia=Tue Oct 08 19:12:44 CEST 2024, descripcionIncidencia=La pizarra electronica tiene fallos en la señal video HDMI., estadoIncidencia=PENDIENTE, comentarioSolucion=)
-2024-10-08T19:12:50.911+02:00 DEBUG 58253 --- [http-nio-8888-exec-8] i.j.i.rest.IncidenciaController          : Objeto guardado en base de datos:
-Incidencia(id=2, numeroAula=0.7, correoDocente=dgia543@g.educaand.es, fechaIncidencia=2024-10-08 19:12:44.495, descripcionIncidencia=La pizarra electronica tiene fallos en la señal video HDMI., estadoIncidencia=RESUELTA, comentarioSolucion=Cambié las piezas.)
-2024-10-08T19:14:50.137+02:00  WARN 58253 --- [http-nio-8888-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: private org.springframework.http.ResponseEntity<java.lang.String> ies.jandula.incidencia.rest.IncidenciaController.resuelveIncidencia(long,java.lang.String)]
-2024-10-08T19:14:54.448+02:00  INFO 58253 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-10-08T19:14:54.450+02:00  INFO 58253 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-10-08T19:14:54.456+02:00  INFO 58253 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-10-11T16:50:30.216+02:00  INFO 94191 --- [main] i.j.incidencia.IncidenciaApplication     : Starting IncidenciaApplication using Java 21.0.4 with PID 94191 (/home/jaydee/Github/Jandula_incidencias/incidencia/target/classes started by jaydee in /home/jaydee/Github/Jandula_incidencias/incidencia)
+2024-10-11T16:50:30.223+02:00 DEBUG 94191 --- [main] i.j.incidencia.IncidenciaApplication     : Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-10-11T16:50:30.224+02:00  INFO 94191 --- [main] i.j.incidencia.IncidenciaApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-10-11T16:50:30.567+02:00  INFO 94191 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-11T16:50:30.598+02:00  INFO 94191 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 25 ms. Found 1 JPA repository interface.
+2024-10-11T16:50:30.877+02:00  INFO 94191 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8888 (http)
+2024-10-11T16:50:30.885+02:00  INFO 94191 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-10-11T16:50:30.885+02:00  INFO 94191 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-10-11T16:50:30.912+02:00  INFO 94191 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-10-11T16:50:30.912+02:00  INFO 94191 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 662 ms
+2024-10-11T16:50:31.012+02:00  INFO 94191 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-11T16:50:31.046+02:00  INFO 94191 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-10-11T16:50:31.070+02:00  INFO 94191 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-10-11T16:50:31.237+02:00  INFO 94191 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-11T16:50:31.252+02:00  INFO 94191 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-10-11T16:50:31.462+02:00  INFO 94191 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@65f5cae3
+2024-10-11T16:50:31.464+02:00  INFO 94191 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-10-11T16:50:31.915+02:00  INFO 94191 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-11T16:50:31.972+02:00  INFO 94191 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-11T16:50:32.087+02:00  INFO 94191 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-10-11T16:50:32.327+02:00  WARN 94191 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-11T16:50:32.513+02:00  INFO 94191 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8888 (http) with context path '/'
+2024-10-11T16:50:32.518+02:00  INFO 94191 --- [main] i.j.incidencia.IncidenciaApplication     : Started IncidenciaApplication in 2.597 seconds (process running for 2.855)
+2024-10-11T16:50:36.662+02:00  INFO 94191 --- [http-nio-8888-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-10-11T16:50:36.662+02:00  INFO 94191 --- [http-nio-8888-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-10-11T16:50:36.663+02:00  INFO 94191 --- [http-nio-8888-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-10-11T16:50:40.426+02:00 DEBUG 94191 --- [http-nio-8888-exec-3] i.j.i.rest.IncidenciaController          : Parametros recibidos: Correo - dgia543@g.educaand.es, Numero - 0.7, Descripcion - La pizarra electronica tiene fallos en la señal video HDMI.
+2024-10-11T16:50:40.463+02:00 DEBUG 94191 --- [http-nio-8888-exec-3] i.j.i.rest.IncidenciaController          : Objeto guardado en base de datos.
+Incidencia(id=1, numeroAula=0.7, correoDocente=dgia543@g.educaand.es, fechaIncidencia=Fri Oct 11 16:50:40 CEST 2024, descripcionIncidencia=La pizarra electronica tiene fallos en la señal video HDMI., estadoIncidencia=PENDIENTE, comentarioSolucion=)
+2024-10-11T16:50:44.859+02:00 DEBUG 94191 --- [http-nio-8888-exec-4] i.j.i.rest.IncidenciaController          : Parametros recibidos: Correo - dgia543@g.educaand.es, Numero - , Descripcion - La pizarra electronica tiene fallos en la señal video HDMI.
+2024-10-11T16:50:44.859+02:00 DEBUG 94191 --- [http-nio-8888-exec-4] i.j.i.rest.IncidenciaController          : Intento de creación de incidencia con numero de aula no definido
+2024-10-11T16:50:47.679+02:00 DEBUG 94191 --- [http-nio-8888-exec-6] i.j.i.rest.IncidenciaController          : Parametros recibidos: Correo - dgia543@g.educaand.es, Numero - 0.7, Descripcion - null
+2024-10-11T16:50:47.679+02:00 DEBUG 94191 --- [http-nio-8888-exec-6] i.j.i.rest.IncidenciaController          : Intento de creación de incidencia con descripcion no definida
+2024-10-11T16:50:55.019+02:00 DEBUG 94191 --- [http-nio-8888-exec-9] i.j.i.rest.IncidenciaController          : <404 NOT_FOUND Not Found,ERROR: No existen incidencias con ese ID.,[]>
+2024-10-11T16:53:58.464+02:00 DEBUG 94191 --- [http-nio-8888-exec-5] i.j.i.rest.IncidenciaController          : Parametros recibidos: Correo - dgia543@g.educaand.es, Numero - 0.7, Descripcion - La pizarra electronica tiene fallos en la señal video HDMI.
+2024-10-11T16:53:58.473+02:00 DEBUG 94191 --- [http-nio-8888-exec-5] i.j.i.rest.IncidenciaController          : Objeto guardado en base de datos.
+Incidencia(id=2, numeroAula=0.7, correoDocente=dgia543@g.educaand.es, fechaIncidencia=Fri Oct 11 16:53:58 CEST 2024, descripcionIncidencia=La pizarra electronica tiene fallos en la señal video HDMI., estadoIncidencia=PENDIENTE, comentarioSolucion=)
+2024-10-11T16:53:58.474+02:00 DEBUG 94191 --- [http-nio-8888-exec-5] i.j.i.rest.IncidenciaController          : Parametros recibidos: Correo - luisf53@g.educaand.es, Numero - 1.2, Descripcion - El proyector no enciende después de varios intentos.
+2024-10-11T16:53:58.481+02:00 DEBUG 94191 --- [http-nio-8888-exec-5] i.j.i.rest.IncidenciaController          : Objeto guardado en base de datos.
+Incidencia(id=3, numeroAula=1.2, correoDocente=luisf53@g.educaand.es, fechaIncidencia=Fri Oct 11 16:53:58 CEST 2024, descripcionIncidencia=El proyector no enciende después de varios intentos., estadoIncidencia=PENDIENTE, comentarioSolucion=)
+2024-10-11T16:53:58.481+02:00 DEBUG 94191 --- [http-nio-8888-exec-5] i.j.i.rest.IncidenciaController          : Parametros recibidos: Correo - mariaf78@g.educaand.es, Numero - 2.4, Descripcion - El ordenador no reconoce el teclado conectado.
+2024-10-11T16:53:58.488+02:00 DEBUG 94191 --- [http-nio-8888-exec-5] i.j.i.rest.IncidenciaController          : Objeto guardado en base de datos.
+Incidencia(id=4, numeroAula=2.4, correoDocente=mariaf78@g.educaand.es, fechaIncidencia=Fri Oct 11 16:53:58 CEST 2024, descripcionIncidencia=El ordenador no reconoce el teclado conectado., estadoIncidencia=PENDIENTE, comentarioSolucion=)
+2024-10-11T16:53:58.489+02:00 DEBUG 94191 --- [http-nio-8888-exec-5] i.j.i.rest.IncidenciaController          : Parametros recibidos: Correo - josep87@g.educaand.es, Numero - 3.1, Descripcion - No hay acceso a internet en el aula, posible fallo de red.
+2024-10-11T16:53:58.495+02:00 DEBUG 94191 --- [http-nio-8888-exec-5] i.j.i.rest.IncidenciaController          : Objeto guardado en base de datos.
+Incidencia(id=5, numeroAula=3.1, correoDocente=josep87@g.educaand.es, fechaIncidencia=Fri Oct 11 16:53:58 CEST 2024, descripcionIncidencia=No hay acceso a internet en el aula, posible fallo de red., estadoIncidencia=PENDIENTE, comentarioSolucion=)
+2024-10-11T16:53:58.495+02:00 DEBUG 94191 --- [http-nio-8888-exec-5] i.j.i.rest.IncidenciaController          : Parametros recibidos: Correo - alvarog3@g.educaand.es, Numero - 0.3, Descripcion - El ratón inalámbrico no funciona correctamente.
+2024-10-11T16:53:58.501+02:00 DEBUG 94191 --- [http-nio-8888-exec-5] i.j.i.rest.IncidenciaController          : Objeto guardado en base de datos.
+Incidencia(id=6, numeroAula=0.3, correoDocente=alvarog3@g.educaand.es, fechaIncidencia=Fri Oct 11 16:53:58 CEST 2024, descripcionIncidencia=El ratón inalámbrico no funciona correctamente., estadoIncidencia=PENDIENTE, comentarioSolucion=)
+2024-10-11T16:53:58.501+02:00 DEBUG 94191 --- [http-nio-8888-exec-5] i.j.i.rest.IncidenciaController          : Parametros recibidos: Correo - soniag19@g.educaand.es, Numero - 4.2, Descripcion - La impresora tiene atascos frecuentes de papel.
+2024-10-11T16:53:58.508+02:00 DEBUG 94191 --- [http-nio-8888-exec-5] i.j.i.rest.IncidenciaController          : Objeto guardado en base de datos.
+Incidencia(id=7, numeroAula=4.2, correoDocente=soniag19@g.educaand.es, fechaIncidencia=Fri Oct 11 16:53:58 CEST 2024, descripcionIncidencia=La impresora tiene atascos frecuentes de papel., estadoIncidencia=PENDIENTE, comentarioSolucion=)
+2024-10-11T16:53:58.508+02:00 DEBUG 94191 --- [http-nio-8888-exec-5] i.j.i.rest.IncidenciaController          : Parametros recibidos: Correo - carmenp89@g.educaand.es, Numero - 5.1, Descripcion - El sonido del ordenador no funciona al conectar altavoces.
+2024-10-11T16:53:58.514+02:00 DEBUG 94191 --- [http-nio-8888-exec-5] i.j.i.rest.IncidenciaController          : Objeto guardado en base de datos.
+Incidencia(id=8, numeroAula=5.1, correoDocente=carmenp89@g.educaand.es, fechaIncidencia=Fri Oct 11 16:53:58 CEST 2024, descripcionIncidencia=El sonido del ordenador no funciona al conectar altavoces., estadoIncidencia=PENDIENTE, comentarioSolucion=)
+2024-10-11T16:53:58.515+02:00 DEBUG 94191 --- [http-nio-8888-exec-5] i.j.i.rest.IncidenciaController          : Parametros recibidos: Correo - raulm65@g.educaand.es, Numero - 2.3, Descripcion - Falta el cable HDMI del proyector, no se puede usar.
+2024-10-11T16:53:58.521+02:00 DEBUG 94191 --- [http-nio-8888-exec-5] i.j.i.rest.IncidenciaController          : Objeto guardado en base de datos.
+Incidencia(id=9, numeroAula=2.3, correoDocente=raulm65@g.educaand.es, fechaIncidencia=Fri Oct 11 16:53:58 CEST 2024, descripcionIncidencia=Falta el cable HDMI del proyector, no se puede usar., estadoIncidencia=PENDIENTE, comentarioSolucion=)
+2024-10-11T16:53:58.521+02:00 DEBUG 94191 --- [http-nio-8888-exec-5] i.j.i.rest.IncidenciaController          : Parametros recibidos: Correo - martaj7@g.educaand.es, Numero - 1.4, Descripcion - El ordenador no se enciende, posible fallo de la fuente de alimentación.
+2024-10-11T16:53:58.527+02:00 DEBUG 94191 --- [http-nio-8888-exec-5] i.j.i.rest.IncidenciaController          : Objeto guardado en base de datos.
+Incidencia(id=10, numeroAula=1.4, correoDocente=martaj7@g.educaand.es, fechaIncidencia=Fri Oct 11 16:53:58 CEST 2024, descripcionIncidencia=El ordenador no se enciende, posible fallo de la fuente de alimentación., estadoIncidencia=PENDIENTE, comentarioSolucion=)
+2024-10-11T16:53:58.528+02:00 DEBUG 94191 --- [http-nio-8888-exec-5] i.j.i.rest.IncidenciaController          : Parametros recibidos: Correo - antoniog65@g.educaand.es, Numero - 3.3, Descripcion - El cañón del proyector muestra la imagen distorsionada.
+2024-10-11T16:53:58.535+02:00 DEBUG 94191 --- [http-nio-8888-exec-5] i.j.i.rest.IncidenciaController          : Objeto guardado en base de datos.
+Incidencia(id=11, numeroAula=3.3, correoDocente=antoniog65@g.educaand.es, fechaIncidencia=Fri Oct 11 16:53:58 CEST 2024, descripcionIncidencia=El cañón del proyector muestra la imagen distorsionada., estadoIncidencia=PENDIENTE, comentarioSolucion=)
+2024-10-11T16:53:58.535+02:00 DEBUG 94191 --- [http-nio-8888-exec-5] i.j.i.rest.IncidenciaController          : Parametros recibidos: Correo - elenap32@g.educaand.es, Numero - 0.8, Descripcion - El monitor no enciende, pantalla completamente negra.
+2024-10-11T16:53:58.543+02:00 DEBUG 94191 --- [http-nio-8888-exec-5] i.j.i.rest.IncidenciaController          : Objeto guardado en base de datos.
+Incidencia(id=12, numeroAula=0.8, correoDocente=elenap32@g.educaand.es, fechaIncidencia=Fri Oct 11 16:53:58 CEST 2024, descripcionIncidencia=El monitor no enciende, pantalla completamente negra., estadoIncidencia=PENDIENTE, comentarioSolucion=)
+2024-10-11T17:45:48.749+02:00 DEBUG 94191 --- [http-nio-8888-exec-2] i.j.i.rest.IncidenciaController          : Objeto guardado en base de datos:
+Incidencia(id=2, numeroAula=0.7, correoDocente=dgia543@g.educaand.es, fechaIncidencia=2024-10-11 16:53:58.465, descripcionIncidencia=La pizarra electronica tiene fallos en la señal video HDMI., estadoIncidencia={
+    "estado":"RESUELTA",
+    "comentario":"La incidencia ha sido resuelta sin dificultades."
+}, comentarioSolucion=)
