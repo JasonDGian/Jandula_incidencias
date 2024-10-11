@@ -1,5 +1,5 @@
 # 📌 Módulo de gestión de incidencias.
-Repositorio del proyecto para módulo de gestión de incidencias.
+Repositorio del proyecto para el módulo de gestión de incidencias.
 Este servicio maneja las solicitudes HTTP relacionadas con la creación, actualización, búsqueda, eliminación y listado de incidencias.   
 
 <!--
@@ -26,7 +26,7 @@ Este servicio maneja las solicitudes HTTP relacionadas con la creación, actuali
    <tr>
       <td>🟡 POST</td>
       <td>/incidencias</td>
-      <td>endpoint que permite recuperar una incidencia especifica almacenada en el sistema mediante su ID.</td>
+      <td>Endpoint que permite recuperar una incidencia específica almacenada en el sistema mediante su ID.</td>
    </tr>
    <tr>
       <td>🟡 POST</td>
@@ -42,12 +42,12 @@ Este servicio maneja las solicitudes HTTP relacionadas con la creación, actuali
    <tr>
       <td>🟡 POST</td>
       <td>/incidencias/actualiza</td>
-      <td>Endpoint que actualiza una incidencia con ID especifico basandose en el cuerpo JSON que recibe.</td>
+      <td>Endpoint que actualiza una incidencia con ID específico basándose en el cuerpo JSON que recibe.</td>
    </tr>
    <tr>
       <td>🔴 DEL</td>
       <td>/incidencias/borrar</td>
-      <td>Endpoint que permite borrar de la base de datos una incidencia especifica a partir de su ID.</td>
+      <td>Endpoint que permite borrar de la base de datos una incidencia específica a partir de su ID.</td>
    </tr>
 </table>
 
@@ -58,7 +58,7 @@ El servicio requiere la existencia de un esquema denominado "**incidencias**" en
    <img src="https://github.com/user-attachments/assets/ab96e2e9-29fd-4182-b6dd-dfd06b9f966b">
 </p>
 
-**Para crear un contenedor de manera facil y rapida que pueda proporcionar este servicio emplear el siguiente comando**
+**Para crear un contenedor de manera fácil y rápida que pueda proporcionar este servicio emplear el siguiente comando**
 ```docker
 docker run --name myServer -p 3306:3306 -e MYSQL_ROOT_PASSWORD=1234 -d mysql
 ```
@@ -71,7 +71,7 @@ docker run --name myServer -p 3306:3306 -e MYSQL_ROOT_PASSWORD=1234 -d mysql
 --- 
 
 # 📌 Endpoints expuestos.
-A continuación el listado de endpoints expuestos actualmente y los parametros necesarios con una descripcion de su comportamiento.
+A continuación el listado de endpoints expuestos actualmente y los parámetros necesarios con una descripcion de su comportamiento.
    
 ### 🟢 GET - Listar incidencias.
 ```
@@ -88,18 +88,18 @@ localhost:8888/incidencias/carga-lote
 Permite cargar un lote de incidencias.   
 Espera una **lista** de objetos Json que especifiquen ciertos atributos.     
    
-**Requeire cuerpo**:   
+**Requiere cuerpo**:   
 ```json
 [
    {   
-   "numeroAula" : String ,
-   "correoDocente" : String ,
-   "drescripcionIncidencia" : String
+   "numeroAula" : "String" ,
+   "correoDocente" : "String" ,
+   "descripcionIncidencia" : "String"
    },
    {   
-   "numeroAula" : String ,
-   "correoDocente" : String ,
-   "drescripcionIncidencia" : String
+   "numeroAula" : "String" ,
+   "correoDocente" : "String" ,
+   "descripcionIncidencia" : "String"
    }
    ...
 ]
@@ -113,15 +113,15 @@ localhost:8888/incidencias/nueva
 ```
 Endpoint que permite añadir incidencias al sistema, de una en una.
    
-**Requeire cabecera:**
+**Requiere cabecera:**
 ```
 correoDocente
 ```
-**Requeire cuerpo:**
+**Requiere cuerpo:**
 ```json
 {   
-"numeroAula" : String ,
-"drescripcionIncidencia" : String
+"numeroAula" : "String" ,
+"descripcionIncidencia" : "String"
 }
 ```
       
@@ -131,9 +131,9 @@ correoDocente
 ```
 localhost:8888/incidencias
 ```
-Endpoint que permite recuperar una incidencia especifica almacenada en el sistema mediante su ID.   
+Endpoint que permite recuperar una incidencia específica almacenada en el sistema mediante su ID.   
    
-**Requeire parametro:**
+**Requiere parámetro:**
 ```
 long id
 ```
@@ -144,18 +144,18 @@ long id
 ```
 localhost:8888/incidencias/actualiza
 ```
-Endpoint que actualiza una incidencia con ID especifico basandose en el cuerpo JSON que recibe.   
+Endpoint que actualiza una incidencia con ID específico basándose en el cuerpo JSON que recibe.   
    
-**Requeire parametro:**
+**Requiere parámetro:**
 ```
 long id
 ```
    
-**Requeire cuerpo:**
+**Requiere cuerpo:**
 ```json
 {
-    "estado":String,
-    "comentario":String
+    "estado":"String",
+    "comentario":"String"
 }
 ```
       
@@ -165,9 +165,9 @@ long id
 ```
 localhost:8888/incidencias/borrar
 ```
-Endpoint que permite borrar de la base de datos una incidencia especifica a partir de su ID. 
+Endpoint que permite borrar de la base de datos una incidencia específica a partir de su ID. 
    
-**Requeire parametro:**
+**Requiere parámetro:**
 ```
 long id
 ```
