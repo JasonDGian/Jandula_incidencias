@@ -1,26 +1,36 @@
 package ies.jandula.incidencia.repository;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
-import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
-import ies.jandula.incidencia.models.Incidencia;
-
+import ies.jandula.incidencia.dto.IncidenciaDTO;
+import ies.jandula.incidencia.entity.IncidenciaEntity;
+import ies.jandula.incidencia.entity.IncidenciaEntityId;
 
 @Repository
-public interface IIncidenciaRepository extends JpaRepository<Incidencia, Long>
+public interface IIncidenciaRepository extends JpaRepository<IncidenciaEntity, IncidenciaEntityId>
 {
-    // Devuelve un listado de incidencias basándose en el estado de la incidencia.
-    public List<Incidencia> findByEstadoIncidencia(String estado);
-    
-    // Método de filtrado por estado con query personalizada.
-    @Query("SELECT inc FROM Incidencia inc WHERE inc.estadoIncidencia = :estado ORDER BY inc.fechaIncidencia DESC")
-    public List<Incidencia> findByEstadoIncidenciaOrderDesc(@Param("estado") String estado);
-    
-    // Método de filtrado por estado con query personalizada.
-    @Query("SELECT i FROM Incidencia i WHERE i.estadoIncidencia = :estado ORDER BY i.fechaIncidencia ASC")
-    public List<Incidencia> findByEstadoIncidenciaOrderAsc(@Param("estado") String estado);
+
+	@Query("SELECT new ies.jandula.incidencia.dto.IncidenciaDTO("
+			+ "e.numeroAula, e.correoDocente, e.fechaIncidencia, e.descripcionIncidencia, e.estadoIncidencia, e.comentario"
+			+ ") " + "FROM IncidenciaEntity e WHERE ( :numeroAula IS NULL OR e.numeroAula = :numeroAula ) AND "
+			+ "( :correoDocente IS NULL OR e.correoDocente = :correoDocente ) AND "
+			+ "( :fechaInicio IS NULL OR :fechaInicio <= e.fechaIncidencia ) AND "
+			+ "( :fechaFin IS NULL OR :fechaFin >= e.fechaIncidencia ) AND "
+			+ "( :descripcionIncidencia IS NULL OR e.descripcionIncidencia LIKE CONCAT('%', :descripcionIncidencia, '%') ) AND "
+			+ "( :estadoIncidencia IS NULL OR e.estadoIncidencia = :estadoIncidencia ) AND "
+			+ "( :comentario IS NULL OR e.comentario LIKE CONCAT('%', :comentario, '%') )")
+	public List<IncidenciaDTO> buscaIncidencia(  
+			String numeroAula, 
+			String correoDocente, 
+			LocalDateTime fechaInicio, 
+			LocalDateTime fechaFin, 
+			String descripcionIncidencia, 
+			String estadoIncidencia, 
+			String comentario );
+
 }
