@@ -106,3 +106,697 @@ IncidenciaCreationDTO(numeroAula=0.6, descripcionIncidencia=Los proyectores no v
  IncidenciaEntity(numeroAula=0.6, correoDocente=dgia543@g.educaand.es, fechaIncidencia=2024-10-16T07:18:01.329149951, descripcionIncidencia=Los proyectores no van., estadoIncidencia=PENDIENTE, comentario=N/A)
 2024-10-16T07:18:01.379+02:00  INFO 131729 --- [http-nio-8888-exec-1] i.j.i.rest.IncidenciaController          : INFO: El objeto guardado en base de datos es:
 IncidenciaEntity(numeroAula=0.6, correoDocente=dgia543@g.educaand.es, fechaIncidencia=2024-10-16T07:18:01.329149951, descripcionIncidencia=Los proyectores no van., estadoIncidencia=PENDIENTE, comentario=N/A)
+2024-10-16T07:27:01.044+02:00  INFO 131729 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-16T07:27:01.046+02:00  INFO 131729 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-10-16T07:27:01.050+02:00  INFO 131729 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-10-16T18:12:42.943+02:00  INFO 215587 --- [main] i.j.incidencia.IncidenciaApplication     : Starting IncidenciaApplication using Java 21.0.4 with PID 215587 (/home/jaydee/Github/Jandula_incidencias/incidencia/target/classes started by jaydee in /home/jaydee/Github/Jandula_incidencias/incidencia)
+2024-10-16T18:12:42.945+02:00 DEBUG 215587 --- [main] i.j.incidencia.IncidenciaApplication     : Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-10-16T18:12:42.945+02:00  INFO 215587 --- [main] i.j.incidencia.IncidenciaApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-10-16T18:12:43.289+02:00  INFO 215587 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-16T18:12:43.319+02:00  INFO 215587 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 26 ms. Found 1 JPA repository interface.
+2024-10-16T18:12:43.619+02:00  INFO 215587 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8888 (http)
+2024-10-16T18:12:43.627+02:00  INFO 215587 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-10-16T18:12:43.627+02:00  INFO 215587 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-10-16T18:12:43.654+02:00  INFO 215587 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-10-16T18:12:43.654+02:00  INFO 215587 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 686 ms
+2024-10-16T18:12:43.740+02:00  INFO 215587 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-16T18:12:43.776+02:00  INFO 215587 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-10-16T18:12:43.797+02:00  INFO 215587 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-10-16T18:12:43.955+02:00  INFO 215587 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-16T18:12:43.971+02:00  INFO 215587 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-10-16T18:12:45.033+02:00  WARN 215587 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 08S01
+2024-10-16T18:12:45.034+02:00 ERROR 215587 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+2024-10-16T18:12:45.035+02:00  WARN 215587 --- [main] o.h.e.j.e.i.JdbcEnvironmentInitiator     : HHH000342: Could not obtain connection to query metadata
+
+org.hibernate.exception.JDBCConnectionException: unable to obtain isolated JDBC connection [Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.] [n/a]
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:100) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:58) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:94) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:116) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:292) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:124) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:78) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:130) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:221) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:189) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:171) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1431) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1502) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75) ~[spring-orm-6.1.13.jar:6.1.13]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390) ~[spring-orm-6.1.13.jar:6.1.13]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-6.1.13.jar:6.1.13]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-6.1.13.jar:6.1.13]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366) ~[spring-orm-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1853) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1802) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:954) ~[spring-context-6.1.13.jar:6.1.13]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625) ~[spring-context-6.1.13.jar:6.1.13]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352) ~[spring-boot-3.3.4.jar:3.3.4]
+	at ies.jandula.incidencia.IncidenciaApplication.main(IncidenciaApplication.java:10) ~[classes/:na]
+Caused by: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:815) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:438) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:189) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:137) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:360) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:202) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:461) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:550) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:98) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111) ~[HikariCP-5.1.0.jar:na]
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:439) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:61) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	... 35 common frames omitted
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486) ~[na:na]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:104) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:149) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:165) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:88) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:120) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:935) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:805) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	... 48 common frames omitted
+Caused by: java.net.ConnectException: Conexión rehusada
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592) ~[na:na]
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:751) ~[na:na]
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:153) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:62) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	... 51 common frames omitted
+
+2024-10-16T18:12:45.038+02:00 ERROR 215587 --- [main] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+2024-10-16T18:12:45.038+02:00  WARN 215587 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+2024-10-16T18:12:45.040+02:00  INFO 215587 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-10-16T18:12:45.046+02:00  INFO 215587 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-10-16T18:12:45.053+02:00 ERROR 215587 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1806) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:954) ~[spring-context-6.1.13.jar:6.1.13]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625) ~[spring-context-6.1.13.jar:6.1.13]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352) ~[spring-boot-3.3.4.jar:3.3.4]
+	at ies.jandula.incidencia.IncidenciaApplication.main(IncidenciaApplication.java:10) ~[classes/:na]
+Caused by: org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:276) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:221) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:189) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:171) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1431) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1502) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75) ~[spring-orm-6.1.13.jar:6.1.13]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390) ~[spring-orm-6.1.13.jar:6.1.13]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-6.1.13.jar:6.1.13]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-6.1.13.jar:6.1.13]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366) ~[spring-orm-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1853) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1802) ~[spring-beans-6.1.13.jar:6.1.13]
+	... 15 common frames omitted
+Caused by: org.hibernate.HibernateException: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.determineDialect(DialectFactoryImpl.java:191) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.buildDialect(DialectFactoryImpl.java:87) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentWithDefaults(JdbcEnvironmentInitiator.java:153) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:364) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:124) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:78) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:130) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	... 30 common frames omitted
+
+2024-10-16T18:13:09.220+02:00  INFO 216518 --- [main] i.j.incidencia.IncidenciaApplication     : Starting IncidenciaApplication using Java 21.0.4 with PID 216518 (/home/jaydee/Github/Jandula_incidencias/incidencia/target/classes started by jaydee in /home/jaydee/Github/Jandula_incidencias/incidencia)
+2024-10-16T18:13:09.221+02:00 DEBUG 216518 --- [main] i.j.incidencia.IncidenciaApplication     : Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-10-16T18:13:09.222+02:00  INFO 216518 --- [main] i.j.incidencia.IncidenciaApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-10-16T18:13:09.587+02:00  INFO 216518 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-16T18:13:09.622+02:00  INFO 216518 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 30 ms. Found 1 JPA repository interface.
+2024-10-16T18:13:09.913+02:00  INFO 216518 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8888 (http)
+2024-10-16T18:13:09.921+02:00  INFO 216518 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-10-16T18:13:09.922+02:00  INFO 216518 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-10-16T18:13:09.948+02:00  INFO 216518 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-10-16T18:13:09.949+02:00  INFO 216518 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 701 ms
+2024-10-16T18:13:10.036+02:00  INFO 216518 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-16T18:13:10.067+02:00  INFO 216518 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-10-16T18:13:10.085+02:00  INFO 216518 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-10-16T18:13:10.236+02:00  INFO 216518 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-16T18:13:10.250+02:00  INFO 216518 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-10-16T18:13:10.458+02:00  INFO 216518 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@fe08eaf
+2024-10-16T18:13:10.459+02:00  INFO 216518 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-10-16T18:13:10.898+02:00  INFO 216518 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-16T18:13:10.959+02:00  INFO 216518 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-16T18:13:11.076+02:00  INFO 216518 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-10-16T18:13:11.417+02:00  WARN 216518 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-16T18:13:11.581+02:00  INFO 216518 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8888 (http) with context path '/'
+2024-10-16T18:13:11.585+02:00  INFO 216518 --- [main] i.j.incidencia.IncidenciaApplication     : Started IncidenciaApplication in 2.653 seconds (process running for 2.901)
+2024-10-16T18:13:28.901+02:00  INFO 216518 --- [http-nio-8888-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-10-16T18:13:28.901+02:00  INFO 216518 --- [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-10-16T18:13:28.903+02:00  INFO 216518 --- [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-10-16T18:13:28.956+02:00 DEBUG 216518 --- [http-nio-8888-exec-1] i.j.i.rest.IncidenciaController          : Parametros recibidos:
+IncidenciaDTO(numeroAula=0.6, correoDocente=null, fechaIncidencia=null, descripcionIncidencia=Los proyectores no van., estadoIncidencia=null, comentario=null)
+2024-10-16T18:13:28.957+02:00 DEBUG 216518 --- [http-nio-8888-exec-1] i.j.i.rest.IncidenciaController          : DEBUG: Nueva incidencia creada con éxito.
+2024-10-16T18:13:28.957+02:00 DEBUG 216518 --- [http-nio-8888-exec-1] i.j.i.rest.IncidenciaController          : DEBUG: Numero de Aula asignado con éxito.
+2024-10-16T18:13:28.957+02:00 DEBUG 216518 --- [http-nio-8888-exec-1] i.j.i.rest.IncidenciaController          : DEBUG: Correo docente asignado con éxito.
+2024-10-16T18:13:28.957+02:00 DEBUG 216518 --- [http-nio-8888-exec-1] i.j.i.rest.IncidenciaController          : DEBUG: Estado pendiente asignado con éxito.
+2024-10-16T18:13:28.957+02:00 DEBUG 216518 --- [http-nio-8888-exec-1] i.j.i.rest.IncidenciaController          : DEBUG: Comentario incidencia inicializado con éxito.
+2024-10-16T18:13:28.957+02:00 DEBUG 216518 --- [http-nio-8888-exec-1] i.j.i.rest.IncidenciaController          : DEBUG: Descripcion incidencia almacenada con éxito.
+2024-10-16T18:13:28.957+02:00 DEBUG 216518 --- [http-nio-8888-exec-1] i.j.i.rest.IncidenciaController          : DEBUG: Fecha de creacion almacenada 2024-10-16T18:13:28.957427013
+2024-10-16T18:13:28.957+02:00 DEBUG 216518 --- [http-nio-8888-exec-1] i.j.i.rest.IncidenciaController          : DEBUG: El objeto incidencia creado es:
+ IncidenciaEntity(numeroAula=0.6, correoDocente=dgia543@g.educaand.es, fechaIncidencia=2024-10-16T18:13:28.957427013, descripcionIncidencia=Los proyectores no van., estadoIncidencia=PENDIENTE, comentario=N/A)
+2024-10-16T18:13:29.022+02:00  INFO 216518 --- [http-nio-8888-exec-1] i.j.i.rest.IncidenciaController          : INFO: El objeto guardado en base de datos es:
+IncidenciaEntity(numeroAula=0.6, correoDocente=dgia543@g.educaand.es, fechaIncidencia=2024-10-16T18:13:28.957427013, descripcionIncidencia=Los proyectores no van., estadoIncidencia=PENDIENTE, comentario=N/A)
+2024-10-16T18:13:59.289+02:00 DEBUG 216518 --- [http-nio-8888-exec-4] i.j.incidencia.mappers.IncidenciaMapper  : DEBUG: Nueva incidencia creada
+2024-10-16T18:13:59.290+02:00 DEBUG 216518 --- [http-nio-8888-exec-4] i.j.incidencia.mappers.IncidenciaMapper  : DEBUG: Incidencia mapeada con éxito.
+ Incidenecia: IncidenciaEntity(numeroAula=0.6, correoDocente=dgia543@g.educaand.es, fechaIncidencia=2024-10-16T18:13:28.957427, descripcionIncidencia=Los proyectores no van., estadoIncidencia=PENDIENTE, comentario=N/A)
+2024-10-16T18:14:06.243+02:00  INFO 216518 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-16T18:14:06.245+02:00  INFO 216518 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-10-16T18:14:06.249+02:00  INFO 216518 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-10-16T18:17:24.614+02:00  INFO 225360 --- [main] i.j.incidencia.IncidenciaApplication     : Starting IncidenciaApplication using Java 21.0.4 with PID 225360 (/home/jaydee/Github/Jandula_incidencias/incidencia/target/classes started by jaydee in /home/jaydee/Github/Jandula_incidencias/incidencia)
+2024-10-16T18:17:24.615+02:00 DEBUG 225360 --- [main] i.j.incidencia.IncidenciaApplication     : Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-10-16T18:17:24.616+02:00  INFO 225360 --- [main] i.j.incidencia.IncidenciaApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-10-16T18:17:24.957+02:00  INFO 225391 --- [main] i.j.incidencia.IncidenciaApplication     : Starting IncidenciaApplication using Java 21.0.4 with PID 225391 (/home/jaydee/Github/Jandula_incidencias/incidencia/target/classes started by jaydee in /home/jaydee/Github/Jandula_incidencias/incidencia)
+2024-10-16T18:17:24.958+02:00 DEBUG 225391 --- [main] i.j.incidencia.IncidenciaApplication     : Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-10-16T18:17:24.959+02:00  INFO 225391 --- [main] i.j.incidencia.IncidenciaApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-10-16T18:17:24.971+02:00  INFO 225360 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-16T18:17:25.010+02:00  INFO 225360 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 29 ms. Found 1 JPA repository interface.
+2024-10-16T18:17:25.339+02:00  INFO 225391 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-16T18:17:25.356+02:00  INFO 225360 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8888 (http)
+2024-10-16T18:17:25.364+02:00  INFO 225360 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-10-16T18:17:25.365+02:00  INFO 225360 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-10-16T18:17:25.375+02:00  INFO 225391 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 28 ms. Found 1 JPA repository interface.
+2024-10-16T18:17:25.396+02:00  INFO 225360 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-10-16T18:17:25.396+02:00  INFO 225360 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 756 ms
+2024-10-16T18:17:25.519+02:00  INFO 225360 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-16T18:17:25.572+02:00  INFO 225360 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-10-16T18:17:25.587+02:00  INFO 225360 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-10-16T18:17:25.738+02:00  INFO 225360 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-16T18:17:25.755+02:00  INFO 225360 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-10-16T18:17:25.764+02:00  INFO 225391 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8888 (http)
+2024-10-16T18:17:25.773+02:00  INFO 225391 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-10-16T18:17:25.774+02:00  INFO 225391 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-10-16T18:17:25.804+02:00  INFO 225391 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-10-16T18:17:25.805+02:00  INFO 225391 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 820 ms
+2024-10-16T18:17:25.888+02:00  INFO 225391 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-16T18:17:25.917+02:00  INFO 225391 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-10-16T18:17:25.935+02:00  INFO 225391 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-10-16T18:17:25.989+02:00  INFO 225360 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6630dd28
+2024-10-16T18:17:25.990+02:00  INFO 225360 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-10-16T18:17:26.098+02:00  INFO 225391 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-16T18:17:26.115+02:00  INFO 225391 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-10-16T18:17:26.351+02:00  INFO 225391 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@25d9291a
+2024-10-16T18:17:26.353+02:00  INFO 225391 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-10-16T18:17:26.452+02:00  INFO 225360 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-16T18:17:26.514+02:00  INFO 225360 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-16T18:17:26.658+02:00  INFO 225360 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-10-16T18:17:26.833+02:00  INFO 225391 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-16T18:17:26.888+02:00  INFO 225391 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-16T18:17:27.022+02:00  INFO 225391 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-10-16T18:17:27.037+02:00  WARN 225360 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-16T18:17:27.216+02:00  INFO 225360 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8888 (http) with context path '/'
+2024-10-16T18:17:27.221+02:00  INFO 225360 --- [main] i.j.incidencia.IncidenciaApplication     : Started IncidenciaApplication in 2.896 seconds (process running for 3.106)
+2024-10-16T18:17:27.407+02:00  WARN 225391 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-16T18:17:27.565+02:00  WARN 225391 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2024-10-16T18:17:27.565+02:00  INFO 225391 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-16T18:17:27.566+02:00  INFO 225391 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-10-16T18:17:27.570+02:00  INFO 225391 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-10-16T18:17:27.578+02:00  INFO 225391 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-10-16T18:17:27.586+02:00 ERROR 225391 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:288) ~[spring-context-6.1.13.jar:6.1.13]
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:472) ~[spring-context-6.1.13.jar:6.1.13]
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75) ~[na:na]
+	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:257) ~[spring-context-6.1.13.jar:6.1.13]
+	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:202) ~[spring-context-6.1.13.jar:6.1.13]
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:990) ~[spring-context-6.1.13.jar:6.1.13]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:628) ~[spring-context-6.1.13.jar:6.1.13]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352) ~[spring-boot-3.3.4.jar:3.3.4]
+	at ies.jandula.incidencia.IncidenciaApplication.main(IncidenciaApplication.java:10) ~[classes/:na]
+Caused by: org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat server
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:251) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.web.servlet.context.WebServerStartStopLifecycle.start(WebServerStartStopLifecycle.java:44) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:285) ~[spring-context-6.1.13.jar:6.1.13]
+	... 13 common frames omitted
+Caused by: java.lang.IllegalArgumentException: standardService.connector.startFailed
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:222) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.addPreviouslyRemovedConnectors(TomcatWebServer.java:310) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:236) ~[spring-boot-3.3.4.jar:3.3.4]
+	... 15 common frames omitted
+Caused by: org.apache.catalina.LifecycleException: Protocol handler start failed
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1061) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:219) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	... 17 common frames omitted
+Caused by: java.net.BindException: La dirección ya se está usando
+	at java.base/sun.nio.ch.Net.bind0(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.bind(Net.java:565) ~[na:na]
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.netBind(ServerSocketChannelImpl.java:344) ~[na:na]
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:301) ~[na:na]
+	at org.apache.tomcat.util.net.NioEndpoint.initServerSocket(NioEndpoint.java:239) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:194) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.tomcat.util.net.AbstractEndpoint.bindWithCleanup(AbstractEndpoint.java:1304) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:1390) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:644) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1058) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	... 19 common frames omitted
+
+2024-10-16T18:17:39.329+02:00  INFO 225956 --- [main] i.j.incidencia.IncidenciaApplication     : Starting IncidenciaApplication using Java 21.0.4 with PID 225956 (/home/jaydee/Github/Jandula_incidencias/incidencia/target/classes started by jaydee in /home/jaydee/Github/Jandula_incidencias/incidencia)
+2024-10-16T18:17:39.330+02:00 DEBUG 225956 --- [main] i.j.incidencia.IncidenciaApplication     : Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-10-16T18:17:39.330+02:00  INFO 225956 --- [main] i.j.incidencia.IncidenciaApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-10-16T18:17:39.614+02:00  INFO 225956 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-16T18:17:39.641+02:00  INFO 225956 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 23 ms. Found 1 JPA repository interface.
+2024-10-16T18:17:39.928+02:00  INFO 225956 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8888 (http)
+2024-10-16T18:17:39.937+02:00  INFO 225956 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-10-16T18:17:39.937+02:00  INFO 225956 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-10-16T18:17:39.963+02:00  INFO 225956 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-10-16T18:17:39.963+02:00  INFO 225956 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 612 ms
+2024-10-16T18:17:40.040+02:00  INFO 225956 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-16T18:17:40.063+02:00  INFO 225956 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-10-16T18:17:40.077+02:00  INFO 225956 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-10-16T18:17:40.207+02:00  INFO 225956 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-16T18:17:40.220+02:00  INFO 225956 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-10-16T18:17:40.411+02:00  INFO 225956 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5909ae90
+2024-10-16T18:17:40.413+02:00  INFO 225956 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-10-16T18:17:40.799+02:00  INFO 225956 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-16T18:17:40.849+02:00  INFO 225956 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-16T18:17:40.957+02:00  INFO 225956 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-10-16T18:17:41.280+02:00  WARN 225956 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-16T18:17:41.434+02:00  WARN 225956 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2024-10-16T18:17:41.434+02:00  INFO 225956 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-16T18:17:41.435+02:00  INFO 225956 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-10-16T18:17:41.440+02:00  INFO 225956 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-10-16T18:17:41.446+02:00  INFO 225956 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-10-16T18:17:41.454+02:00 ERROR 225956 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:288) ~[spring-context-6.1.13.jar:6.1.13]
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:472) ~[spring-context-6.1.13.jar:6.1.13]
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75) ~[na:na]
+	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:257) ~[spring-context-6.1.13.jar:6.1.13]
+	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:202) ~[spring-context-6.1.13.jar:6.1.13]
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:990) ~[spring-context-6.1.13.jar:6.1.13]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:628) ~[spring-context-6.1.13.jar:6.1.13]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352) ~[spring-boot-3.3.4.jar:3.3.4]
+	at ies.jandula.incidencia.IncidenciaApplication.main(IncidenciaApplication.java:10) ~[classes/:na]
+Caused by: org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat server
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:251) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.web.servlet.context.WebServerStartStopLifecycle.start(WebServerStartStopLifecycle.java:44) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:285) ~[spring-context-6.1.13.jar:6.1.13]
+	... 13 common frames omitted
+Caused by: java.lang.IllegalArgumentException: standardService.connector.startFailed
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:222) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.addPreviouslyRemovedConnectors(TomcatWebServer.java:310) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:236) ~[spring-boot-3.3.4.jar:3.3.4]
+	... 15 common frames omitted
+Caused by: org.apache.catalina.LifecycleException: Protocol handler start failed
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1061) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:219) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	... 17 common frames omitted
+Caused by: java.net.BindException: La dirección ya se está usando
+	at java.base/sun.nio.ch.Net.bind0(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.bind(Net.java:565) ~[na:na]
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.netBind(ServerSocketChannelImpl.java:344) ~[na:na]
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:301) ~[na:na]
+	at org.apache.tomcat.util.net.NioEndpoint.initServerSocket(NioEndpoint.java:239) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:194) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.tomcat.util.net.AbstractEndpoint.bindWithCleanup(AbstractEndpoint.java:1304) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:1390) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:644) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1058) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	... 19 common frames omitted
+
+2024-10-16T18:17:57.270+02:00  INFO 225360 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-16T18:17:57.271+02:00  INFO 225360 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-10-16T18:17:57.275+02:00  INFO 225360 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-10-16T18:18:18.380+02:00  INFO 227603 --- [main] i.j.incidencia.IncidenciaApplication     : Starting IncidenciaApplication using Java 21.0.4 with PID 227603 (/home/jaydee/Github/Jandula_incidencias/incidencia/target/classes started by jaydee in /home/jaydee/Github/Jandula_incidencias/incidencia)
+2024-10-16T18:18:18.382+02:00 DEBUG 227603 --- [main] i.j.incidencia.IncidenciaApplication     : Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-10-16T18:18:18.384+02:00  INFO 227603 --- [main] i.j.incidencia.IncidenciaApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-10-16T18:18:19.106+02:00  INFO 227603 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-16T18:18:19.157+02:00  INFO 227603 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 45 ms. Found 1 JPA repository interface.
+2024-10-16T18:18:19.623+02:00  INFO 227603 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8888 (http)
+2024-10-16T18:18:19.637+02:00  INFO 227603 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-10-16T18:18:19.637+02:00  INFO 227603 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-10-16T18:18:19.678+02:00  INFO 227603 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-10-16T18:18:19.678+02:00  INFO 227603 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1208 ms
+2024-10-16T18:18:19.819+02:00  INFO 227603 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-16T18:18:19.859+02:00  INFO 227603 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-10-16T18:18:19.883+02:00  INFO 227603 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-10-16T18:18:20.091+02:00  INFO 227603 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-16T18:18:20.110+02:00  INFO 227603 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-10-16T18:18:20.329+02:00  INFO 227603 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1de12397
+2024-10-16T18:18:20.330+02:00  INFO 227603 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-10-16T18:18:20.727+02:00  INFO 227603 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-16T18:18:20.782+02:00  INFO 227603 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-16T18:18:20.899+02:00  INFO 227603 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-10-16T18:18:21.229+02:00  WARN 227603 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-16T18:18:21.400+02:00  INFO 227603 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8888 (http) with context path '/'
+2024-10-16T18:18:21.407+02:00  INFO 227603 --- [main] i.j.incidencia.IncidenciaApplication     : Started IncidenciaApplication in 3.597 seconds (process running for 3.877)
+2024-10-16T18:18:37.924+02:00  INFO 227603 --- [http-nio-8888-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-10-16T18:18:37.924+02:00  INFO 227603 --- [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-10-16T18:18:37.925+02:00  INFO 227603 --- [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2024-10-16T18:18:37.984+02:00 DEBUG 227603 --- [http-nio-8888-exec-1] i.j.i.rest.IncidenciaController          : Parametros recibidos:
+IncidenciaDTO(numeroAula=0.6, correoDocente=null, fechaIncidencia=null, descripcionIncidencia=Los proyectores no van., estadoIncidencia=null, comentario=null)
+2024-10-16T18:18:37.984+02:00 DEBUG 227603 --- [http-nio-8888-exec-1] i.j.i.rest.IncidenciaController          : DEBUG: Nueva incidencia creada con éxito.
+2024-10-16T18:18:37.984+02:00 DEBUG 227603 --- [http-nio-8888-exec-1] i.j.i.rest.IncidenciaController          : DEBUG: Numero de Aula asignado con éxito.
+2024-10-16T18:18:37.984+02:00 DEBUG 227603 --- [http-nio-8888-exec-1] i.j.i.rest.IncidenciaController          : DEBUG: Correo docente asignado con éxito.
+2024-10-16T18:18:37.984+02:00 DEBUG 227603 --- [http-nio-8888-exec-1] i.j.i.rest.IncidenciaController          : DEBUG: Estado pendiente asignado con éxito.
+2024-10-16T18:18:37.984+02:00 DEBUG 227603 --- [http-nio-8888-exec-1] i.j.i.rest.IncidenciaController          : DEBUG: Comentario incidencia inicializado con éxito.
+2024-10-16T18:18:37.984+02:00 DEBUG 227603 --- [http-nio-8888-exec-1] i.j.i.rest.IncidenciaController          : DEBUG: Descripcion incidencia almacenada con éxito.
+2024-10-16T18:18:37.985+02:00 DEBUG 227603 --- [http-nio-8888-exec-1] i.j.i.rest.IncidenciaController          : DEBUG: Fecha de creacion almacenada 2024-10-16T18:18:37.985063634
+2024-10-16T18:18:37.985+02:00 DEBUG 227603 --- [http-nio-8888-exec-1] i.j.i.rest.IncidenciaController          : DEBUG: El objeto incidencia creado es:
+ IncidenciaEntity(numeroAula=0.6, correoDocente=dgia543@g.educaand.es, fechaIncidencia=2024-10-16T18:18:37.985063634, descripcionIncidencia=Los proyectores no van., estadoIncidencia=PENDIENTE, comentario=N/A)
+2024-10-16T18:18:38.044+02:00  INFO 227603 --- [http-nio-8888-exec-1] i.j.i.rest.IncidenciaController          : INFO: El objeto guardado en base de datos es:
+IncidenciaEntity(numeroAula=0.6, correoDocente=dgia543@g.educaand.es, fechaIncidencia=2024-10-16T18:18:37.985063634, descripcionIncidencia=Los proyectores no van., estadoIncidencia=PENDIENTE, comentario=N/A)
+2024-10-16T18:18:59.635+02:00  INFO 227603 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-16T18:18:59.636+02:00  INFO 227603 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-10-16T18:18:59.640+02:00  INFO 227603 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-10-16T18:36:42.599+02:00  INFO 266229 --- [main] i.j.incidencia.IncidenciaApplication     : Starting IncidenciaApplication using Java 21.0.4 with PID 266229 (/home/jaydee/Github/Jandula_incidencias/incidencia/target/classes started by jaydee in /home/jaydee/Github/Jandula_incidencias/incidencia)
+2024-10-16T18:36:42.600+02:00 DEBUG 266229 --- [main] i.j.incidencia.IncidenciaApplication     : Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-10-16T18:36:42.601+02:00  INFO 266229 --- [main] i.j.incidencia.IncidenciaApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-10-16T18:36:42.921+02:00  INFO 266229 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-16T18:36:42.950+02:00  INFO 266229 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 24 ms. Found 1 JPA repository interface.
+2024-10-16T18:36:43.243+02:00  INFO 266229 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8888 (http)
+2024-10-16T18:36:43.252+02:00  INFO 266229 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-10-16T18:36:43.252+02:00  INFO 266229 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-10-16T18:36:43.281+02:00  INFO 266229 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-10-16T18:36:43.281+02:00  INFO 266229 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 659 ms
+2024-10-16T18:36:43.365+02:00  INFO 266229 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-16T18:36:43.400+02:00  INFO 266229 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-10-16T18:36:43.422+02:00  INFO 266229 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-10-16T18:36:43.580+02:00  INFO 266229 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-16T18:36:43.597+02:00  INFO 266229 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-10-16T18:36:43.821+02:00  INFO 266229 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@fe08eaf
+2024-10-16T18:36:43.822+02:00  INFO 266229 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-10-16T18:36:44.294+02:00  INFO 266229 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-16T18:36:44.349+02:00  INFO 266229 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-16T18:36:44.463+02:00  INFO 266229 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-10-16T18:36:44.842+02:00  WARN 266229 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-16T18:36:45.013+02:00  INFO 266229 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8888 (http) with context path '/'
+2024-10-16T18:36:45.018+02:00  INFO 266229 --- [main] i.j.incidencia.IncidenciaApplication     : Started IncidenciaApplication in 2.7 seconds (process running for 2.954)
+2024-10-16T18:36:52.597+02:00  INFO 266229 --- [http-nio-8888-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-10-16T18:36:52.597+02:00  INFO 266229 --- [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-10-16T18:36:52.598+02:00  INFO 266229 --- [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-10-16T18:36:52.650+02:00 DEBUG 266229 --- [http-nio-8888-exec-1] i.j.i.rest.IncidenciaController          : Parametros recibidos:
+IncidenciaDTO(numeroAula=0.6, correoDocente=null, fechaIncidencia=null, descripcionIncidencia=Los proyectores no van., estadoIncidencia=null, comentario=null)
+2024-10-16T18:36:52.650+02:00 DEBUG 266229 --- [http-nio-8888-exec-1] i.j.i.rest.IncidenciaController          : DEBUG: Nueva incidencia creada con éxito.
+2024-10-16T18:36:52.650+02:00 DEBUG 266229 --- [http-nio-8888-exec-1] i.j.i.rest.IncidenciaController          : DEBUG: Numero de Aula asignado con éxito.
+2024-10-16T18:36:52.650+02:00 DEBUG 266229 --- [http-nio-8888-exec-1] i.j.i.rest.IncidenciaController          : DEBUG: Correo docente asignado con éxito.
+2024-10-16T18:36:52.650+02:00 DEBUG 266229 --- [http-nio-8888-exec-1] i.j.i.rest.IncidenciaController          : DEBUG: Estado pendiente asignado con éxito.
+2024-10-16T18:36:52.650+02:00 DEBUG 266229 --- [http-nio-8888-exec-1] i.j.i.rest.IncidenciaController          : DEBUG: Comentario incidencia inicializado con éxito.
+2024-10-16T18:36:52.650+02:00 DEBUG 266229 --- [http-nio-8888-exec-1] i.j.i.rest.IncidenciaController          : DEBUG: Descripcion incidencia almacenada con éxito.
+2024-10-16T18:36:52.651+02:00 DEBUG 266229 --- [http-nio-8888-exec-1] i.j.i.rest.IncidenciaController          : DEBUG: Fecha de creacion almacenada 2024-10-16T18:36:52.650991406
+2024-10-16T18:36:52.651+02:00 DEBUG 266229 --- [http-nio-8888-exec-1] i.j.i.rest.IncidenciaController          : DEBUG: Objeto creado:
+ IncidenciaEntity(numeroAula=0.6, correoDocente=dgia543@g.educaand.es, fechaIncidencia=2024-10-16T18:36:52.650991406, descripcionIncidencia=Los proyectores no van., estadoIncidencia=PENDIENTE, comentario=N/A)
+2024-10-16T18:36:52.704+02:00  INFO 266229 --- [http-nio-8888-exec-1] i.j.i.rest.IncidenciaController          : INFO: El objeto guardado en base de datos es:
+IncidenciaEntity(numeroAula=0.6, correoDocente=dgia543@g.educaand.es, fechaIncidencia=2024-10-16T18:36:52.650991406, descripcionIncidencia=Los proyectores no van., estadoIncidencia=PENDIENTE, comentario=N/A)
+2024-10-16T18:37:06.419+02:00 DEBUG 266229 --- [http-nio-8888-exec-4] i.j.i.rest.IncidenciaController          : La incidencia a borrar existe.
+2024-10-16T18:37:06.420+02:00 DEBUG 266229 --- [http-nio-8888-exec-4] i.j.incidencia.mappers.IncidenciaMapper  : DEBUG: Nueva incidencia creada
+2024-10-16T18:37:06.420+02:00 DEBUG 266229 --- [http-nio-8888-exec-4] i.j.incidencia.mappers.IncidenciaMapper  : DEBUG: Incidencia mapeada con éxito.
+ Incidenecia: IncidenciaEntity(numeroAula=0.6, correoDocente=dgia543@g.educaand.es, fechaIncidencia=2024-10-16T18:36:52.650991, descripcionIncidencia=Los proyectores no van., estadoIncidencia=PENDIENTE, comentario=N/A)
+2024-10-16T18:37:35.540+02:00  INFO 266229 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-16T18:37:35.542+02:00  INFO 266229 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-10-16T18:37:35.545+02:00  INFO 266229 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-10-16T18:38:38.382+02:00  INFO 270449 --- [main] i.j.incidencia.IncidenciaApplication     : Starting IncidenciaApplication using Java 21.0.4 with PID 270449 (/home/jaydee/Github/Jandula_incidencias/incidencia/target/classes started by jaydee in /home/jaydee/Github/Jandula_incidencias/incidencia)
+2024-10-16T18:38:38.383+02:00 DEBUG 270449 --- [main] i.j.incidencia.IncidenciaApplication     : Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-10-16T18:38:38.383+02:00  INFO 270449 --- [main] i.j.incidencia.IncidenciaApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-10-16T18:38:38.709+02:00  INFO 270449 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-16T18:38:38.740+02:00  INFO 270449 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 23 ms. Found 1 JPA repository interface.
+2024-10-16T18:38:39.038+02:00  INFO 270449 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8888 (http)
+2024-10-16T18:38:39.046+02:00  INFO 270449 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-10-16T18:38:39.047+02:00  INFO 270449 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-10-16T18:38:39.073+02:00  INFO 270449 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-10-16T18:38:39.073+02:00  INFO 270449 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 667 ms
+2024-10-16T18:38:39.154+02:00  INFO 270449 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-16T18:38:39.179+02:00  INFO 270449 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-10-16T18:38:39.194+02:00  INFO 270449 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-10-16T18:38:39.331+02:00  INFO 270449 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-16T18:38:39.345+02:00  INFO 270449 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-10-16T18:38:39.543+02:00  INFO 270449 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7b3c2ae0
+2024-10-16T18:38:39.545+02:00  INFO 270449 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-10-16T18:38:39.948+02:00  INFO 270449 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-16T18:38:40.000+02:00  INFO 270449 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-16T18:38:40.113+02:00  INFO 270449 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-10-16T18:38:40.458+02:00  WARN 270449 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-16T18:38:40.636+02:00  INFO 270449 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8888 (http) with context path '/'
+2024-10-16T18:38:40.641+02:00  INFO 270449 --- [main] i.j.incidencia.IncidenciaApplication     : Started IncidenciaApplication in 2.534 seconds (process running for 2.753)
+2024-10-16T18:38:48.400+02:00  INFO 270449 --- [http-nio-8888-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-10-16T18:38:48.400+02:00  INFO 270449 --- [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-10-16T18:38:48.401+02:00  INFO 270449 --- [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-10-16T18:38:48.452+02:00 DEBUG 270449 --- [http-nio-8888-exec-1] i.j.i.rest.IncidenciaController          : Parametros recibidos:
+IncidenciaDTO(numeroAula=0.6, correoDocente=null, fechaIncidencia=null, descripcionIncidencia=Los proyectores no van., estadoIncidencia=null, comentario=null)
+2024-10-16T18:38:48.453+02:00 DEBUG 270449 --- [http-nio-8888-exec-1] i.j.i.rest.IncidenciaController          : DEBUG: Nueva incidencia creada con éxito.
+2024-10-16T18:38:48.453+02:00 DEBUG 270449 --- [http-nio-8888-exec-1] i.j.i.rest.IncidenciaController          : DEBUG: Numero de Aula asignado con éxito.
+2024-10-16T18:38:48.453+02:00 DEBUG 270449 --- [http-nio-8888-exec-1] i.j.i.rest.IncidenciaController          : DEBUG: Correo docente asignado con éxito.
+2024-10-16T18:38:48.453+02:00 DEBUG 270449 --- [http-nio-8888-exec-1] i.j.i.rest.IncidenciaController          : DEBUG: Estado pendiente asignado con éxito.
+2024-10-16T18:38:48.453+02:00 DEBUG 270449 --- [http-nio-8888-exec-1] i.j.i.rest.IncidenciaController          : DEBUG: Comentario incidencia inicializado con éxito.
+2024-10-16T18:38:48.453+02:00 DEBUG 270449 --- [http-nio-8888-exec-1] i.j.i.rest.IncidenciaController          : DEBUG: Descripcion incidencia almacenada con éxito.
+2024-10-16T18:38:48.453+02:00 DEBUG 270449 --- [http-nio-8888-exec-1] i.j.i.rest.IncidenciaController          : DEBUG: Fecha de creacion almacenada 2024-10-16T18:38:48.453424064
+2024-10-16T18:38:48.453+02:00 DEBUG 270449 --- [http-nio-8888-exec-1] i.j.i.rest.IncidenciaController          : DEBUG: Objeto creado:
+ IncidenciaEntity(numeroAula=0.6, correoDocente=dgia543@g.educaand.es, fechaIncidencia=2024-10-16T18:38:48.453424064, descripcionIncidencia=Los proyectores no van., estadoIncidencia=PENDIENTE, comentario=N/A)
+2024-10-16T18:38:48.505+02:00  INFO 270449 --- [http-nio-8888-exec-1] i.j.i.rest.IncidenciaController          : INFO: El objeto guardado en base de datos es:
+IncidenciaEntity(numeroAula=0.6, correoDocente=dgia543@g.educaand.es, fechaIncidencia=2024-10-16T18:38:48.453424064, descripcionIncidencia=Los proyectores no van., estadoIncidencia=PENDIENTE, comentario=N/A)
+2024-10-16T18:39:01.162+02:00 DEBUG 270449 --- [http-nio-8888-exec-4] i.j.incidencia.mappers.IncidenciaMapper  : DEBUG: Nueva incidencia creada
+2024-10-16T18:39:01.162+02:00 DEBUG 270449 --- [http-nio-8888-exec-4] i.j.incidencia.mappers.IncidenciaMapper  : DEBUG: Incidencia mapeada con éxito.
+ Incidenecia: IncidenciaEntity(numeroAula=0.6, correoDocente=dgia543@g.educaand.es, fechaIncidencia=2024-10-16T18:38:48.453424, descripcionIncidencia=Los proyectores no van., estadoIncidencia=PENDIENTE, comentario=N/A)
+2024-10-16T18:39:05.390+02:00 DEBUG 270449 --- [http-nio-8888-exec-5] i.j.incidencia.mappers.IncidenciaMapper  : DEBUG: Nueva incidencia creada
+2024-10-16T18:39:05.390+02:00 DEBUG 270449 --- [http-nio-8888-exec-5] i.j.incidencia.mappers.IncidenciaMapper  : DEBUG: Incidencia mapeada con éxito.
+ Incidenecia: IncidenciaEntity(numeroAula=0.6, correoDocente=dgia543@g.educaand.es, fechaIncidencia=2024-10-16T18:38:48.453424, descripcionIncidencia=Los proyectores no van., estadoIncidencia=PENDIENTE, comentario=N/A)
+2024-10-16T18:39:08.859+02:00  INFO 270449 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-16T18:39:08.860+02:00  INFO 270449 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-10-16T18:39:08.864+02:00  INFO 270449 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-10-16T19:19:04.138+02:00  INFO 355102 --- [main] i.j.incidencia.IncidenciaApplication     : Starting IncidenciaApplication using Java 21.0.4 with PID 355102 (/home/jaydee/Github/Jandula_incidencias/incidencia/target/classes started by jaydee in /home/jaydee/Github/Jandula_incidencias/incidencia)
+2024-10-16T19:19:04.139+02:00 DEBUG 355102 --- [main] i.j.incidencia.IncidenciaApplication     : Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-10-16T19:19:04.139+02:00  INFO 355102 --- [main] i.j.incidencia.IncidenciaApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-10-16T19:19:04.480+02:00  INFO 355102 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-16T19:19:04.509+02:00  INFO 355102 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 24 ms. Found 1 JPA repository interface.
+2024-10-16T19:19:04.801+02:00  INFO 355102 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8888 (http)
+2024-10-16T19:19:04.810+02:00  INFO 355102 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-10-16T19:19:04.810+02:00  INFO 355102 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-10-16T19:19:04.839+02:00  INFO 355102 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-10-16T19:19:04.839+02:00  INFO 355102 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 674 ms
+2024-10-16T19:19:04.920+02:00  INFO 355102 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-16T19:19:04.942+02:00  INFO 355102 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-10-16T19:19:04.957+02:00  INFO 355102 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-10-16T19:19:05.097+02:00  INFO 355102 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-16T19:19:05.110+02:00  INFO 355102 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-10-16T19:19:05.313+02:00  INFO 355102 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5d5574c7
+2024-10-16T19:19:05.315+02:00  INFO 355102 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-10-16T19:19:05.717+02:00  INFO 355102 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-16T19:19:05.770+02:00  INFO 355102 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-16T19:19:05.883+02:00  INFO 355102 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-10-16T19:19:06.231+02:00  WARN 355102 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-16T19:19:06.414+02:00  INFO 355102 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8888 (http) with context path '/'
+2024-10-16T19:19:06.420+02:00  INFO 355102 --- [main] i.j.incidencia.IncidenciaApplication     : Started IncidenciaApplication in 2.56 seconds (process running for 2.811)
+2024-10-16T19:19:28.068+02:00  INFO 355102 --- [http-nio-8888-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-10-16T19:19:28.068+02:00  INFO 355102 --- [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-10-16T19:19:28.069+02:00  INFO 355102 --- [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-10-16T19:19:28.121+02:00 DEBUG 355102 --- [http-nio-8888-exec-1] i.j.i.rest.IncidenciaController          : Parametros recibidos:
+IncidenciaDTO(numeroAula=0.6, correoDocente=null, fechaIncidencia=null, descripcionIncidencia=Los proyectores no van., estadoIncidencia=null, comentario=null)
+2024-10-16T19:19:28.122+02:00 DEBUG 355102 --- [http-nio-8888-exec-1] i.j.i.rest.IncidenciaController          : DEBUG: Nueva incidencia creada con éxito.
+2024-10-16T19:19:28.122+02:00 DEBUG 355102 --- [http-nio-8888-exec-1] i.j.i.rest.IncidenciaController          : DEBUG: Numero de Aula asignado con éxito.
+2024-10-16T19:19:28.122+02:00 DEBUG 355102 --- [http-nio-8888-exec-1] i.j.i.rest.IncidenciaController          : DEBUG: Correo docente asignado con éxito.
+2024-10-16T19:19:28.122+02:00 DEBUG 355102 --- [http-nio-8888-exec-1] i.j.i.rest.IncidenciaController          : DEBUG: Estado pendiente asignado con éxito.
+2024-10-16T19:19:28.122+02:00 DEBUG 355102 --- [http-nio-8888-exec-1] i.j.i.rest.IncidenciaController          : DEBUG: Comentario incidencia inicializado con éxito.
+2024-10-16T19:19:28.122+02:00 DEBUG 355102 --- [http-nio-8888-exec-1] i.j.i.rest.IncidenciaController          : DEBUG: Descripcion incidencia almacenada con éxito.
+2024-10-16T19:19:28.122+02:00 DEBUG 355102 --- [http-nio-8888-exec-1] i.j.i.rest.IncidenciaController          : DEBUG: Fecha de creacion almacenada 2024-10-16T19:19:28.122483120
+2024-10-16T19:19:28.122+02:00 DEBUG 355102 --- [http-nio-8888-exec-1] i.j.i.rest.IncidenciaController          : DEBUG: Objeto creado:
+ IncidenciaEntity(numeroAula=0.6, correoDocente=dgia543@g.educaand.es, fechaIncidencia=2024-10-16T19:19:28.122483120, descripcionIncidencia=Los proyectores no van., estadoIncidencia=PENDIENTE, comentario=N/A)
+2024-10-16T19:19:28.183+02:00  INFO 355102 --- [http-nio-8888-exec-1] i.j.i.rest.IncidenciaController          : INFO: El objeto guardado en base de datos es:
+IncidenciaEntity(numeroAula=0.6, correoDocente=dgia543@g.educaand.es, fechaIncidencia=2024-10-16T19:19:28.122483120, descripcionIncidencia=Los proyectores no van., estadoIncidencia=PENDIENTE, comentario=N/A)
+2024-10-16T19:19:36.076+02:00 DEBUG 355102 --- [http-nio-8888-exec-4] i.j.incidencia.mappers.IncidenciaMapper  : DEBUG: Nueva incidencia creada
+2024-10-16T19:19:36.076+02:00 DEBUG 355102 --- [http-nio-8888-exec-4] i.j.incidencia.mappers.IncidenciaMapper  : DEBUG: Incidencia mapeada con éxito.
+ Incidenecia: IncidenciaEntity(numeroAula=0.6, correoDocente=dgia543@g.educaand.es, fechaIncidencia=2024-10-16T19:19:28.122483, descripcionIncidencia=Los proyectores no van., estadoIncidencia=PENDIENTE, comentario=N/A)
+2024-10-16T19:19:36.099+02:00  INFO 355102 --- [http-nio-8888-exec-4] i.j.i.rest.IncidenciaController          : INFO: Incidencia borrada. IncidenciaEntity(numeroAula=0.6, correoDocente=dgia543@g.educaand.es, fechaIncidencia=2024-10-16T19:19:28.122483, descripcionIncidencia=Los proyectores no van., estadoIncidencia=PENDIENTE, comentario=N/A)
+2024-10-16T19:19:39.567+02:00 DEBUG 355102 --- [http-nio-8888-exec-5] i.j.incidencia.mappers.IncidenciaMapper  : DEBUG: Nueva incidencia creada
+2024-10-16T19:19:39.567+02:00 DEBUG 355102 --- [http-nio-8888-exec-5] i.j.incidencia.mappers.IncidenciaMapper  : DEBUG: Incidencia mapeada con éxito.
+ Incidenecia: IncidenciaEntity(numeroAula=0.6, correoDocente=dgia543@g.educaand.es, fechaIncidencia=2024-10-16T19:19:28.122483, descripcionIncidencia=Los proyectores no van., estadoIncidencia=PENDIENTE, comentario=N/A)
+2024-10-16T19:31:57.287+02:00  INFO 382967 --- [main] i.j.incidencia.IncidenciaApplication     : Starting IncidenciaApplication using Java 21.0.4 with PID 382967 (/home/jaydee/Github/Jandula_incidencias/incidencia/target/classes started by jaydee in /home/jaydee/Github/Jandula_incidencias/incidencia)
+2024-10-16T19:31:57.288+02:00 DEBUG 382967 --- [main] i.j.incidencia.IncidenciaApplication     : Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-10-16T19:31:57.288+02:00  INFO 382967 --- [main] i.j.incidencia.IncidenciaApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-10-16T19:31:57.644+02:00  INFO 382967 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-16T19:31:57.678+02:00  INFO 382967 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 29 ms. Found 1 JPA repository interface.
+2024-10-16T19:31:57.974+02:00  INFO 382967 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8888 (http)
+2024-10-16T19:31:57.982+02:00  INFO 382967 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-10-16T19:31:57.982+02:00  INFO 382967 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-10-16T19:31:58.008+02:00  INFO 382967 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-10-16T19:31:58.008+02:00  INFO 382967 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 698 ms
+2024-10-16T19:31:58.088+02:00  INFO 382967 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-16T19:31:58.112+02:00  INFO 382967 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-10-16T19:31:58.127+02:00  INFO 382967 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-10-16T19:31:58.273+02:00  INFO 382967 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-16T19:31:58.287+02:00  INFO 382967 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-10-16T19:31:58.498+02:00  INFO 382967 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5d5574c7
+2024-10-16T19:31:58.500+02:00  INFO 382967 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-10-16T19:31:58.911+02:00  INFO 382967 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-16T19:31:58.964+02:00  INFO 382967 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-16T19:31:59.087+02:00  INFO 382967 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-10-16T19:31:59.474+02:00  WARN 382967 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-16T19:31:59.648+02:00  WARN 382967 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2024-10-16T19:31:59.649+02:00  INFO 382967 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-16T19:31:59.650+02:00  INFO 382967 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-10-16T19:31:59.654+02:00  INFO 382967 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-10-16T19:31:59.662+02:00  INFO 382967 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-10-16T19:31:59.672+02:00 ERROR 382967 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:288) ~[spring-context-6.1.13.jar:6.1.13]
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:472) ~[spring-context-6.1.13.jar:6.1.13]
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75) ~[na:na]
+	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:257) ~[spring-context-6.1.13.jar:6.1.13]
+	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:202) ~[spring-context-6.1.13.jar:6.1.13]
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:990) ~[spring-context-6.1.13.jar:6.1.13]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:628) ~[spring-context-6.1.13.jar:6.1.13]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352) ~[spring-boot-3.3.4.jar:3.3.4]
+	at ies.jandula.incidencia.IncidenciaApplication.main(IncidenciaApplication.java:10) ~[classes/:na]
+Caused by: org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat server
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:251) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.web.servlet.context.WebServerStartStopLifecycle.start(WebServerStartStopLifecycle.java:44) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:285) ~[spring-context-6.1.13.jar:6.1.13]
+	... 13 common frames omitted
+Caused by: java.lang.IllegalArgumentException: standardService.connector.startFailed
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:222) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.addPreviouslyRemovedConnectors(TomcatWebServer.java:310) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:236) ~[spring-boot-3.3.4.jar:3.3.4]
+	... 15 common frames omitted
+Caused by: org.apache.catalina.LifecycleException: Protocol handler start failed
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1061) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:219) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	... 17 common frames omitted
+Caused by: java.net.BindException: La dirección ya se está usando
+	at java.base/sun.nio.ch.Net.bind0(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.bind(Net.java:565) ~[na:na]
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.netBind(ServerSocketChannelImpl.java:344) ~[na:na]
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:301) ~[na:na]
+	at org.apache.tomcat.util.net.NioEndpoint.initServerSocket(NioEndpoint.java:239) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:194) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.tomcat.util.net.AbstractEndpoint.bindWithCleanup(AbstractEndpoint.java:1304) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:1390) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:644) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1058) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	... 19 common frames omitted
+
+2024-10-16T19:32:30.023+02:00  INFO 355102 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-16T19:32:30.024+02:00  INFO 355102 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-10-16T19:32:30.028+02:00  INFO 355102 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-10-16T19:33:06.177+02:00  INFO 385678 --- [main] i.j.incidencia.IncidenciaApplication     : Starting IncidenciaApplication using Java 21.0.4 with PID 385678 (/home/jaydee/Github/Jandula_incidencias/incidencia/target/classes started by jaydee in /home/jaydee/Github/Jandula_incidencias/incidencia)
+2024-10-16T19:33:06.178+02:00 DEBUG 385678 --- [main] i.j.incidencia.IncidenciaApplication     : Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-10-16T19:33:06.179+02:00  INFO 385678 --- [main] i.j.incidencia.IncidenciaApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-10-16T19:33:06.551+02:00  INFO 385678 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-16T19:33:06.586+02:00  INFO 385678 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 26 ms. Found 1 JPA repository interface.
+2024-10-16T19:33:06.898+02:00  INFO 385678 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8888 (http)
+2024-10-16T19:33:06.908+02:00  INFO 385678 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-10-16T19:33:06.909+02:00  INFO 385678 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-10-16T19:33:06.941+02:00  INFO 385678 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-10-16T19:33:06.942+02:00  INFO 385678 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 736 ms
+2024-10-16T19:33:07.046+02:00  INFO 385678 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-16T19:33:07.078+02:00  INFO 385678 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-10-16T19:33:07.096+02:00  INFO 385678 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-10-16T19:33:07.233+02:00  INFO 385678 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-16T19:33:07.248+02:00  INFO 385678 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-10-16T19:33:07.463+02:00  INFO 385678 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6fd9dbe6
+2024-10-16T19:33:07.464+02:00  INFO 385678 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-10-16T19:33:07.877+02:00  INFO 385678 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-16T19:33:07.938+02:00  INFO 385678 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-16T19:33:08.061+02:00  INFO 385678 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-10-16T19:33:08.430+02:00  WARN 385678 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-16T19:33:08.613+02:00  INFO 385678 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8888 (http) with context path '/'
+2024-10-16T19:33:08.619+02:00  INFO 385678 --- [main] i.j.incidencia.IncidenciaApplication     : Started IncidenciaApplication in 2.724 seconds (process running for 2.965)
+2024-10-16T19:33:16.999+02:00  INFO 385678 --- [http-nio-8888-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-10-16T19:33:17.000+02:00  INFO 385678 --- [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-10-16T19:33:17.000+02:00  INFO 385678 --- [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2024-10-16T19:33:17.061+02:00 DEBUG 385678 --- [http-nio-8888-exec-1] i.j.i.rest.IncidenciaController          : Parametros recibidos:
+IncidenciaDTO(numeroAula=0.6, correoDocente=null, fechaIncidencia=null, descripcionIncidencia=Los proyectores no van., estadoIncidencia=null, comentario=null)
+2024-10-16T19:33:17.061+02:00 DEBUG 385678 --- [http-nio-8888-exec-1] i.j.i.rest.IncidenciaController          : DEBUG: Nueva incidencia creada con éxito.
+2024-10-16T19:33:17.061+02:00 DEBUG 385678 --- [http-nio-8888-exec-1] i.j.i.rest.IncidenciaController          : DEBUG: Numero de Aula asignado con éxito.
+2024-10-16T19:33:17.061+02:00 DEBUG 385678 --- [http-nio-8888-exec-1] i.j.i.rest.IncidenciaController          : DEBUG: Correo docente asignado con éxito.
+2024-10-16T19:33:17.061+02:00 DEBUG 385678 --- [http-nio-8888-exec-1] i.j.i.rest.IncidenciaController          : DEBUG: Estado pendiente asignado con éxito.
+2024-10-16T19:33:17.061+02:00 DEBUG 385678 --- [http-nio-8888-exec-1] i.j.i.rest.IncidenciaController          : DEBUG: Comentario incidencia inicializado con éxito.
+2024-10-16T19:33:17.061+02:00 DEBUG 385678 --- [http-nio-8888-exec-1] i.j.i.rest.IncidenciaController          : DEBUG: Descripcion incidencia almacenada con éxito.
+2024-10-16T19:33:17.061+02:00 DEBUG 385678 --- [http-nio-8888-exec-1] i.j.i.rest.IncidenciaController          : DEBUG: Fecha de creacion almacenada 2024-10-16T19:33:17.061749429
+2024-10-16T19:33:17.062+02:00 DEBUG 385678 --- [http-nio-8888-exec-1] i.j.i.rest.IncidenciaController          : DEBUG: Objeto creado:
+ IncidenciaEntity(numeroAula=0.6, correoDocente=dgia543@g.educaand.es, fechaIncidencia=2024-10-16T19:33:17.061749429, descripcionIncidencia=Los proyectores no van., estadoIncidencia=PENDIENTE, comentario=N/A)
+2024-10-16T19:33:17.120+02:00  INFO 385678 --- [http-nio-8888-exec-1] i.j.i.rest.IncidenciaController          : INFO: El objeto guardado en base de datos es:
+IncidenciaEntity(numeroAula=0.6, correoDocente=dgia543@g.educaand.es, fechaIncidencia=2024-10-16T19:33:17.061749429, descripcionIncidencia=Los proyectores no van., estadoIncidencia=PENDIENTE, comentario=N/A)
+2024-10-16T19:33:25.944+02:00 DEBUG 385678 --- [http-nio-8888-exec-3] i.j.i.rest.IncidenciaController          : Parametros recibidos:
+IncidenciaDTO(numeroAula=0.6, correoDocente=null, fechaIncidencia=null, descripcionIncidencia=Los proyectores no van., estadoIncidencia=null, comentario=null)
+2024-10-16T19:33:25.944+02:00 DEBUG 385678 --- [http-nio-8888-exec-3] i.j.i.rest.IncidenciaController          : DEBUG: Nueva incidencia creada con éxito.
+2024-10-16T19:33:25.944+02:00 DEBUG 385678 --- [http-nio-8888-exec-3] i.j.i.rest.IncidenciaController          : DEBUG: Numero de Aula asignado con éxito.
+2024-10-16T19:33:25.944+02:00 DEBUG 385678 --- [http-nio-8888-exec-3] i.j.i.rest.IncidenciaController          : DEBUG: Correo docente asignado con éxito.
+2024-10-16T19:33:25.944+02:00 DEBUG 385678 --- [http-nio-8888-exec-3] i.j.i.rest.IncidenciaController          : DEBUG: Estado pendiente asignado con éxito.
+2024-10-16T19:33:25.944+02:00 DEBUG 385678 --- [http-nio-8888-exec-3] i.j.i.rest.IncidenciaController          : DEBUG: Comentario incidencia inicializado con éxito.
+2024-10-16T19:33:25.944+02:00 DEBUG 385678 --- [http-nio-8888-exec-3] i.j.i.rest.IncidenciaController          : DEBUG: Descripcion incidencia almacenada con éxito.
+2024-10-16T19:33:25.945+02:00 DEBUG 385678 --- [http-nio-8888-exec-3] i.j.i.rest.IncidenciaController          : DEBUG: Fecha de creacion almacenada 2024-10-16T19:33:25.945013396
+2024-10-16T19:33:25.945+02:00 DEBUG 385678 --- [http-nio-8888-exec-3] i.j.i.rest.IncidenciaController          : DEBUG: Objeto creado:
+ IncidenciaEntity(numeroAula=0.6, correoDocente=dgia543@g.educaand.es, fechaIncidencia=2024-10-16T19:33:25.945013396, descripcionIncidencia=Los proyectores no van., estadoIncidencia=PENDIENTE, comentario=N/A)
+2024-10-16T19:33:25.958+02:00  INFO 385678 --- [http-nio-8888-exec-3] i.j.i.rest.IncidenciaController          : INFO: El objeto guardado en base de datos es:
+IncidenciaEntity(numeroAula=0.6, correoDocente=dgia543@g.educaand.es, fechaIncidencia=2024-10-16T19:33:25.945013396, descripcionIncidencia=Los proyectores no van., estadoIncidencia=PENDIENTE, comentario=N/A)

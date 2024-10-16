@@ -42,5 +42,5 @@ public class IncidenciaDTO
 	 * Atribtuo - Comentario relacionado a la solucion de la incidencia.
 	 */
 	private String comentario;
-
+	
 }

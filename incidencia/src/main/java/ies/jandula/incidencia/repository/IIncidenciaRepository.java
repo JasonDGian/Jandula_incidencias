@@ -14,7 +14,10 @@ import ies.jandula.incidencia.entity.IncidenciaEntityId;
 @Repository
 public interface IIncidenciaRepository extends JpaRepository<IncidenciaEntity, IncidenciaEntityId>
 {
+	
+	public boolean existsByNumeroAulaAndCorreoDocenteAndFechaIncidencia( String numeroAula, String correoDocente, LocalDateTime fechaIncidencia );
 
+	
 	@Query("SELECT new ies.jandula.incidencia.dto.IncidenciaDTO("
 			+ "e.numeroAula, e.correoDocente, e.fechaIncidencia, e.descripcionIncidencia, e.estadoIncidencia, e.comentario"
 			+ ") " + "FROM IncidenciaEntity e WHERE ( :numeroAula IS NULL OR e.numeroAula = :numeroAula ) AND "
