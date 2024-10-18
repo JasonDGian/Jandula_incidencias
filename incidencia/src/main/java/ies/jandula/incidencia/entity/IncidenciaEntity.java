@@ -2,6 +2,7 @@ package ies.jandula.incidencia.entity;
 
 import java.time.LocalDateTime;
 
+import ies.jandula.incidencia.utils.Constants;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
@@ -36,7 +37,7 @@ public class IncidenciaEntity
 	 * Atributo - Correo del docente que informa de la incidencia.
 	 */
 	@Id
-	@Column(length = 50)
+	@Column(length = Constants.MAX_LONG_CORREO)
 	private String correoDocente;
 
 	/**
@@ -48,18 +49,19 @@ public class IncidenciaEntity
 	/**
 	 * Atributo - Detalla el problema relacionado a la incidencia.
 	 */
-	@Column(length = 250)
+	@Column(length = Constants.MAX_LONG_DESCRIPCION)
 	private String descripcionIncidencia;
 
 	/**
 	 * Atributo - Define el estado de la incidencia. 
 	 */
+	@Column(length = Constants.MAX_LONG_ESTADO)
 	private String estadoIncidencia;
 	
 	/**
 	 * Atributo - Comentario relacionado a la solucion de la incidencia.
 	 */
-	@Column(length = 250)
+	@Column(length = Constants.MAX_LONG_COMENTARIO)
 	private String comentario;
 
 }
