@@ -1,0 +1,337 @@
+{
+	"info": {
+		"_postman_id": "6ed7ba06-7e4a-462f-bd87-2f4eaccb8f8d",
+		"name": "Incidencias-Revision",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38627125"
+	},
+	"item": [
+		{
+			"name": "Crear incidencia ejemplo 1",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "correo-docente",
+						"value": "dgia543@g.educaand.es",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"numeroAula\":\"0.5\",\n    \"descripcionIncidencia\":\"La pizarra electronica no enciende.\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8888/incidencias",
+					"host": [
+						"localhost"
+					],
+					"port": "8888",
+					"path": [
+						"incidencias"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear incidencia ejemplo 2",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "correo-docente",
+						"value": "dgia543@g.educaand.es",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"numeroAula\":\"0.7\",\n    \"descripcionIncidencia\":\"El teclado del equipo 16 ha dejado de funcionar.\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8888/incidencias",
+					"host": [
+						"localhost"
+					],
+					"port": "8888",
+					"path": [
+						"incidencias"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear incidencia ejemplo 3",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "correo-docente",
+						"value": "jsotsan950@g.educaand.es",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"numeroAula\":\"1.1\",\n    \"descripcionIncidencia\":\"No hay acceso a internet.\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8888/incidencias",
+					"host": [
+						"localhost"
+					],
+					"port": "8888",
+					"path": [
+						"incidencias"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Busqueda con filtro vacio.",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8888/incidencias",
+					"host": [
+						"localhost"
+					],
+					"port": "8888",
+					"path": [
+						"incidencias"
+					],
+					"query": [
+						{
+							"key": "fechaInicio",
+							"value": "2024-10-16T19:33:17.061748",
+							"disabled": true
+						},
+						{
+							"key": "fechaFin",
+							"value": "2024-10-16T19:33:17.061750",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Busqueda por numero de aula.",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"numeroAula\": \"0.5\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8888/incidencias",
+					"host": [
+						"localhost"
+					],
+					"port": "8888",
+					"path": [
+						"incidencias"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Busqueda por palabra en descripcion",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"descripcionIncidencia\": \"pizarra\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8888/incidencias",
+					"host": [
+						"localhost"
+					],
+					"port": "8888",
+					"path": [
+						"incidencias"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Busqueda por estado",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"estadoIncidencia\": \"PENDIENTE\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8888/incidencias",
+					"host": [
+						"localhost"
+					],
+					"port": "8888",
+					"path": [
+						"incidencias"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Borrado de incidencia (ejemplo)",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\n        \"numeroAula\": \"0.7\",\n        \"correoDocente\": \"dgia543@g.educaand.es\",\n        \"fechaIncidencia\": \"2024-10-18T17:47:25.172178\",\n        \"descripcionIncidencia\": \"El teclado del equipo 16 ha dejado de funcionar.\",\n        \"estadoIncidencia\": \"PENDIENTE\",\n        \"comentario\": \"\"\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8888/incidencias",
+					"host": [
+						"localhost"
+					],
+					"port": "8888",
+					"path": [
+						"incidencias"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actualización de incidencia (ejemplo)",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "correo-docente",
+						"value": "tda@admin.yes",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\n        \"numeroAula\": \"0.6\",\n        \"correoDocente\": \"dgia543@g.educaand.es\",\n        \"fechaIncidencia\": \"2024-10-18T10:31:04.358203\",\n        \"descripcionIncidencia\": \"Los proyectores no van.\",\n        \"estadoIncidencia\": \"EN PROGRESO\",\n        \"comentario\": \"N/A\"\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8888/incidencias",
+					"host": [
+						"localhost"
+					],
+					"port": "8888",
+					"path": [
+						"incidencias"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import ies.jandula.incidencia.dto.FiltroBusqueda;
@@ -24,6 +23,36 @@ import ies.jandula.incidencia.repository.IIncidenciaRepository;
 import ies.jandula.incidencia.utils.Constants;
 import lombok.extern.slf4j.Slf4j;
 
+
+/**
+ * Controlador REST para gestionar incidencias en el sistema.
+ * 
+ * Esta clase proporciona endpoints para crear, actualizar, buscar y eliminar incidencias
+ * en la base de datos. Utiliza un repositorio para interactuar con los datos de las incidencias
+ * y un mapeador para convertir entre objetos DTO y entidades de base de datos.
+ * 
+ * Los métodos de esta clase devuelven respuestas adecuadas basadas en el resultado de
+ * las operaciones, incluyendo códigos de estado HTTP para informar sobre el éxito o 
+ * fracaso de las solicitudes. 
+ * 
+ * Las operaciones que se pueden realizar incluyen:
+ * <ul>
+ *     <li><strong>Crear Incidencia:</strong> Permite la creación de nuevas incidencias.</li>
+ *     <li><strong>Actualizar Incidencia:</strong> Permite la actualización de incidencias existentes.</li>
+ *     <li><strong>Buscar Incidencias:</strong> Permite buscar incidencias basadas en criterios específicos.</li>
+ *     <li><strong>Eliminar Incidencia:</strong> Permite la eliminación de incidencias existentes.</li>
+ * </ul>
+ * 
+ * Se requiere que los encabezados y los cuerpos de las solicitudes contengan información válida 
+ * para que las operaciones se ejecuten correctamente. En caso de errores, se devuelven 
+ * mensajes informativos y códigos de estado HTTP adecuados.
+ * 
+ * @see FiltroBusqueda
+ * @see IncidenciaDTO
+ * @see IncidenciaEntity
+ * @see IIncidenciaRepository
+ * @see IncidenciaMapper
+ */
 @Slf4j // añade el logger.
 @RestController
 @RequestMapping(value = "/incidencias")
@@ -35,6 +64,7 @@ public class IncidenciaController
 	private IIncidenciaRepository iIncidenciaRepository;
 
 	@Autowired
+	// Auto-inyeccion de mapeador de dto-entidad.
 	IncidenciaMapper incidenciaMapper;
 
 	/**
@@ -94,7 +124,7 @@ public class IncidenciaController
 
 			incidencia.setCorreoDocente(correoDocente);
 
-			incidencia.setEstadoIncidencia(Constants.PENDIENTE);
+			incidencia.setEstadoIncidencia(Constants.ESTADO_PENDIENTE);
 
 			incidencia.setComentario("");
 
@@ -191,32 +221,56 @@ public class IncidenciaController
 
 	}
 
-	// Metodo de busqueda.
+	/**
+	 * Maneja las solicitudes GET para buscar incidencias en base a los criterios proporcionados en el filtro de búsqueda.
+	 * 
+	 * Este método recibe un objeto {@link FiltroBusqueda} que contiene los criterios de búsqueda para filtrar
+	 * las incidencias almacenadas. Realiza la búsqueda utilizando el repositorio correspondiente y devuelve 
+	 * una lista de incidencias que cumplen con los criterios. En caso de que no se encuentren incidencias,
+	 * se devuelve un mensaje informativo con un código de estado 404 (Not Found). Si ocurre algún error
+	 * durante el proceso, se devuelve un mensaje de error con un código de estado 500 (Internal Server Error).
+	 *
+	 * @param f El objeto {@link FiltroBusqueda} que contiene los criterios de búsqueda para filtrar las incidencias.
+	 * @return Un objeto {@link ResponseEntity} que puede contener:
+	 *         <ul>
+	 *           <li>Una lista de {@link IncidenciaDTO} en caso de que se encuentren incidencias, con código de estado 200 (OK).</li>
+	 *           <li>Un mensaje de error si no se encuentran incidencias, con código de estado 404 (Not Found).</li>
+	 *           <li>Un mensaje de error general, en caso de excepciones inesperadas, con código de estado 500 (Internal Server Error).</li>
+	 *         </ul>
+	 */
 	@RequestMapping(method = RequestMethod.GET)
-	public List<IncidenciaDTO> buscaIncidencia(@RequestBody FiltroBusqueda f)
+	public ResponseEntity<?> buscaIncidencia(@RequestBody FiltroBusqueda f)
 	{
 		try
 		{
 			// Loguea los parametros recibidos
 			log.debug("DEBUG: Parametros de busqueda recibidos:\n {}", f.toString());
-			
-			// Controlar si cuerpo es nulo y responder acorte.
-			// Controllar si la lista de resultados es nula y responder con un mensaje HTTP acorde.
-			
 
 			// Invoca el metodo con query personalizada para busqueda con nulos.
 			List<IncidenciaDTO> listado = iIncidenciaRepository.buscaIncidencia(f.getNumeroAula(), f.getCorreoDocente(),
 					f.getFechaInicio(), f.getFechaFin(), f.getDescripcionIncidencia(), f.getEstadoIncidencia(),
 					f.getComentario());
 
+			// Registra los elementos encontrados en la lista.
 			log.debug("DEBUG: Objetos encontrados {}", listado.size());
 
-			return listado;
+			// Verifica si la lista de resultados está vacía y devuelve un mensaje adecuado.
+			if (listado.isEmpty())
+			{
+				log.info("No se han encontrado incidencias con los criterios especificados.");
+				return ResponseEntity.status(HttpStatus.NOT_FOUND)
+						.body("No se han encontrado incidencias con los criterios especificados.");
+			}
+
+			// Si el filtro no es nulo y la lista no está vacia devuelve los resultados
+			// encontrados.
+			return ResponseEntity.status(HttpStatus.OK).body(listado);
 
 		} catch (Exception e)
 		{
 			log.error("ERROR: Capturado en buscaIncidencia()\n {}", e);
-			return new ArrayList<>();
+			return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
+					.body("ERROR: Capturado en buscaIncidencia()\n " + e);
 		}
 	}
 

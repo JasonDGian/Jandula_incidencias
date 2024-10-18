@@ -1,5 +1,5 @@
 spring:
-  jpa.hibernate.ddl-auto: create # Configura cómo se debe gestionar el esquema de la base de datos.
+  jpa.hibernate.ddl-auto: update # Configura cómo se debe gestionar el esquema de la base de datos.
   datasource:
     url: jdbc:mysql://localhost:3306/incidencias # URL de conexión a la base de datos MySQL.
     username: root # Nombre de usuario para conectarse a la base de datos.

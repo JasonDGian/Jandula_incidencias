@@ -1,988 +1,146 @@
-2024-10-18T09:10:45.420+02:00  INFO 50644 --- [main] i.j.incidencia.IncidenciaApplication     : Starting IncidenciaApplication using Java 21.0.4 with PID 50644 (/home/jaydee/Github/Jandula_incidencias/incidencia/target/classes started by jaydee in /home/jaydee/Github/Jandula_incidencias/incidencia)
-2024-10-18T09:10:45.428+02:00 DEBUG 50644 --- [main] i.j.incidencia.IncidenciaApplication     : Running with Spring Boot v3.3.4, Spring v6.1.13
-2024-10-18T09:10:45.428+02:00  INFO 50644 --- [main] i.j.incidencia.IncidenciaApplication     : No active profile set, falling back to 1 default profile: "default"
-2024-10-18T09:10:45.749+02:00  INFO 50644 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-10-18T09:10:45.775+02:00  INFO 50644 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 22 ms. Found 1 JPA repository interface.
-2024-10-18T09:10:46.070+02:00  INFO 50644 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8888 (http)
-2024-10-18T09:10:46.078+02:00  INFO 50644 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-10-18T09:10:46.079+02:00  INFO 50644 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
-2024-10-18T09:10:46.105+02:00  INFO 50644 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-10-18T09:10:46.106+02:00  INFO 50644 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 654 ms
-2024-10-18T09:10:46.186+02:00  INFO 50644 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-10-18T09:10:46.217+02:00  INFO 50644 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
-2024-10-18T09:10:46.235+02:00  INFO 50644 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-10-18T09:10:46.391+02:00  INFO 50644 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-10-18T09:10:46.405+02:00  INFO 50644 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-10-18T09:10:47.466+02:00  WARN 50644 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 08S01
-2024-10-18T09:10:47.466+02:00 ERROR 50644 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-2024-10-18T09:10:47.467+02:00  WARN 50644 --- [main] o.h.e.j.e.i.JdbcEnvironmentInitiator     : HHH000342: Could not obtain connection to query metadata
-
-org.hibernate.exception.JDBCConnectionException: unable to obtain isolated JDBC connection [Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.] [n/a]
-	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:100) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
-	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:58) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
-	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
-	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:94) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
-	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:116) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
-	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:292) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
-	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:124) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
-	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:78) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
-	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:130) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
-	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
-	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:221) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
-	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:189) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
-	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:171) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1431) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1502) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
-	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75) ~[spring-orm-6.1.13.jar:6.1.13]
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390) ~[spring-orm-6.1.13.jar:6.1.13]
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-6.1.13.jar:6.1.13]
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-6.1.13.jar:6.1.13]
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366) ~[spring-orm-6.1.13.jar:6.1.13]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1853) ~[spring-beans-6.1.13.jar:6.1.13]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1802) ~[spring-beans-6.1.13.jar:6.1.13]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600) ~[spring-beans-6.1.13.jar:6.1.13]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.13.jar:6.1.13]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337) ~[spring-beans-6.1.13.jar:6.1.13]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.13.jar:6.1.13]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335) ~[spring-beans-6.1.13.jar:6.1.13]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205) ~[spring-beans-6.1.13.jar:6.1.13]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:954) ~[spring-context-6.1.13.jar:6.1.13]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625) ~[spring-context-6.1.13.jar:6.1.13]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.3.4.jar:3.3.4]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.3.4.jar:3.3.4]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.3.4.jar:3.3.4]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335) ~[spring-boot-3.3.4.jar:3.3.4]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) ~[spring-boot-3.3.4.jar:3.3.4]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352) ~[spring-boot-3.3.4.jar:3.3.4]
-	at ies.jandula.incidencia.IncidenciaApplication.main(IncidenciaApplication.java:10) ~[classes/:na]
-Caused by: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174) ~[mysql-connector-j-8.3.0.jar:8.3.0]
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64) ~[mysql-connector-j-8.3.0.jar:8.3.0]
-	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:815) ~[mysql-connector-j-8.3.0.jar:8.3.0]
-	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:438) ~[mysql-connector-j-8.3.0.jar:8.3.0]
-	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241) ~[mysql-connector-j-8.3.0.jar:8.3.0]
-	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:189) ~[mysql-connector-j-8.3.0.jar:8.3.0]
-	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:137) ~[HikariCP-5.1.0.jar:na]
-	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:360) ~[HikariCP-5.1.0.jar:na]
-	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:202) ~[HikariCP-5.1.0.jar:na]
-	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:461) ~[HikariCP-5.1.0.jar:na]
-	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:550) ~[HikariCP-5.1.0.jar:na]
-	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:98) ~[HikariCP-5.1.0.jar:na]
-	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111) ~[HikariCP-5.1.0.jar:na]
-	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
-	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:439) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
-	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:61) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
-	... 35 common frames omitted
-Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62) ~[na:na]
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502) ~[na:na]
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486) ~[na:na]
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61) ~[mysql-connector-j-8.3.0.jar:8.3.0]
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:104) ~[mysql-connector-j-8.3.0.jar:8.3.0]
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:149) ~[mysql-connector-j-8.3.0.jar:8.3.0]
-	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:165) ~[mysql-connector-j-8.3.0.jar:8.3.0]
-	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:88) ~[mysql-connector-j-8.3.0.jar:8.3.0]
-	at com.mysql.cj.NativeSession.connect(NativeSession.java:120) ~[mysql-connector-j-8.3.0.jar:8.3.0]
-	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:935) ~[mysql-connector-j-8.3.0.jar:8.3.0]
-	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:805) ~[mysql-connector-j-8.3.0.jar:8.3.0]
-	... 48 common frames omitted
-Caused by: java.net.ConnectException: Conexión rehusada
-	at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[na:na]
-	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682) ~[na:na]
-	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542) ~[na:na]
-	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592) ~[na:na]
-	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327) ~[na:na]
-	at java.base/java.net.Socket.connect(Socket.java:751) ~[na:na]
-	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:153) ~[mysql-connector-j-8.3.0.jar:8.3.0]
-	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:62) ~[mysql-connector-j-8.3.0.jar:8.3.0]
-	... 51 common frames omitted
-
-2024-10-18T09:10:47.471+02:00 ERROR 50644 --- [main] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
-2024-10-18T09:10:47.471+02:00  WARN 50644 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
-2024-10-18T09:10:47.473+02:00  INFO 50644 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2024-10-18T09:10:47.479+02:00  INFO 50644 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2024-10-18T09:10:47.487+02:00 ERROR 50644 --- [main] o.s.boot.SpringApplication               : Application run failed
-
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1806) ~[spring-beans-6.1.13.jar:6.1.13]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600) ~[spring-beans-6.1.13.jar:6.1.13]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.13.jar:6.1.13]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337) ~[spring-beans-6.1.13.jar:6.1.13]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.13.jar:6.1.13]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335) ~[spring-beans-6.1.13.jar:6.1.13]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205) ~[spring-beans-6.1.13.jar:6.1.13]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:954) ~[spring-context-6.1.13.jar:6.1.13]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625) ~[spring-context-6.1.13.jar:6.1.13]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.3.4.jar:3.3.4]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.3.4.jar:3.3.4]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.3.4.jar:3.3.4]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335) ~[spring-boot-3.3.4.jar:3.3.4]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) ~[spring-boot-3.3.4.jar:3.3.4]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352) ~[spring-boot-3.3.4.jar:3.3.4]
-	at ies.jandula.incidencia.IncidenciaApplication.main(IncidenciaApplication.java:10) ~[classes/:na]
-Caused by: org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:276) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
-	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
-	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:221) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
-	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:189) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
-	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:171) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1431) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1502) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
-	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75) ~[spring-orm-6.1.13.jar:6.1.13]
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390) ~[spring-orm-6.1.13.jar:6.1.13]
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-6.1.13.jar:6.1.13]
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-6.1.13.jar:6.1.13]
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366) ~[spring-orm-6.1.13.jar:6.1.13]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1853) ~[spring-beans-6.1.13.jar:6.1.13]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1802) ~[spring-beans-6.1.13.jar:6.1.13]
-	... 15 common frames omitted
-Caused by: org.hibernate.HibernateException: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
-	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.determineDialect(DialectFactoryImpl.java:191) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
-	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.buildDialect(DialectFactoryImpl.java:87) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
-	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentWithDefaults(JdbcEnvironmentInitiator.java:153) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
-	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:364) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
-	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:124) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
-	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:78) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
-	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:130) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
-	... 30 common frames omitted
-
-2024-10-18T09:11:07.561+02:00  INFO 51462 --- [main] i.j.incidencia.IncidenciaApplication     : Starting IncidenciaApplication using Java 21.0.4 with PID 51462 (/home/jaydee/Github/Jandula_incidencias/incidencia/target/classes started by jaydee in /home/jaydee/Github/Jandula_incidencias/incidencia)
-2024-10-18T09:11:07.562+02:00 DEBUG 51462 --- [main] i.j.incidencia.IncidenciaApplication     : Running with Spring Boot v3.3.4, Spring v6.1.13
-2024-10-18T09:11:07.562+02:00  INFO 51462 --- [main] i.j.incidencia.IncidenciaApplication     : No active profile set, falling back to 1 default profile: "default"
-2024-10-18T09:11:07.855+02:00  INFO 51462 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-10-18T09:11:07.883+02:00  INFO 51462 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 23 ms. Found 1 JPA repository interface.
-2024-10-18T09:11:08.147+02:00  INFO 51462 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8888 (http)
-2024-10-18T09:11:08.156+02:00  INFO 51462 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-10-18T09:11:08.156+02:00  INFO 51462 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
-2024-10-18T09:11:08.183+02:00  INFO 51462 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-10-18T09:11:08.183+02:00  INFO 51462 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 597 ms
-2024-10-18T09:11:08.269+02:00  INFO 51462 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-10-18T09:11:08.291+02:00  INFO 51462 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
-2024-10-18T09:11:08.311+02:00  INFO 51462 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-10-18T09:11:08.442+02:00  INFO 51462 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-10-18T09:11:08.454+02:00  INFO 51462 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-10-18T09:11:08.657+02:00  INFO 51462 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6fd9dbe6
-2024-10-18T09:11:08.659+02:00  INFO 51462 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-10-18T09:11:09.085+02:00  INFO 51462 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-10-18T09:11:09.141+02:00  INFO 51462 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-10-18T09:11:09.265+02:00  INFO 51462 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
-2024-10-18T09:11:09.742+02:00  WARN 51462 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-10-18T09:11:09.913+02:00  INFO 51462 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8888 (http) with context path '/'
-2024-10-18T09:11:09.918+02:00  INFO 51462 --- [main] i.j.incidencia.IncidenciaApplication     : Started IncidenciaApplication in 2.633 seconds (process running for 2.857)
-2024-10-18T09:12:09.821+02:00  INFO 51462 --- [http-nio-8888-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-10-18T09:12:09.821+02:00  INFO 51462 --- [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-10-18T09:12:09.822+02:00  INFO 51462 --- [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2024-10-18T09:12:09.884+02:00 DEBUG 51462 --- [http-nio-8888-exec-1] i.j.i.rest.IncidenciaController          : Parametros recibidos:
-IncidenciaDTO(numeroAula=0.6, correoDocente=null, fechaIncidencia=null, descripcionIncidencia=Los proyectores no van., estadoIncidencia=null, comentario=null)
-2024-10-18T09:12:09.885+02:00 DEBUG 51462 --- [http-nio-8888-exec-1] i.j.i.rest.IncidenciaController          : DEBUG: Nueva incidencia creada con éxito.
-2024-10-18T09:12:09.885+02:00 DEBUG 51462 --- [http-nio-8888-exec-1] i.j.i.rest.IncidenciaController          : DEBUG: Numero de Aula asignado con éxito.
-2024-10-18T09:12:09.885+02:00 DEBUG 51462 --- [http-nio-8888-exec-1] i.j.i.rest.IncidenciaController          : DEBUG: Correo docente asignado con éxito.
-2024-10-18T09:12:09.885+02:00 DEBUG 51462 --- [http-nio-8888-exec-1] i.j.i.rest.IncidenciaController          : DEBUG: Estado pendiente asignado con éxito.
-2024-10-18T09:12:09.885+02:00 DEBUG 51462 --- [http-nio-8888-exec-1] i.j.i.rest.IncidenciaController          : DEBUG: Comentario incidencia inicializado con éxito.
-2024-10-18T09:12:09.885+02:00 DEBUG 51462 --- [http-nio-8888-exec-1] i.j.i.rest.IncidenciaController          : DEBUG: Descripcion incidencia almacenada con éxito.
-2024-10-18T09:12:09.885+02:00 DEBUG 51462 --- [http-nio-8888-exec-1] i.j.i.rest.IncidenciaController          : DEBUG: Fecha de creacion almacenada 2024-10-18T09:12:09.885488617
-2024-10-18T09:12:09.885+02:00 DEBUG 51462 --- [http-nio-8888-exec-1] i.j.i.rest.IncidenciaController          : DEBUG: Objeto creado:
- IncidenciaEntity(numeroAula=0.6, correoDocente=dgia543@g.educaand.es, fechaIncidencia=2024-10-18T09:12:09.885488617, descripcionIncidencia=Los proyectores no van., estadoIncidencia=PENDIENTE, comentario=N/A)
-2024-10-18T09:12:09.951+02:00  INFO 51462 --- [http-nio-8888-exec-1] i.j.i.rest.IncidenciaController          : INFO: El objeto guardado en base de datos es:
-IncidenciaEntity(numeroAula=0.6, correoDocente=dgia543@g.educaand.es, fechaIncidencia=2024-10-18T09:12:09.885488617, descripcionIncidencia=Los proyectores no van., estadoIncidencia=PENDIENTE, comentario=N/A)
-2024-10-18T09:12:18.997+02:00 DEBUG 51462 --- [http-nio-8888-exec-3] i.j.i.rest.IncidenciaController          : Parametros recibidos:
-IncidenciaDTO(numeroAula=0.4, correoDocente=null, fechaIncidencia=null, descripcionIncidencia=Los proyectores no van., estadoIncidencia=null, comentario=null)
-2024-10-18T09:12:18.997+02:00 DEBUG 51462 --- [http-nio-8888-exec-3] i.j.i.rest.IncidenciaController          : DEBUG: Nueva incidencia creada con éxito.
-2024-10-18T09:12:18.997+02:00 DEBUG 51462 --- [http-nio-8888-exec-3] i.j.i.rest.IncidenciaController          : DEBUG: Numero de Aula asignado con éxito.
-2024-10-18T09:12:18.997+02:00 DEBUG 51462 --- [http-nio-8888-exec-3] i.j.i.rest.IncidenciaController          : DEBUG: Correo docente asignado con éxito.
-2024-10-18T09:12:18.997+02:00 DEBUG 51462 --- [http-nio-8888-exec-3] i.j.i.rest.IncidenciaController          : DEBUG: Estado pendiente asignado con éxito.
-2024-10-18T09:12:18.997+02:00 DEBUG 51462 --- [http-nio-8888-exec-3] i.j.i.rest.IncidenciaController          : DEBUG: Comentario incidencia inicializado con éxito.
-2024-10-18T09:12:18.997+02:00 DEBUG 51462 --- [http-nio-8888-exec-3] i.j.i.rest.IncidenciaController          : DEBUG: Descripcion incidencia almacenada con éxito.
-2024-10-18T09:12:18.997+02:00 DEBUG 51462 --- [http-nio-8888-exec-3] i.j.i.rest.IncidenciaController          : DEBUG: Fecha de creacion almacenada 2024-10-18T09:12:18.997667705
-2024-10-18T09:12:18.997+02:00 DEBUG 51462 --- [http-nio-8888-exec-3] i.j.i.rest.IncidenciaController          : DEBUG: Objeto creado:
- IncidenciaEntity(numeroAula=0.4, correoDocente=dgia543@g.educaand.es, fechaIncidencia=2024-10-18T09:12:18.997667705, descripcionIncidencia=Los proyectores no van., estadoIncidencia=PENDIENTE, comentario=N/A)
-2024-10-18T09:12:19.009+02:00  INFO 51462 --- [http-nio-8888-exec-3] i.j.i.rest.IncidenciaController          : INFO: El objeto guardado en base de datos es:
-IncidenciaEntity(numeroAula=0.4, correoDocente=dgia543@g.educaand.es, fechaIncidencia=2024-10-18T09:12:18.997667705, descripcionIncidencia=Los proyectores no van., estadoIncidencia=PENDIENTE, comentario=N/A)
-2024-10-18T09:12:53.003+02:00 ERROR 51462 --- [http-nio-8888-exec-5] i.j.incidencia.mappers.IncidenciaMapper  : ERROR: Error inesperado en mapper.
-
-java.lang.IllegalArgumentException: El DTO recibido es nulo o tiene atributos nulos.
-	at ies.jandula.incidencia.mappers.IncidenciaMapper.mapToEntity(IncidenciaMapper.java:36) ~[classes/:na]
-	at ies.jandula.incidencia.rest.IncidenciaController.borraIncidencia(IncidenciaController.java:224) ~[classes/:na]
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255) ~[spring-web-6.1.13.jar:6.1.13]
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188) ~[spring-web-6.1.13.jar:6.1.13]
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.1.13.jar:6.1.13]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926) ~[spring-webmvc-6.1.13.jar:6.1.13]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831) ~[spring-webmvc-6.1.13.jar:6.1.13]
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.1.13.jar:6.1.13]
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.1.13.jar:6.1.13]
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.13.jar:6.1.13]
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.13.jar:6.1.13]
-	at org.springframework.web.servlet.FrameworkServlet.doDelete(FrameworkServlet.java:936) ~[spring-webmvc-6.1.13.jar:6.1.13]
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:596) ~[tomcat-embed-core-10.1.30.jar:6.0]
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.13.jar:6.1.13]
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.30.jar:6.0]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.30.jar:10.1.30]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.13.jar:6.1.13]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.13.jar:6.1.13]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.13.jar:6.1.13]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.13.jar:6.1.13]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.13.jar:6.1.13]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.13.jar:6.1.13]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:384) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
-
-2024-10-18T09:12:53.006+02:00 ERROR 51462 --- [http-nio-8888-exec-5] i.j.i.rest.IncidenciaController          : ERROR: Error inesperado capturado en borraIncidencia().
-{}
-
-java.lang.Exception: ERROR: El mapeo de objeto ha fallado.
- El DTO recibido es nulo o tiene atributos nulos.
-	at ies.jandula.incidencia.mappers.IncidenciaMapper.mapToEntity(IncidenciaMapper.java:60) ~[classes/:na]
-	at ies.jandula.incidencia.rest.IncidenciaController.borraIncidencia(IncidenciaController.java:224) ~[classes/:na]
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255) ~[spring-web-6.1.13.jar:6.1.13]
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188) ~[spring-web-6.1.13.jar:6.1.13]
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.1.13.jar:6.1.13]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926) ~[spring-webmvc-6.1.13.jar:6.1.13]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831) ~[spring-webmvc-6.1.13.jar:6.1.13]
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.1.13.jar:6.1.13]
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.1.13.jar:6.1.13]
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.13.jar:6.1.13]
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.13.jar:6.1.13]
-	at org.springframework.web.servlet.FrameworkServlet.doDelete(FrameworkServlet.java:936) ~[spring-webmvc-6.1.13.jar:6.1.13]
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:596) ~[tomcat-embed-core-10.1.30.jar:6.0]
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.13.jar:6.1.13]
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.30.jar:6.0]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.30.jar:10.1.30]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.13.jar:6.1.13]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.13.jar:6.1.13]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.13.jar:6.1.13]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.13.jar:6.1.13]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.13.jar:6.1.13]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.13.jar:6.1.13]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:384) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
-
-2024-10-18T09:13:21.109+02:00 DEBUG 51462 --- [http-nio-8888-exec-7] i.j.incidencia.mappers.IncidenciaMapper  : DEBUG: Nueva incidencia creada
-2024-10-18T09:13:21.109+02:00 DEBUG 51462 --- [http-nio-8888-exec-7] i.j.incidencia.mappers.IncidenciaMapper  : DEBUG: Incidencia mapeada con éxito.
- Incidenecia: IncidenciaEntity(numeroAula=0.6, correoDocente=dgia543@g.educaand.es, fechaIncidencia=2024-10-18T09:12:09.885489, descripcionIncidencia=, estadoIncidencia=PENDIENTE, comentario=N/A)
-2024-10-18T09:13:21.134+02:00  INFO 51462 --- [http-nio-8888-exec-7] i.j.i.rest.IncidenciaController          : INFO: Incidencia eliminada.
-IncidenciaEntity(numeroAula=0.6, correoDocente=dgia543@g.educaand.es, fechaIncidencia=2024-10-18T09:12:09.885489, descripcionIncidencia=, estadoIncidencia=PENDIENTE, comentario=N/A)
-2024-10-18T09:18:33.223+02:00 ERROR 51462 --- [http-nio-8888-exec-10] i.j.incidencia.mappers.IncidenciaMapper  : ERROR: Error inesperado en mapper.
-
-java.lang.IllegalArgumentException: El DTO recibido es nulo o tiene atributos nulos.
-	at ies.jandula.incidencia.mappers.IncidenciaMapper.mapToEntity(IncidenciaMapper.java:36) ~[classes/:na]
-	at ies.jandula.incidencia.rest.IncidenciaController.borraIncidencia(IncidenciaController.java:224) ~[classes/:na]
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255) ~[spring-web-6.1.13.jar:6.1.13]
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188) ~[spring-web-6.1.13.jar:6.1.13]
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.1.13.jar:6.1.13]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926) ~[spring-webmvc-6.1.13.jar:6.1.13]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831) ~[spring-webmvc-6.1.13.jar:6.1.13]
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.1.13.jar:6.1.13]
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.1.13.jar:6.1.13]
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.13.jar:6.1.13]
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.13.jar:6.1.13]
-	at org.springframework.web.servlet.FrameworkServlet.doDelete(FrameworkServlet.java:936) ~[spring-webmvc-6.1.13.jar:6.1.13]
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:596) ~[tomcat-embed-core-10.1.30.jar:6.0]
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.13.jar:6.1.13]
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.30.jar:6.0]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.30.jar:10.1.30]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.13.jar:6.1.13]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.13.jar:6.1.13]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.13.jar:6.1.13]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.13.jar:6.1.13]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.13.jar:6.1.13]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.13.jar:6.1.13]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:384) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
-
-2024-10-18T09:18:33.224+02:00 ERROR 51462 --- [http-nio-8888-exec-10] i.j.i.rest.IncidenciaController          : ERROR: Error inesperado capturado en borraIncidencia().
-{}
-
-java.lang.Exception: ERROR: El mapeo de objeto ha fallado.
- El DTO recibido es nulo o tiene atributos nulos.
-	at ies.jandula.incidencia.mappers.IncidenciaMapper.mapToEntity(IncidenciaMapper.java:60) ~[classes/:na]
-	at ies.jandula.incidencia.rest.IncidenciaController.borraIncidencia(IncidenciaController.java:224) ~[classes/:na]
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255) ~[spring-web-6.1.13.jar:6.1.13]
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188) ~[spring-web-6.1.13.jar:6.1.13]
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.1.13.jar:6.1.13]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926) ~[spring-webmvc-6.1.13.jar:6.1.13]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831) ~[spring-webmvc-6.1.13.jar:6.1.13]
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.1.13.jar:6.1.13]
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.1.13.jar:6.1.13]
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.13.jar:6.1.13]
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.13.jar:6.1.13]
-	at org.springframework.web.servlet.FrameworkServlet.doDelete(FrameworkServlet.java:936) ~[spring-webmvc-6.1.13.jar:6.1.13]
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:596) ~[tomcat-embed-core-10.1.30.jar:6.0]
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.13.jar:6.1.13]
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.30.jar:6.0]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.30.jar:10.1.30]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.13.jar:6.1.13]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.13.jar:6.1.13]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.13.jar:6.1.13]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.13.jar:6.1.13]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.13.jar:6.1.13]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.13.jar:6.1.13]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:384) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
-
-2024-10-18T09:19:12.119+02:00 ERROR 51462 --- [http-nio-8888-exec-1] i.j.incidencia.mappers.IncidenciaMapper  : ERROR: Error inesperado en mapper.
-
-java.lang.IllegalArgumentException: El DTO recibido es nulo o tiene atributos nulos.
-	at ies.jandula.incidencia.mappers.IncidenciaMapper.mapToEntity(IncidenciaMapper.java:36) ~[classes/:na]
-	at ies.jandula.incidencia.rest.IncidenciaController.borraIncidencia(IncidenciaController.java:224) ~[classes/:na]
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255) ~[spring-web-6.1.13.jar:6.1.13]
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188) ~[spring-web-6.1.13.jar:6.1.13]
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.1.13.jar:6.1.13]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926) ~[spring-webmvc-6.1.13.jar:6.1.13]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831) ~[spring-webmvc-6.1.13.jar:6.1.13]
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.1.13.jar:6.1.13]
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.1.13.jar:6.1.13]
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.13.jar:6.1.13]
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.13.jar:6.1.13]
-	at org.springframework.web.servlet.FrameworkServlet.doDelete(FrameworkServlet.java:936) ~[spring-webmvc-6.1.13.jar:6.1.13]
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:596) ~[tomcat-embed-core-10.1.30.jar:6.0]
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.13.jar:6.1.13]
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.30.jar:6.0]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.30.jar:10.1.30]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.13.jar:6.1.13]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.13.jar:6.1.13]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.13.jar:6.1.13]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.13.jar:6.1.13]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.13.jar:6.1.13]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.13.jar:6.1.13]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:384) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
-
-2024-10-18T09:19:12.120+02:00 ERROR 51462 --- [http-nio-8888-exec-1] i.j.i.rest.IncidenciaController          : ERROR: Error inesperado capturado en borraIncidencia().
-{}
-
-java.lang.Exception: ERROR: El mapeo de objeto ha fallado.
- El DTO recibido es nulo o tiene atributos nulos.
-	at ies.jandula.incidencia.mappers.IncidenciaMapper.mapToEntity(IncidenciaMapper.java:60) ~[classes/:na]
-	at ies.jandula.incidencia.rest.IncidenciaController.borraIncidencia(IncidenciaController.java:224) ~[classes/:na]
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255) ~[spring-web-6.1.13.jar:6.1.13]
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188) ~[spring-web-6.1.13.jar:6.1.13]
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.1.13.jar:6.1.13]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926) ~[spring-webmvc-6.1.13.jar:6.1.13]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831) ~[spring-webmvc-6.1.13.jar:6.1.13]
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.1.13.jar:6.1.13]
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.1.13.jar:6.1.13]
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.13.jar:6.1.13]
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.13.jar:6.1.13]
-	at org.springframework.web.servlet.FrameworkServlet.doDelete(FrameworkServlet.java:936) ~[spring-webmvc-6.1.13.jar:6.1.13]
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:596) ~[tomcat-embed-core-10.1.30.jar:6.0]
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.13.jar:6.1.13]
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.30.jar:6.0]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.30.jar:10.1.30]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.13.jar:6.1.13]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.13.jar:6.1.13]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.13.jar:6.1.13]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.13.jar:6.1.13]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.13.jar:6.1.13]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.13.jar:6.1.13]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:384) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
-
-2024-10-18T09:19:21.855+02:00 DEBUG 51462 --- [http-nio-8888-exec-4] i.j.incidencia.mappers.IncidenciaMapper  : DEBUG: Nueva incidencia creada
-2024-10-18T09:19:21.855+02:00 DEBUG 51462 --- [http-nio-8888-exec-4] i.j.incidencia.mappers.IncidenciaMapper  : DEBUG: Incidencia mapeada con éxito.
- Incidenecia: IncidenciaEntity(numeroAula=0.4, correoDocente=dgia543@g.educaand.es, fechaIncidencia=2024-10-18T09:12:18.997668, descripcionIncidencia=Los proyectores no van., estadoIncidencia=PENDIENTE, comentario=N/A)
-2024-10-18T09:19:21.869+02:00  INFO 51462 --- [http-nio-8888-exec-4] i.j.i.rest.IncidenciaController          : INFO: Incidencia eliminada.
-IncidenciaEntity(numeroAula=0.4, correoDocente=dgia543@g.educaand.es, fechaIncidencia=2024-10-18T09:12:18.997668, descripcionIncidencia=Los proyectores no van., estadoIncidencia=PENDIENTE, comentario=N/A)
-2024-10-18T09:19:52.950+02:00 DEBUG 51462 --- [http-nio-8888-exec-5] i.j.incidencia.mappers.IncidenciaMapper  : DEBUG: Nueva incidencia creada
-2024-10-18T09:19:52.950+02:00 DEBUG 51462 --- [http-nio-8888-exec-5] i.j.incidencia.mappers.IncidenciaMapper  : DEBUG: Incidencia mapeada con éxito.
- Incidenecia: IncidenciaEntity(numeroAula=0.6, correoDocente=dgia543@g.educaand.es, fechaIncidencia=2024-10-18T09:12:18.997668, descripcionIncidencia=Los proyectores no van., estadoIncidencia=PENDIENTE, comentario=N/A)
-2024-10-18T10:12:01.674+02:00  INFO 51462 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-10-18T10:12:01.675+02:00  INFO 51462 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-10-18T10:12:01.678+02:00  INFO 51462 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2024-10-18T10:12:04.025+02:00  INFO 175282 --- [main] i.j.incidencia.IncidenciaApplication     : Starting IncidenciaApplication using Java 21.0.4 with PID 175282 (/home/jaydee/Github/Jandula_incidencias/incidencia/target/classes started by jaydee in /home/jaydee/Github/Jandula_incidencias/incidencia)
-2024-10-18T10:12:04.026+02:00 DEBUG 175282 --- [main] i.j.incidencia.IncidenciaApplication     : Running with Spring Boot v3.3.4, Spring v6.1.13
-2024-10-18T10:12:04.027+02:00  INFO 175282 --- [main] i.j.incidencia.IncidenciaApplication     : No active profile set, falling back to 1 default profile: "default"
-2024-10-18T10:12:04.358+02:00  INFO 175282 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-10-18T10:12:04.390+02:00  INFO 175282 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 25 ms. Found 1 JPA repository interface.
-2024-10-18T10:12:04.676+02:00  INFO 175282 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8888 (http)
-2024-10-18T10:12:04.685+02:00  INFO 175282 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-10-18T10:12:04.686+02:00  INFO 175282 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
-2024-10-18T10:12:04.715+02:00  INFO 175282 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-10-18T10:12:04.715+02:00  INFO 175282 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 667 ms
-2024-10-18T10:12:04.797+02:00  INFO 175282 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-10-18T10:12:04.832+02:00  INFO 175282 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
-2024-10-18T10:12:04.852+02:00  INFO 175282 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-10-18T10:12:05.012+02:00  INFO 175282 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-10-18T10:12:05.027+02:00  INFO 175282 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-10-18T10:12:05.233+02:00  INFO 175282 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@34e25492
-2024-10-18T10:12:05.235+02:00  INFO 175282 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-10-18T10:12:05.683+02:00  INFO 175282 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-10-18T10:12:05.737+02:00  INFO 175282 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-10-18T10:12:05.867+02:00  INFO 175282 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
-2024-10-18T10:12:06.245+02:00  WARN 175282 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-10-18T10:12:06.434+02:00  INFO 175282 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8888 (http) with context path '/'
-2024-10-18T10:12:06.438+02:00  INFO 175282 --- [main] i.j.incidencia.IncidenciaApplication     : Started IncidenciaApplication in 2.7 seconds (process running for 2.935)
-2024-10-18T10:12:11.717+02:00  INFO 175282 --- [http-nio-8888-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-10-18T10:12:11.717+02:00  INFO 175282 --- [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-10-18T10:12:11.718+02:00  INFO 175282 --- [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2024-10-18T10:12:11.779+02:00 DEBUG 175282 --- [http-nio-8888-exec-1] i.j.i.rest.IncidenciaController          : Parametros recibidos:
-IncidenciaDTO(numeroAula=0.4, correoDocente=null, fechaIncidencia=null, descripcionIncidencia=Los proyectores no van., estadoIncidencia=null, comentario=null)
-2024-10-18T10:12:11.779+02:00 DEBUG 175282 --- [http-nio-8888-exec-1] i.j.i.rest.IncidenciaController          : DEBUG: Nueva incidencia creada con éxito.
-2024-10-18T10:12:11.779+02:00 DEBUG 175282 --- [http-nio-8888-exec-1] i.j.i.rest.IncidenciaController          : DEBUG: Numero de Aula asignado con éxito.
-2024-10-18T10:12:11.779+02:00 DEBUG 175282 --- [http-nio-8888-exec-1] i.j.i.rest.IncidenciaController          : DEBUG: Correo docente asignado con éxito.
-2024-10-18T10:12:11.779+02:00 DEBUG 175282 --- [http-nio-8888-exec-1] i.j.i.rest.IncidenciaController          : DEBUG: Estado pendiente asignado con éxito.
-2024-10-18T10:12:11.779+02:00 DEBUG 175282 --- [http-nio-8888-exec-1] i.j.i.rest.IncidenciaController          : DEBUG: Comentario incidencia inicializado con éxito.
-2024-10-18T10:12:11.779+02:00 DEBUG 175282 --- [http-nio-8888-exec-1] i.j.i.rest.IncidenciaController          : DEBUG: Descripcion incidencia almacenada con éxito.
-2024-10-18T10:12:11.779+02:00 DEBUG 175282 --- [http-nio-8888-exec-1] i.j.i.rest.IncidenciaController          : DEBUG: Fecha de creacion almacenada 2024-10-18T10:12:11.779780527
-2024-10-18T10:12:11.779+02:00 DEBUG 175282 --- [http-nio-8888-exec-1] i.j.i.rest.IncidenciaController          : DEBUG: Objeto creado:
- IncidenciaEntity(numeroAula=0.4, correoDocente=dgia543@g.educaand.es, fechaIncidencia=2024-10-18T10:12:11.779780527, descripcionIncidencia=Los proyectores no van., estadoIncidencia=PENDIENTE, comentario=N/A)
-2024-10-18T10:12:11.840+02:00  INFO 175282 --- [http-nio-8888-exec-1] i.j.i.rest.IncidenciaController          : INFO: El objeto guardado en base de datos es:
-IncidenciaEntity(numeroAula=0.4, correoDocente=dgia543@g.educaand.es, fechaIncidencia=2024-10-18T10:12:11.779780527, descripcionIncidencia=Los proyectores no van., estadoIncidencia=PENDIENTE, comentario=N/A)
-2024-10-18T10:13:17.807+02:00 DEBUG 175282 --- [http-nio-8888-exec-6] i.j.i.rest.IncidenciaController          : Parametros recibidos:
-IncidenciaDTO(numeroAula=0.4, correoDocente=dgia543@g.educaand.es, fechaIncidencia=2024-10-18T10:12:11.779781, descripcionIncidencia=Los proyectores no van., estadoIncidencia=EN PROGRESO, comentario=La incidencia está progresando.)
-2024-10-18T10:13:17.807+02:00 DEBUG 175282 --- [http-nio-8888-exec-6] i.j.incidencia.mappers.IncidenciaMapper  : DEBUG: Nueva incidencia creada
-2024-10-18T10:13:17.807+02:00 DEBUG 175282 --- [http-nio-8888-exec-6] i.j.incidencia.mappers.IncidenciaMapper  : DEBUG: Incidencia mapeada con éxito.
- Incidenecia: IncidenciaEntity(numeroAula=0.4, correoDocente=dgia543@g.educaand.es, fechaIncidencia=2024-10-18T10:12:11.779781, descripcionIncidencia=Los proyectores no van., estadoIncidencia=EN PROGRESO, comentario=La incidencia está progresando.)
-2024-10-18T10:13:17.808+02:00 DEBUG 175282 --- [http-nio-8888-exec-6] i.j.i.rest.IncidenciaController          : DEBUG: Nueva incidencia mapeada desde DTO con éxito.
- IncidenciaEntity(numeroAula=0.4, correoDocente=dgia543@g.educaand.es, fechaIncidencia=2024-10-18T10:12:11.779781, descripcionIncidencia=Los proyectores no van., estadoIncidencia=EN PROGRESO, comentario=La incidencia está progresando.)
-2024-10-18T10:13:17.825+02:00  INFO 175282 --- [http-nio-8888-exec-6] i.j.i.rest.IncidenciaController          : INFO: El objeto guardado en base de datos es:
-IncidenciaEntity(numeroAula=0.4, correoDocente=dgia543@g.educaand.es, fechaIncidencia=2024-10-18T10:12:11.779781, descripcionIncidencia=Los proyectores no van., estadoIncidencia=EN PROGRESO, comentario=La incidencia está progresando.)
-2024-10-18T10:23:50.634+02:00  INFO 175282 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-10-18T10:23:50.658+02:00  INFO 175282 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-10-18T10:23:50.662+02:00  INFO 175282 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2024-10-18T10:30:55.043+02:00  INFO 214323 --- [main] i.j.incidencia.IncidenciaApplication     : Starting IncidenciaApplication using Java 21.0.4 with PID 214323 (/home/jaydee/Github/Jandula_incidencias/incidencia/target/classes started by jaydee in /home/jaydee/Github/Jandula_incidencias/incidencia)
-2024-10-18T10:30:55.045+02:00 DEBUG 214323 --- [main] i.j.incidencia.IncidenciaApplication     : Running with Spring Boot v3.3.4, Spring v6.1.13
-2024-10-18T10:30:55.045+02:00  INFO 214323 --- [main] i.j.incidencia.IncidenciaApplication     : No active profile set, falling back to 1 default profile: "default"
-2024-10-18T10:30:55.669+02:00  INFO 214323 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-10-18T10:30:55.722+02:00  INFO 214323 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 40 ms. Found 1 JPA repository interface.
-2024-10-18T10:30:56.103+02:00  INFO 214323 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8888 (http)
-2024-10-18T10:30:56.113+02:00  INFO 214323 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-10-18T10:30:56.114+02:00  INFO 214323 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
-2024-10-18T10:30:56.150+02:00  INFO 214323 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-10-18T10:30:56.150+02:00  INFO 214323 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1060 ms
-2024-10-18T10:30:56.243+02:00  INFO 214323 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-10-18T10:30:56.276+02:00  INFO 214323 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
-2024-10-18T10:30:56.292+02:00  INFO 214323 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-10-18T10:30:56.450+02:00  INFO 214323 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-10-18T10:30:56.466+02:00  INFO 214323 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-10-18T10:30:56.687+02:00  INFO 214323 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@fe08eaf
-2024-10-18T10:30:56.688+02:00  INFO 214323 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-10-18T10:30:57.143+02:00  INFO 214323 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-10-18T10:30:57.195+02:00  INFO 214323 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-10-18T10:30:57.319+02:00  INFO 214323 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
-2024-10-18T10:30:57.670+02:00  WARN 214323 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-10-18T10:30:57.858+02:00  INFO 214323 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8888 (http) with context path '/'
-2024-10-18T10:30:57.863+02:00  INFO 214323 --- [main] i.j.incidencia.IncidenciaApplication     : Started IncidenciaApplication in 3.24 seconds (process running for 3.589)
-2024-10-18T10:31:04.299+02:00  INFO 214323 --- [http-nio-8888-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-10-18T10:31:04.299+02:00  INFO 214323 --- [http-nio-8888-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-10-18T10:31:04.300+02:00  INFO 214323 --- [http-nio-8888-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2024-10-18T10:31:04.357+02:00 DEBUG 214323 --- [http-nio-8888-exec-2] i.j.i.rest.IncidenciaController          : Parametros recibidos:
-IncidenciaDTO(numeroAula=0.4, correoDocente=null, fechaIncidencia=null, descripcionIncidencia=Los proyectores no van., estadoIncidencia=null, comentario=null)
-2024-10-18T10:31:04.357+02:00 DEBUG 214323 --- [http-nio-8888-exec-2] i.j.i.rest.IncidenciaController          : DEBUG: Nueva incidencia creada con éxito.
-2024-10-18T10:31:04.357+02:00 DEBUG 214323 --- [http-nio-8888-exec-2] i.j.i.rest.IncidenciaController          : DEBUG: Numero de Aula asignado con éxito.
-2024-10-18T10:31:04.357+02:00 DEBUG 214323 --- [http-nio-8888-exec-2] i.j.i.rest.IncidenciaController          : DEBUG: Correo docente asignado con éxito.
-2024-10-18T10:31:04.357+02:00 DEBUG 214323 --- [http-nio-8888-exec-2] i.j.i.rest.IncidenciaController          : DEBUG: Estado pendiente asignado con éxito.
-2024-10-18T10:31:04.357+02:00 DEBUG 214323 --- [http-nio-8888-exec-2] i.j.i.rest.IncidenciaController          : DEBUG: Comentario incidencia inicializado con éxito.
-2024-10-18T10:31:04.357+02:00 DEBUG 214323 --- [http-nio-8888-exec-2] i.j.i.rest.IncidenciaController          : DEBUG: Descripcion incidencia almacenada con éxito.
-2024-10-18T10:31:04.358+02:00 DEBUG 214323 --- [http-nio-8888-exec-2] i.j.i.rest.IncidenciaController          : DEBUG: Fecha de creacion almacenada 2024-10-18T10:31:04.358203208
-2024-10-18T10:31:04.358+02:00 DEBUG 214323 --- [http-nio-8888-exec-2] i.j.i.rest.IncidenciaController          : DEBUG: Objeto creado:
- IncidenciaEntity(numeroAula=0.4, correoDocente=dgia543@g.educaand.es, fechaIncidencia=2024-10-18T10:31:04.358203208, descripcionIncidencia=Los proyectores no van., estadoIncidencia=PENDIENTE, comentario=N/A)
-2024-10-18T10:31:04.415+02:00  INFO 214323 --- [http-nio-8888-exec-2] i.j.i.rest.IncidenciaController          : INFO: El objeto guardado en base de datos es:
-IncidenciaEntity(numeroAula=0.4, correoDocente=dgia543@g.educaand.es, fechaIncidencia=2024-10-18T10:31:04.358203208, descripcionIncidencia=Los proyectores no van., estadoIncidencia=PENDIENTE, comentario=N/A)
-2024-10-18T10:31:21.714+02:00 DEBUG 214323 --- [http-nio-8888-exec-5] i.j.incidencia.mappers.IncidenciaMapper  : DEBUG: Nueva incidencia creada
-2024-10-18T10:31:21.714+02:00 DEBUG 214323 --- [http-nio-8888-exec-5] i.j.incidencia.mappers.IncidenciaMapper  : DEBUG: Incidencia mapeada con éxito.
- Incidenecia: IncidenciaEntity(numeroAula=0.6, correoDocente=dgia543@g.educaand.es, fechaIncidencia=2024-10-18T09:12:18.997668, descripcionIncidencia=Los proyectores no van., estadoIncidencia=PENDIENTE, comentario=N/A)
-2024-10-18T10:31:23.895+02:00 DEBUG 214323 --- [http-nio-8888-exec-6] i.j.incidencia.mappers.IncidenciaMapper  : DEBUG: Nueva incidencia creada
-2024-10-18T10:31:23.895+02:00 DEBUG 214323 --- [http-nio-8888-exec-6] i.j.incidencia.mappers.IncidenciaMapper  : DEBUG: Incidencia mapeada con éxito.
- Incidenecia: IncidenciaEntity(numeroAula=0.6, correoDocente=dgia543@g.educaand.es, fechaIncidencia=2024-10-18T09:12:18.997668, descripcionIncidencia=Los proyectores no van., estadoIncidencia=PENDIENTE, comentario=N/A)
-2024-10-18T10:31:27.884+02:00 ERROR 214323 --- [http-nio-8888-exec-4] i.j.incidencia.mappers.IncidenciaMapper  : ERROR: Error inesperado en mapper.
-
-java.lang.IllegalArgumentException: El DTO recibido es nulo o tiene atributos nulos.
-	at ies.jandula.incidencia.mappers.IncidenciaMapper.mapToEntity(IncidenciaMapper.java:36) ~[classes/:na]
-	at ies.jandula.incidencia.rest.IncidenciaController.borraIncidencia(IncidenciaController.java:241) ~[classes/:na]
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255) ~[spring-web-6.1.13.jar:6.1.13]
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188) ~[spring-web-6.1.13.jar:6.1.13]
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.1.13.jar:6.1.13]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926) ~[spring-webmvc-6.1.13.jar:6.1.13]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831) ~[spring-webmvc-6.1.13.jar:6.1.13]
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.1.13.jar:6.1.13]
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.1.13.jar:6.1.13]
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.13.jar:6.1.13]
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.13.jar:6.1.13]
-	at org.springframework.web.servlet.FrameworkServlet.doDelete(FrameworkServlet.java:936) ~[spring-webmvc-6.1.13.jar:6.1.13]
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:596) ~[tomcat-embed-core-10.1.30.jar:6.0]
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.13.jar:6.1.13]
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.30.jar:6.0]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.30.jar:10.1.30]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.13.jar:6.1.13]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.13.jar:6.1.13]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.13.jar:6.1.13]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.13.jar:6.1.13]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.13.jar:6.1.13]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.13.jar:6.1.13]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:384) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
-
-2024-10-18T10:31:27.887+02:00 ERROR 214323 --- [http-nio-8888-exec-4] i.j.i.rest.IncidenciaController          : ERROR: Error inesperado capturado en borraIncidencia().
-{}
-
-java.lang.Exception: ERROR: El mapeo de objeto ha fallado.
- El DTO recibido es nulo o tiene atributos nulos.
-	at ies.jandula.incidencia.mappers.IncidenciaMapper.mapToEntity(IncidenciaMapper.java:60) ~[classes/:na]
-	at ies.jandula.incidencia.rest.IncidenciaController.borraIncidencia(IncidenciaController.java:241) ~[classes/:na]
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255) ~[spring-web-6.1.13.jar:6.1.13]
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188) ~[spring-web-6.1.13.jar:6.1.13]
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.1.13.jar:6.1.13]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926) ~[spring-webmvc-6.1.13.jar:6.1.13]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831) ~[spring-webmvc-6.1.13.jar:6.1.13]
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.1.13.jar:6.1.13]
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.1.13.jar:6.1.13]
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.13.jar:6.1.13]
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.13.jar:6.1.13]
-	at org.springframework.web.servlet.FrameworkServlet.doDelete(FrameworkServlet.java:936) ~[spring-webmvc-6.1.13.jar:6.1.13]
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:596) ~[tomcat-embed-core-10.1.30.jar:6.0]
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.13.jar:6.1.13]
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.30.jar:6.0]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.30.jar:10.1.30]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.13.jar:6.1.13]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.13.jar:6.1.13]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.13.jar:6.1.13]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.13.jar:6.1.13]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.13.jar:6.1.13]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.13.jar:6.1.13]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:384) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
-
-2024-10-18T10:31:41.400+02:00 DEBUG 214323 --- [http-nio-8888-exec-9] i.j.i.rest.IncidenciaController          : Parametros recibidos:
-IncidenciaDTO(numeroAula=0.4, correoDocente=dgia543@g.educaand.es, fechaIncidencia=2024-10-18T10:12:11.779781, descripcionIncidencia=Los proyectores no van., estadoIncidencia=EN PROGRESO, comentario=La incidencia está progresando.)
-2024-10-18T10:31:41.400+02:00 DEBUG 214323 --- [http-nio-8888-exec-9] i.j.incidencia.mappers.IncidenciaMapper  : DEBUG: Nueva incidencia creada
-2024-10-18T10:31:41.400+02:00 DEBUG 214323 --- [http-nio-8888-exec-9] i.j.incidencia.mappers.IncidenciaMapper  : DEBUG: Incidencia mapeada con éxito.
- Incidenecia: IncidenciaEntity(numeroAula=0.4, correoDocente=dgia543@g.educaand.es, fechaIncidencia=2024-10-18T10:12:11.779781, descripcionIncidencia=Los proyectores no van., estadoIncidencia=EN PROGRESO, comentario=La incidencia está progresando.)
-2024-10-18T10:31:41.400+02:00 DEBUG 214323 --- [http-nio-8888-exec-9] i.j.i.rest.IncidenciaController          : DEBUG: Nueva incidencia mapeada desde DTO con éxito.
- IncidenciaEntity(numeroAula=0.4, correoDocente=dgia543@g.educaand.es, fechaIncidencia=2024-10-18T10:12:11.779781, descripcionIncidencia=Los proyectores no van., estadoIncidencia=EN PROGRESO, comentario=La incidencia está progresando.)
-2024-10-18T10:31:44.851+02:00 DEBUG 214323 --- [http-nio-8888-exec-10] i.j.i.rest.IncidenciaController          : Parametros recibidos:
-IncidenciaDTO(numeroAula=0.4, correoDocente=dgia543@g.educaand.es, fechaIncidencia=2024-10-18T10:31:04.358203, descripcionIncidencia=Los proyectores no van., estadoIncidencia=PENDIENTE, comentario=N/A)
-2024-10-18T10:31:44.851+02:00 DEBUG 214323 --- [http-nio-8888-exec-10] i.j.incidencia.mappers.IncidenciaMapper  : DEBUG: Nueva incidencia creada
-2024-10-18T10:31:44.851+02:00 DEBUG 214323 --- [http-nio-8888-exec-10] i.j.incidencia.mappers.IncidenciaMapper  : DEBUG: Incidencia mapeada con éxito.
- Incidenecia: IncidenciaEntity(numeroAula=0.4, correoDocente=dgia543@g.educaand.es, fechaIncidencia=2024-10-18T10:31:04.358203, descripcionIncidencia=Los proyectores no van., estadoIncidencia=PENDIENTE, comentario=N/A)
-2024-10-18T10:31:44.851+02:00 DEBUG 214323 --- [http-nio-8888-exec-10] i.j.i.rest.IncidenciaController          : DEBUG: Nueva incidencia mapeada desde DTO con éxito.
- IncidenciaEntity(numeroAula=0.4, correoDocente=dgia543@g.educaand.es, fechaIncidencia=2024-10-18T10:31:04.358203, descripcionIncidencia=Los proyectores no van., estadoIncidencia=PENDIENTE, comentario=N/A)
-2024-10-18T10:31:44.860+02:00  INFO 214323 --- [http-nio-8888-exec-10] i.j.i.rest.IncidenciaController          : INFO: Objeto actualizado:
-IncidenciaEntity(numeroAula=0.4, correoDocente=dgia543@g.educaand.es, fechaIncidencia=2024-10-18T10:31:04.358203, descripcionIncidencia=Los proyectores no van., estadoIncidencia=PENDIENTE, comentario=N/A)
-2024-10-18T10:32:06.324+02:00 DEBUG 214323 --- [http-nio-8888-exec-8] i.j.i.rest.IncidenciaController          : Parametros recibidos:
-IncidenciaDTO(numeroAula=0.4, correoDocente=dgia543@g.educaand.es, fechaIncidencia=2024-10-18T10:31:04.358203, descripcionIncidencia=Los proyectores no van., estadoIncidencia=EN PROGRESO, comentario=N/A)
-2024-10-18T10:32:06.324+02:00 DEBUG 214323 --- [http-nio-8888-exec-8] i.j.incidencia.mappers.IncidenciaMapper  : DEBUG: Nueva incidencia creada
-2024-10-18T10:32:06.324+02:00 DEBUG 214323 --- [http-nio-8888-exec-8] i.j.incidencia.mappers.IncidenciaMapper  : DEBUG: Incidencia mapeada con éxito.
- Incidenecia: IncidenciaEntity(numeroAula=0.4, correoDocente=dgia543@g.educaand.es, fechaIncidencia=2024-10-18T10:31:04.358203, descripcionIncidencia=Los proyectores no van., estadoIncidencia=EN PROGRESO, comentario=N/A)
-2024-10-18T10:32:06.324+02:00 DEBUG 214323 --- [http-nio-8888-exec-8] i.j.i.rest.IncidenciaController          : DEBUG: Nueva incidencia mapeada desde DTO con éxito.
- IncidenciaEntity(numeroAula=0.4, correoDocente=dgia543@g.educaand.es, fechaIncidencia=2024-10-18T10:31:04.358203, descripcionIncidencia=Los proyectores no van., estadoIncidencia=EN PROGRESO, comentario=N/A)
-2024-10-18T10:32:06.341+02:00  INFO 214323 --- [http-nio-8888-exec-8] i.j.i.rest.IncidenciaController          : INFO: Objeto actualizado:
-IncidenciaEntity(numeroAula=0.4, correoDocente=dgia543@g.educaand.es, fechaIncidencia=2024-10-18T10:31:04.358203, descripcionIncidencia=Los proyectores no van., estadoIncidencia=EN PROGRESO, comentario=N/A)
-2024-10-18T10:32:14.597+02:00  WARN 214323 --- [http-nio-8888-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character ('}' (code 125)): was expecting double-quote to start field name]
-2024-10-18T10:32:24.818+02:00 DEBUG 214323 --- [http-nio-8888-exec-5] i.j.i.rest.IncidenciaController          : Parametros recibidos:
-IncidenciaDTO(numeroAula=0.4, correoDocente=dgia543@g.educaand.es, fechaIncidencia=2024-10-18T10:31:04.358203, descripcionIncidencia=Los proyectores no van., estadoIncidencia=EN PROGRESO, comentario=null)
-2024-10-18T10:32:24.818+02:00 ERROR 214323 --- [http-nio-8888-exec-5] i.j.incidencia.mappers.IncidenciaMapper  : ERROR: Error inesperado en mapper.
-
-java.lang.IllegalArgumentException: El DTO recibido es nulo o tiene atributos nulos.
-	at ies.jandula.incidencia.mappers.IncidenciaMapper.mapToEntity(IncidenciaMapper.java:36) ~[classes/:na]
-	at ies.jandula.incidencia.rest.IncidenciaController.actualizarIncidencia(IncidenciaController.java:156) ~[classes/:na]
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255) ~[spring-web-6.1.13.jar:6.1.13]
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188) ~[spring-web-6.1.13.jar:6.1.13]
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.1.13.jar:6.1.13]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926) ~[spring-webmvc-6.1.13.jar:6.1.13]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831) ~[spring-webmvc-6.1.13.jar:6.1.13]
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.1.13.jar:6.1.13]
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.1.13.jar:6.1.13]
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.13.jar:6.1.13]
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.13.jar:6.1.13]
-	at org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:925) ~[spring-webmvc-6.1.13.jar:6.1.13]
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:593) ~[tomcat-embed-core-10.1.30.jar:6.0]
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.13.jar:6.1.13]
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.30.jar:6.0]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.30.jar:10.1.30]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.13.jar:6.1.13]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.13.jar:6.1.13]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.13.jar:6.1.13]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.13.jar:6.1.13]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.13.jar:6.1.13]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.13.jar:6.1.13]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:384) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
-
-2024-10-18T10:32:24.819+02:00 ERROR 214323 --- [http-nio-8888-exec-5] i.j.i.rest.IncidenciaController          : Excepción capturada en actualizarIncidencia(): ERROR: El mapeo de objeto ha fallado.
- El DTO recibido es nulo o tiene atributos nulos.
-
-java.lang.Exception: ERROR: El mapeo de objeto ha fallado.
- El DTO recibido es nulo o tiene atributos nulos.
-	at ies.jandula.incidencia.mappers.IncidenciaMapper.mapToEntity(IncidenciaMapper.java:60) ~[classes/:na]
-	at ies.jandula.incidencia.rest.IncidenciaController.actualizarIncidencia(IncidenciaController.java:156) ~[classes/:na]
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255) ~[spring-web-6.1.13.jar:6.1.13]
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188) ~[spring-web-6.1.13.jar:6.1.13]
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.1.13.jar:6.1.13]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926) ~[spring-webmvc-6.1.13.jar:6.1.13]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831) ~[spring-webmvc-6.1.13.jar:6.1.13]
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.1.13.jar:6.1.13]
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.1.13.jar:6.1.13]
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.13.jar:6.1.13]
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.13.jar:6.1.13]
-	at org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:925) ~[spring-webmvc-6.1.13.jar:6.1.13]
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:593) ~[tomcat-embed-core-10.1.30.jar:6.0]
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.13.jar:6.1.13]
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.30.jar:6.0]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.30.jar:10.1.30]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.13.jar:6.1.13]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.13.jar:6.1.13]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.13.jar:6.1.13]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.13.jar:6.1.13]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.13.jar:6.1.13]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.13.jar:6.1.13]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:384) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
-
-2024-10-18T10:33:20.037+02:00 DEBUG 214323 --- [http-nio-8888-exec-4] i.j.i.rest.IncidenciaController          : Parametros recibidos:
-IncidenciaDTO(numeroAula=0.4, correoDocente=dgia543@g.educaand.es, fechaIncidencia=2024-10-18T10:31:04.358203, descripcionIncidencia=Los proyectores no van., estadoIncidencia=EN PROGRESO, comentario=N/A)
-2024-10-18T10:33:20.038+02:00 DEBUG 214323 --- [http-nio-8888-exec-4] i.j.incidencia.mappers.IncidenciaMapper  : DEBUG: Nueva incidencia creada
-2024-10-18T10:33:20.038+02:00 DEBUG 214323 --- [http-nio-8888-exec-4] i.j.incidencia.mappers.IncidenciaMapper  : DEBUG: Incidencia mapeada con éxito.
- Incidenecia: IncidenciaEntity(numeroAula=0.4, correoDocente=dgia543@g.educaand.es, fechaIncidencia=2024-10-18T10:31:04.358203, descripcionIncidencia=Los proyectores no van., estadoIncidencia=EN PROGRESO, comentario=N/A)
-2024-10-18T10:33:20.038+02:00 DEBUG 214323 --- [http-nio-8888-exec-4] i.j.i.rest.IncidenciaController          : DEBUG: Nueva incidencia mapeada desde DTO con éxito.
- IncidenciaEntity(numeroAula=0.4, correoDocente=dgia543@g.educaand.es, fechaIncidencia=2024-10-18T10:31:04.358203, descripcionIncidencia=Los proyectores no van., estadoIncidencia=EN PROGRESO, comentario=N/A)
-2024-10-18T10:33:20.045+02:00  INFO 214323 --- [http-nio-8888-exec-4] i.j.i.rest.IncidenciaController          : INFO: Objeto actualizado:
-IncidenciaEntity(numeroAula=0.4, correoDocente=dgia543@g.educaand.es, fechaIncidencia=2024-10-18T10:31:04.358203, descripcionIncidencia=Los proyectores no van., estadoIncidencia=EN PROGRESO, comentario=N/A)
-2024-10-18T10:33:26.664+02:00 DEBUG 214323 --- [http-nio-8888-exec-7] i.j.i.rest.IncidenciaController          : Parametros recibidos:
-IncidenciaDTO(numeroAula=0.6, correoDocente=dgia543@g.educaand.es, fechaIncidencia=2024-10-18T10:31:04.358203, descripcionIncidencia=Los proyectores no van., estadoIncidencia=EN PROGRESO, comentario=N/A)
-2024-10-18T10:33:26.664+02:00 DEBUG 214323 --- [http-nio-8888-exec-7] i.j.incidencia.mappers.IncidenciaMapper  : DEBUG: Nueva incidencia creada
-2024-10-18T10:33:26.664+02:00 DEBUG 214323 --- [http-nio-8888-exec-7] i.j.incidencia.mappers.IncidenciaMapper  : DEBUG: Incidencia mapeada con éxito.
- Incidenecia: IncidenciaEntity(numeroAula=0.6, correoDocente=dgia543@g.educaand.es, fechaIncidencia=2024-10-18T10:31:04.358203, descripcionIncidencia=Los proyectores no van., estadoIncidencia=EN PROGRESO, comentario=N/A)
-2024-10-18T10:33:26.664+02:00 DEBUG 214323 --- [http-nio-8888-exec-7] i.j.i.rest.IncidenciaController          : DEBUG: Nueva incidencia mapeada desde DTO con éxito.
- IncidenciaEntity(numeroAula=0.6, correoDocente=dgia543@g.educaand.es, fechaIncidencia=2024-10-18T10:31:04.358203, descripcionIncidencia=Los proyectores no van., estadoIncidencia=EN PROGRESO, comentario=N/A)
-2024-10-18T10:52:37.276+02:00  INFO 214323 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-10-18T10:52:37.277+02:00  INFO 214323 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-10-18T10:52:37.280+02:00  INFO 214323 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2024-10-18T11:08:32.054+02:00  INFO 291872 --- [main] i.j.incidencia.IncidenciaApplication     : Starting IncidenciaApplication using Java 21.0.4 with PID 291872 (/home/jaydee/Github/Jandula_incidencias/incidencia/target/classes started by jaydee in /home/jaydee/Github/Jandula_incidencias/incidencia)
-2024-10-18T11:08:32.055+02:00 DEBUG 291872 --- [main] i.j.incidencia.IncidenciaApplication     : Running with Spring Boot v3.3.4, Spring v6.1.13
-2024-10-18T11:08:32.056+02:00  INFO 291872 --- [main] i.j.incidencia.IncidenciaApplication     : No active profile set, falling back to 1 default profile: "default"
-2024-10-18T11:08:32.378+02:00  INFO 291872 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-10-18T11:08:32.412+02:00  INFO 291872 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 27 ms. Found 1 JPA repository interface.
-2024-10-18T11:08:32.698+02:00  INFO 291872 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8888 (http)
-2024-10-18T11:08:32.706+02:00  INFO 291872 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-10-18T11:08:32.707+02:00  INFO 291872 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
-2024-10-18T11:08:32.734+02:00  INFO 291872 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-10-18T11:08:32.735+02:00  INFO 291872 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 646 ms
-2024-10-18T11:08:32.828+02:00  INFO 291872 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-10-18T11:08:32.860+02:00  INFO 291872 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
-2024-10-18T11:08:32.875+02:00  INFO 291872 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-10-18T11:08:33.007+02:00  INFO 291872 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-10-18T11:08:33.023+02:00  INFO 291872 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-10-18T11:08:33.243+02:00  INFO 291872 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5d5574c7
-2024-10-18T11:08:33.244+02:00  INFO 291872 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-10-18T11:08:33.632+02:00  INFO 291872 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-10-18T11:08:33.684+02:00  INFO 291872 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-10-18T11:08:33.793+02:00  INFO 291872 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
-2024-10-18T11:08:34.113+02:00  WARN 291872 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-10-18T11:08:34.297+02:00  INFO 291872 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8888 (http) with context path '/'
-2024-10-18T11:08:34.302+02:00  INFO 291872 --- [main] i.j.incidencia.IncidenciaApplication     : Started IncidenciaApplication in 2.543 seconds (process running for 2.769)
-2024-10-18T11:08:40.095+02:00  INFO 291872 --- [http-nio-8888-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-10-18T11:08:40.095+02:00  INFO 291872 --- [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-10-18T11:08:40.096+02:00  INFO 291872 --- [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2024-10-18T11:08:40.150+02:00 DEBUG 291872 --- [http-nio-8888-exec-1] i.j.i.rest.IncidenciaController          : Parametros recibidos:
-IncidenciaDTO(numeroAula=0.4, correoDocente=null, fechaIncidencia=null, descripcionIncidencia=Los proyectores no van., estadoIncidencia=null, comentario=null)
-2024-10-18T11:08:40.151+02:00 DEBUG 291872 --- [http-nio-8888-exec-1] i.j.i.rest.IncidenciaController          : DEBUG: Objeto incidencia inicializado correctamente:
- IncidenciaEntity(numeroAula=0.4, correoDocente=dgia543@g.educaand.es, fechaIncidencia=2024-10-18T11:08:40.151150125, descripcionIncidencia=Los proyectores no van., estadoIncidencia=PENDIENTE, comentario=)
-2024-10-18T11:08:40.210+02:00  INFO 291872 --- [http-nio-8888-exec-1] i.j.i.rest.IncidenciaController          : INFO: El objeto guardado en base de datos es:
-IncidenciaEntity(numeroAula=0.4, correoDocente=dgia543@g.educaand.es, fechaIncidencia=2024-10-18T11:08:40.151150125, descripcionIncidencia=Los proyectores no van., estadoIncidencia=PENDIENTE, comentario=)
-2024-10-18T11:08:47.164+02:00  WARN 291872 --- [http-nio-8888-exec-6] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public java.util.List<ies.jandula.incidencia.dto.IncidenciaDTO> ies.jandula.incidencia.rest.IncidenciaController.buscaIncidencia(ies.jandula.incidencia.dto.FiltroBusqueda)]
-2024-10-18T11:09:09.055+02:00  WARN 291872 --- [http-nio-8888-exec-4] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public java.util.List<ies.jandula.incidencia.dto.IncidenciaDTO> ies.jandula.incidencia.rest.IncidenciaController.buscaIncidencia(ies.jandula.incidencia.dto.FiltroBusqueda)]
-2024-10-18T11:09:12.935+02:00 DEBUG 291872 --- [http-nio-8888-exec-5] i.j.i.rest.IncidenciaController          : DEBUG: Parametros de busqueda recibidos:
+2024-10-18T17:47:18.937+02:00  INFO 1094929 --- [main] i.j.incidencia.IncidenciaApplication     : Starting IncidenciaApplication using Java 21.0.4 with PID 1094929 (/home/jaydee/Github/Jandula_incidencias/incidencia/target/classes started by jaydee in /home/jaydee/Github/Jandula_incidencias/incidencia)
+2024-10-18T17:47:18.938+02:00 DEBUG 1094929 --- [main] i.j.incidencia.IncidenciaApplication     : Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-10-18T17:47:18.938+02:00  INFO 1094929 --- [main] i.j.incidencia.IncidenciaApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-10-18T17:47:19.240+02:00  INFO 1094929 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-18T17:47:19.269+02:00  INFO 1094929 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 25 ms. Found 1 JPA repository interface.
+2024-10-18T17:47:19.551+02:00  INFO 1094929 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8888 (http)
+2024-10-18T17:47:19.559+02:00  INFO 1094929 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-10-18T17:47:19.559+02:00  INFO 1094929 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-10-18T17:47:19.585+02:00  INFO 1094929 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-10-18T17:47:19.585+02:00  INFO 1094929 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 621 ms
+2024-10-18T17:47:19.665+02:00  INFO 1094929 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-18T17:47:19.688+02:00  INFO 1094929 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-10-18T17:47:19.705+02:00  INFO 1094929 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-10-18T17:47:19.850+02:00  INFO 1094929 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-18T17:47:19.864+02:00  INFO 1094929 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-10-18T17:47:20.066+02:00  INFO 1094929 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@25d9291a
+2024-10-18T17:47:20.067+02:00  INFO 1094929 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-10-18T17:47:20.455+02:00  INFO 1094929 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-18T17:47:20.506+02:00  INFO 1094929 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-18T17:47:20.619+02:00  INFO 1094929 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-10-18T17:47:20.933+02:00  WARN 1094929 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-18T17:47:21.083+02:00  INFO 1094929 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8888 (http) with context path '/'
+2024-10-18T17:47:21.087+02:00  INFO 1094929 --- [main] i.j.incidencia.IncidenciaApplication     : Started IncidenciaApplication in 2.445 seconds (process running for 2.658)
+2024-10-18T17:47:25.119+02:00  INFO 1094929 --- [http-nio-8888-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-10-18T17:47:25.119+02:00  INFO 1094929 --- [http-nio-8888-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-10-18T17:47:25.120+02:00  INFO 1094929 --- [http-nio-8888-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2024-10-18T17:47:25.171+02:00 DEBUG 1094929 --- [http-nio-8888-exec-2] i.j.i.rest.IncidenciaController          : Parametros recibidos:
+IncidenciaDTO(numeroAula=0.7, correoDocente=null, fechaIncidencia=null, descripcionIncidencia=El teclado del equipo 16 ha dejado de funcionar., estadoIncidencia=null, comentario=null)
+2024-10-18T17:47:25.172+02:00 DEBUG 1094929 --- [http-nio-8888-exec-2] i.j.i.rest.IncidenciaController          : DEBUG: Objeto incidencia inicializado correctamente:
+ IncidenciaEntity(numeroAula=0.7, correoDocente=dgia543@g.educaand.es, fechaIncidencia=2024-10-18T17:47:25.172178046, descripcionIncidencia=El teclado del equipo 16 ha dejado de funcionar., estadoIncidencia=PENDIENTE, comentario=)
+2024-10-18T17:47:25.226+02:00  INFO 1094929 --- [http-nio-8888-exec-2] i.j.i.rest.IncidenciaController          : INFO: El objeto guardado en base de datos es:
+IncidenciaEntity(numeroAula=0.7, correoDocente=dgia543@g.educaand.es, fechaIncidencia=2024-10-18T17:47:25.172178046, descripcionIncidencia=El teclado del equipo 16 ha dejado de funcionar., estadoIncidencia=PENDIENTE, comentario=)
+2024-10-18T17:48:17.989+02:00 DEBUG 1094929 --- [http-nio-8888-exec-3] i.j.i.rest.IncidenciaController          : Parametros recibidos:
+IncidenciaDTO(numeroAula=0.5, correoDocente=null, fechaIncidencia=null, descripcionIncidencia=La pizarra electronica no enciende., estadoIncidencia=null, comentario=null)
+2024-10-18T17:48:17.989+02:00 DEBUG 1094929 --- [http-nio-8888-exec-3] i.j.i.rest.IncidenciaController          : DEBUG: Objeto incidencia inicializado correctamente:
+ IncidenciaEntity(numeroAula=0.5, correoDocente=dgia543@g.educaand.es, fechaIncidencia=2024-10-18T17:48:17.989286889, descripcionIncidencia=La pizarra electronica no enciende., estadoIncidencia=PENDIENTE, comentario=)
+2024-10-18T17:48:18.011+02:00  INFO 1094929 --- [http-nio-8888-exec-3] i.j.i.rest.IncidenciaController          : INFO: El objeto guardado en base de datos es:
+IncidenciaEntity(numeroAula=0.5, correoDocente=dgia543@g.educaand.es, fechaIncidencia=2024-10-18T17:48:17.989286889, descripcionIncidencia=La pizarra electronica no enciende., estadoIncidencia=PENDIENTE, comentario=)
+2024-10-18T17:49:22.683+02:00 DEBUG 1094929 --- [http-nio-8888-exec-6] i.j.i.rest.IncidenciaController          : Parametros recibidos:
+IncidenciaDTO(numeroAula=1.1, correoDocente=null, fechaIncidencia=null, descripcionIncidencia=No hay acceso a internet., estadoIncidencia=null, comentario=null)
+2024-10-18T17:49:22.683+02:00 DEBUG 1094929 --- [http-nio-8888-exec-6] i.j.i.rest.IncidenciaController          : DEBUG: Objeto incidencia inicializado correctamente:
+ IncidenciaEntity(numeroAula=1.1, correoDocente=jsotsan950@g.educaand.es, fechaIncidencia=2024-10-18T17:49:22.683325057, descripcionIncidencia=No hay acceso a internet., estadoIncidencia=PENDIENTE, comentario=)
+2024-10-18T17:49:22.692+02:00  INFO 1094929 --- [http-nio-8888-exec-6] i.j.i.rest.IncidenciaController          : INFO: El objeto guardado en base de datos es:
+IncidenciaEntity(numeroAula=1.1, correoDocente=jsotsan950@g.educaand.es, fechaIncidencia=2024-10-18T17:49:22.683325057, descripcionIncidencia=No hay acceso a internet., estadoIncidencia=PENDIENTE, comentario=)
+2024-10-18T17:49:37.253+02:00  WARN 1094929 --- [http-nio-8888-exec-7] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public org.springframework.http.ResponseEntity<?> ies.jandula.incidencia.rest.IncidenciaController.buscaIncidencia(ies.jandula.incidencia.dto.FiltroBusqueda)]
+2024-10-18T17:49:44.228+02:00 DEBUG 1094929 --- [http-nio-8888-exec-9] i.j.i.rest.IncidenciaController          : DEBUG: Parametros de busqueda recibidos:
  FiltroBusqueda(numeroAula=null, correoDocente=null, fechaInicio=null, fechaFin=null, descripcionIncidencia=null, estadoIncidencia=null, comentario=null)
-2024-10-18T11:09:12.968+02:00 DEBUG 291872 --- [http-nio-8888-exec-5] i.j.i.rest.IncidenciaController          : DEBUG: Objetos encontrados 1
-2024-10-18T11:09:24.188+02:00 DEBUG 291872 --- [http-nio-8888-exec-9] i.j.i.rest.IncidenciaController          : Parametros recibidos:
-IncidenciaDTO(numeroAula=0.5, correoDocente=null, fechaIncidencia=null, descripcionIncidencia=Los ratones no van., estadoIncidencia=null, comentario=null)
-2024-10-18T11:09:24.188+02:00 DEBUG 291872 --- [http-nio-8888-exec-9] i.j.i.rest.IncidenciaController          : DEBUG: Objeto incidencia inicializado correctamente:
- IncidenciaEntity(numeroAula=0.5, correoDocente=dgia543@g.educaand.es, fechaIncidencia=2024-10-18T11:09:24.188195487, descripcionIncidencia=Los ratones no van., estadoIncidencia=PENDIENTE, comentario=)
-2024-10-18T11:09:24.198+02:00  INFO 291872 --- [http-nio-8888-exec-9] i.j.i.rest.IncidenciaController          : INFO: El objeto guardado en base de datos es:
-IncidenciaEntity(numeroAula=0.5, correoDocente=dgia543@g.educaand.es, fechaIncidencia=2024-10-18T11:09:24.188195487, descripcionIncidencia=Los ratones no van., estadoIncidencia=PENDIENTE, comentario=)
-2024-10-18T11:09:30.438+02:00 DEBUG 291872 --- [http-nio-8888-exec-8] i.j.i.rest.IncidenciaController          : Parametros recibidos:
-IncidenciaDTO(numeroAula=0.8, correoDocente=null, fechaIncidencia=null, descripcionIncidencia=Los teclados no van., estadoIncidencia=null, comentario=null)
-2024-10-18T11:09:30.438+02:00 DEBUG 291872 --- [http-nio-8888-exec-8] i.j.i.rest.IncidenciaController          : DEBUG: Objeto incidencia inicializado correctamente:
- IncidenciaEntity(numeroAula=0.8, correoDocente=dgia543@g.educaand.es, fechaIncidencia=2024-10-18T11:09:30.438607620, descripcionIncidencia=Los teclados no van., estadoIncidencia=PENDIENTE, comentario=)
-2024-10-18T11:09:30.449+02:00  INFO 291872 --- [http-nio-8888-exec-8] i.j.i.rest.IncidenciaController          : INFO: El objeto guardado en base de datos es:
-IncidenciaEntity(numeroAula=0.8, correoDocente=dgia543@g.educaand.es, fechaIncidencia=2024-10-18T11:09:30.438607620, descripcionIncidencia=Los teclados no van., estadoIncidencia=PENDIENTE, comentario=)
-2024-10-18T11:09:32.169+02:00 DEBUG 291872 --- [http-nio-8888-exec-10] i.j.i.rest.IncidenciaController          : DEBUG: Parametros de busqueda recibidos:
+2024-10-18T17:49:44.267+02:00 DEBUG 1094929 --- [http-nio-8888-exec-9] i.j.i.rest.IncidenciaController          : DEBUG: Objetos encontrados 3
+2024-10-18T17:50:19.925+02:00 DEBUG 1094929 --- [http-nio-8888-exec-10] i.j.i.rest.IncidenciaController          : DEBUG: Parametros de busqueda recibidos:
  FiltroBusqueda(numeroAula=null, correoDocente=null, fechaInicio=null, fechaFin=null, descripcionIncidencia=null, estadoIncidencia=null, comentario=null)
-2024-10-18T11:09:32.172+02:00 DEBUG 291872 --- [http-nio-8888-exec-10] i.j.i.rest.IncidenciaController          : DEBUG: Objetos encontrados 3
-2024-10-18T11:09:43.150+02:00  WARN 291872 --- [http-nio-8888-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character ('}' (code 125)): was expecting double-quote to start field name]
-2024-10-18T11:09:45.899+02:00 DEBUG 291872 --- [http-nio-8888-exec-6] i.j.i.rest.IncidenciaController          : DEBUG: Parametros de busqueda recibidos:
+2024-10-18T17:50:19.928+02:00 DEBUG 1094929 --- [http-nio-8888-exec-10] i.j.i.rest.IncidenciaController          : DEBUG: Objetos encontrados 3
+2024-10-18T17:50:23.463+02:00 DEBUG 1094929 --- [http-nio-8888-exec-1] i.j.i.rest.IncidenciaController          : DEBUG: Parametros de busqueda recibidos:
+ FiltroBusqueda(numeroAula=null, correoDocente=null, fechaInicio=null, fechaFin=null, descripcionIncidencia=null, estadoIncidencia=null, comentario=null)
+2024-10-18T17:50:23.466+02:00 DEBUG 1094929 --- [http-nio-8888-exec-1] i.j.i.rest.IncidenciaController          : DEBUG: Objetos encontrados 3
+2024-10-18T17:50:51.337+02:00 DEBUG 1094929 --- [http-nio-8888-exec-2] i.j.i.rest.IncidenciaController          : DEBUG: Parametros de busqueda recibidos:
  FiltroBusqueda(numeroAula=0.5, correoDocente=null, fechaInicio=null, fechaFin=null, descripcionIncidencia=null, estadoIncidencia=null, comentario=null)
-2024-10-18T11:09:45.902+02:00 DEBUG 291872 --- [http-nio-8888-exec-6] i.j.i.rest.IncidenciaController          : DEBUG: Objetos encontrados 1
-2024-10-18T11:09:57.206+02:00 DEBUG 291872 --- [http-nio-8888-exec-7] i.j.i.rest.IncidenciaController          : DEBUG: Parametros de busqueda recibidos:
+2024-10-18T17:50:51.340+02:00 DEBUG 1094929 --- [http-nio-8888-exec-2] i.j.i.rest.IncidenciaController          : DEBUG: Objetos encontrados 1
+2024-10-18T17:51:25.819+02:00 DEBUG 1094929 --- [http-nio-8888-exec-3] i.j.i.rest.IncidenciaController          : DEBUG: Parametros de busqueda recibidos:
+ FiltroBusqueda(numeroAula=null, correoDocente=null, fechaInicio=null, fechaFin=null, descripcionIncidencia=pizarra., estadoIncidencia=null, comentario=null)
+2024-10-18T17:51:25.821+02:00 DEBUG 1094929 --- [http-nio-8888-exec-3] i.j.i.rest.IncidenciaController          : DEBUG: Objetos encontrados 0
+2024-10-18T17:51:25.821+02:00  INFO 1094929 --- [http-nio-8888-exec-3] i.j.i.rest.IncidenciaController          : No se han encontrado incidencias con los criterios especificados.
+2024-10-18T17:51:30.879+02:00 DEBUG 1094929 --- [http-nio-8888-exec-4] i.j.i.rest.IncidenciaController          : DEBUG: Parametros de busqueda recibidos:
+ FiltroBusqueda(numeroAula=null, correoDocente=null, fechaInicio=null, fechaFin=null, descripcionIncidencia=pizarra, estadoIncidencia=null, comentario=null)
+2024-10-18T17:51:30.882+02:00 DEBUG 1094929 --- [http-nio-8888-exec-4] i.j.i.rest.IncidenciaController          : DEBUG: Objetos encontrados 1
+2024-10-18T17:52:10.469+02:00 DEBUG 1094929 --- [http-nio-8888-exec-5] i.j.i.rest.IncidenciaController          : DEBUG: Parametros de busqueda recibidos:
+ FiltroBusqueda(numeroAula=null, correoDocente=null, fechaInicio=null, fechaFin=null, descripcionIncidencia=null, estadoIncidencia=PENDIENTE, comentario=null)
+2024-10-18T17:52:10.472+02:00 DEBUG 1094929 --- [http-nio-8888-exec-5] i.j.i.rest.IncidenciaController          : DEBUG: Objetos encontrados 3
+2024-10-18T17:52:26.942+02:00 DEBUG 1094929 --- [http-nio-8888-exec-6] i.j.i.rest.IncidenciaController          : DEBUG: Parametros de busqueda recibidos:
+ FiltroBusqueda(numeroAula=null, correoDocente=null, fechaInicio=null, fechaFin=null, descripcionIncidencia=null, estadoIncidencia=, comentario=null)
+2024-10-18T17:52:26.944+02:00 DEBUG 1094929 --- [http-nio-8888-exec-6] i.j.i.rest.IncidenciaController          : DEBUG: Objetos encontrados 0
+2024-10-18T17:52:26.944+02:00  INFO 1094929 --- [http-nio-8888-exec-6] i.j.i.rest.IncidenciaController          : No se han encontrado incidencias con los criterios especificados.
+2024-10-18T17:52:50.084+02:00 ERROR 1094929 --- [http-nio-8888-exec-7] i.j.incidencia.mappers.IncidenciaMapper  : ERROR: Error en mapToEntity() al mapear incidencia.
+2024-10-18T17:52:50.085+02:00 ERROR 1094929 --- [http-nio-8888-exec-7] i.j.i.rest.IncidenciaController          : Error inesperado en borraIncidencia() .
+Mensaje de error: 
+
+java.lang.Exception: ERROR: El mapeo de objeto ha fallado.
+ El DTO recibido es nulo o tiene atributos nulos.
+	at ies.jandula.incidencia.mappers.IncidenciaMapper.mapToEntity(IncidenciaMapper.java:73) ~[classes/:na]
+	at ies.jandula.incidencia.rest.IncidenciaController.borraIncidencia(IncidenciaController.java:269) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255) ~[spring-web-6.1.13.jar:6.1.13]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188) ~[spring-web-6.1.13.jar:6.1.13]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.1.13.jar:6.1.13]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926) ~[spring-webmvc-6.1.13.jar:6.1.13]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831) ~[spring-webmvc-6.1.13.jar:6.1.13]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.1.13.jar:6.1.13]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.1.13.jar:6.1.13]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.13.jar:6.1.13]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.13.jar:6.1.13]
+	at org.springframework.web.servlet.FrameworkServlet.doDelete(FrameworkServlet.java:936) ~[spring-webmvc-6.1.13.jar:6.1.13]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:596) ~[tomcat-embed-core-10.1.30.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.13.jar:6.1.13]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.30.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.30.jar:10.1.30]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.13.jar:6.1.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.13.jar:6.1.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.13.jar:6.1.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.13.jar:6.1.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.13.jar:6.1.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.13.jar:6.1.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:384) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+
+2024-10-18T17:52:55.979+02:00 DEBUG 1094929 --- [http-nio-8888-exec-9] i.j.i.rest.IncidenciaController          : DEBUG: Parametros de busqueda recibidos:
  FiltroBusqueda(numeroAula=null, correoDocente=null, fechaInicio=null, fechaFin=null, descripcionIncidencia=null, estadoIncidencia=null, comentario=null)
-2024-10-18T11:09:57.209+02:00 DEBUG 291872 --- [http-nio-8888-exec-7] i.j.i.rest.IncidenciaController          : DEBUG: Objetos encontrados 3
-2024-10-18T11:09:59.015+02:00  WARN 291872 --- [http-nio-8888-exec-4] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public java.util.List<ies.jandula.incidencia.dto.IncidenciaDTO> ies.jandula.incidencia.rest.IncidenciaController.buscaIncidencia(ies.jandula.incidencia.dto.FiltroBusqueda)]
-2024-10-18T11:10:09.300+02:00  INFO 291872 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-10-18T11:10:09.301+02:00  INFO 291872 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-10-18T11:10:09.305+02:00  INFO 291872 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-10-18T17:52:55.982+02:00 DEBUG 1094929 --- [http-nio-8888-exec-9] i.j.i.rest.IncidenciaController          : DEBUG: Objetos encontrados 3
+2024-10-18T17:53:07.985+02:00 DEBUG 1094929 --- [http-nio-8888-exec-10] i.j.incidencia.mappers.IncidenciaMapper  : DEBUG: Nueva incidencia creada
+2024-10-18T17:53:07.985+02:00 DEBUG 1094929 --- [http-nio-8888-exec-10] i.j.incidencia.mappers.IncidenciaMapper  : DEBUG: Incidencia mapeada con éxito.
+ Incidenecia: IncidenciaEntity(numeroAula=0.7, correoDocente=dgia543@g.educaand.es, fechaIncidencia=2024-10-18T17:47:25.172178, descripcionIncidencia=El teclado del equipo 16 ha dejado de funcionar., estadoIncidencia=PENDIENTE, comentario=)
+2024-10-18T17:53:08.018+02:00  INFO 1094929 --- [http-nio-8888-exec-10] i.j.i.rest.IncidenciaController          : INFO: Incidencia eliminada con exito.
+IncidenciaEntity(numeroAula=0.7, correoDocente=dgia543@g.educaand.es, fechaIncidencia=2024-10-18T17:47:25.172178, descripcionIncidencia=El teclado del equipo 16 ha dejado de funcionar., estadoIncidencia=PENDIENTE, comentario=)
+2024-10-18T17:54:59.497+02:00 DEBUG 1094929 --- [http-nio-8888-exec-3] i.j.i.rest.IncidenciaController          : Parametros recibidos:
+IncidenciaDTO(numeroAula=0.6, correoDocente=dgia543@g.educaand.es, fechaIncidencia=2024-10-18T10:31:04.358203, descripcionIncidencia=Los proyectores no van., estadoIncidencia=EN PROGRESO, comentario=N/A)
+2024-10-18T17:54:59.497+02:00 DEBUG 1094929 --- [http-nio-8888-exec-3] i.j.incidencia.mappers.IncidenciaMapper  : DEBUG: Nueva incidencia creada
+2024-10-18T17:54:59.497+02:00 DEBUG 1094929 --- [http-nio-8888-exec-3] i.j.incidencia.mappers.IncidenciaMapper  : DEBUG: Incidencia mapeada con éxito.
+ Incidenecia: IncidenciaEntity(numeroAula=0.6, correoDocente=dgia543@g.educaand.es, fechaIncidencia=2024-10-18T10:31:04.358203, descripcionIncidencia=Los proyectores no van., estadoIncidencia=EN PROGRESO, comentario=N/A)
+2024-10-18T17:54:59.497+02:00 DEBUG 1094929 --- [http-nio-8888-exec-3] i.j.i.rest.IncidenciaController          : DEBUG: Nueva incidencia mapeada desde DTO con éxito.
+ IncidenciaEntity(numeroAula=0.6, correoDocente=dgia543@g.educaand.es, fechaIncidencia=2024-10-18T10:31:04.358203, descripcionIncidencia=Los proyectores no van., estadoIncidencia=EN PROGRESO, comentario=N/A)
+2024-10-18T17:56:19.567+02:00  INFO 1094929 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-18T17:56:19.568+02:00  INFO 1094929 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-10-18T17:56:19.572+02:00  INFO 1094929 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

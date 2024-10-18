@@ -6,6 +6,19 @@ import ies.jandula.incidencia.dto.IncidenciaDTO;
 import ies.jandula.incidencia.entity.IncidenciaEntity;
 import lombok.extern.slf4j.Slf4j;
 
+/**
+ * Clase que proporciona métodos para mapear objetos de tipo {@link IncidenciaDTO} 
+ * a objetos de tipo {@link IncidenciaEntity} y validar la integridad de los datos 
+ * de los DTO.
+ * 
+ * <p>
+ * Esta clase utiliza el patrón de diseño Mapper, lo que permite separar la lógica 
+ * de conversión de datos entre diferentes capas de la aplicación. Proporciona 
+ * validaciones para garantizar que los datos requeridos estén presentes antes de 
+ * realizar el mapeo. En caso de que el DTO no sea válido, se lanzará una 
+ * {@link IllegalArgumentException}.
+ * </p>
+ */
 @Component
 @Slf4j
 public class IncidenciaMapper
@@ -56,7 +69,7 @@ public class IncidenciaMapper
 		// Bloque de captura de errores no esperados o calculados.
 		catch (	Exception e)
 		{
-			log.error("ERROR: Error inesperado en mapper.", e); // Supuestamente esto devuelve la traza entera.
+			log.error("ERROR: Error en mapToEntity() al mapear incidencia.", e.getMessage());
 			throw new Exception("ERROR: El mapeo de objeto ha fallado.\n " + e.getMessage());
 		}
 
